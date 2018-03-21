@@ -3,6 +3,7 @@ package com.example.admin.tombola;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.View;
+import java.util.Objects;
 
 public class AscoltatoreActivityMain implements View.OnClickListener {
 
@@ -16,20 +17,28 @@ public class AscoltatoreActivityMain implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         Bitmap b;
+        if (view.getContentDescription().toString().length() > 7) {
+            switch (view.getContentDescription().toString().substring(0, 7)) {
+                case "casella":
+                    b = BitmapFactory.decodeResource(activity.getResources(),R.drawable.casella_tappata);
+                    activity.getCaselle().get(Integer.parseInt(view.getContentDescription().toString().substring(7))).setImageBitmap(b);
+                    break;
+            }
+        }
         switch (view.getId()) {
             case R.id.cinquina:
-                if (activity.getCinquina().getContentDescription() == "verde"){
+                if (Objects.equals(activity.getCinquina().getContentDescription().toString(), "verde")){
                     b = BitmapFactory.decodeResource(activity.getResources(),R.drawable.cinquina_rossa);
                     activity.getCinquina().setContentDescription("rosso");
                 }
                 else {
                     b = BitmapFactory.decodeResource(activity.getResources(), R.drawable.cinquina_verde);
                     activity.getCinquina().setContentDescription("verde");
-                }
+                };
                 activity.getCinquina().setImageBitmap(b);
                 break;
             case R.id.decima:
-                if (activity.getDecima().getContentDescription() == "verde"){
+                if (Objects.equals(activity.getDecima().getContentDescription().toString(), "verde")){
                     b = BitmapFactory.decodeResource(activity.getResources(),R.drawable.decima_rossa);
                     activity.getDecima().setContentDescription("rosso");
                 }
@@ -40,7 +49,7 @@ public class AscoltatoreActivityMain implements View.OnClickListener {
                 activity.getDecima().setImageBitmap(b);
                 break;
             case R.id.tombola:
-                if (activity.getTombola().getContentDescription() == "verde"){
+                if (Objects.equals(activity.getTombola().getContentDescription().toString(), "verde")){
                     b = BitmapFactory.decodeResource(activity.getResources(),R.drawable.tombola_rossa);
                     activity.getTombola().setContentDescription("rosso");
                 }
