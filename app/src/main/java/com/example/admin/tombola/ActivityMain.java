@@ -8,7 +8,6 @@ import android.util.Log;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
 import java.util.ArrayList;
-import com.example.admin.tombola.R;
 
 
 public class ActivityMain  extends AppCompatActivity {
