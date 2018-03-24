@@ -1,8 +1,23 @@
 package com.example.admin.tombola;
 
 
+import android.content.res.Resources;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.ColorFilter;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.LayerDrawable;
+import android.graphics.drawable.ScaleDrawable;
+import android.graphics.drawable.shapes.RectShape;
+import android.graphics.drawable.shapes.Shape;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import java.util.ArrayList;
@@ -57,9 +72,8 @@ public class ActivityMain  extends AppCompatActivity {
         tombola =(ImageButton)findViewById(R.id.tombola);
         caselle = new ArrayList<>(90);
         AscoltatoreActivityMain ascoltatore = new AscoltatoreActivityMain(this);
-        ImageButton casella0 = (ImageButton)findViewById(R.id.casella0);
+        Button casella0 = (Button) findViewById(R.id.casella0);
         casella0.setOnClickListener(ascoltatore);
-        caselle.add(casella0);
         ImageButton casella1 = (ImageButton)findViewById(R.id.casella1);
         casella1.setOnClickListener(ascoltatore);
         caselle.add(casella1);
@@ -333,7 +347,7 @@ public class ActivityMain  extends AppCompatActivity {
         piu.setOnClickListener(ascoltatore);
         meno.setOnClickListener(ascoltatore);
         annulla.setOnClickListener(ascoltatore);
-    }
+}
 
     @Override
     protected void onResume() {super.onResume();}
@@ -353,10 +367,13 @@ public class ActivityMain  extends AppCompatActivity {
         ImageButton casella_giro = (ImageButton) findViewById(R.id.casella_giro);
         giro.setTextSize((casella_giro.getWidth()/2f)/2.65f);
 
-        ImageButton casella0 = (ImageButton) findViewById(R.id.casella0);
+        Button casella0 = (Button) findViewById(R.id.casella0);
+       /* LayerDrawable layerDrawable = (LayerDrawable) getResources().getDrawable(R.drawable.casella_left_top);
+        GradientDrawable gradientDrawable = (GradientDrawable) layerDrawable.findDrawableByLayerId(R.id.bordo_sinistro);
+        gradientDrawable.setShape();*/
+        Log.i("WIDTH BUTTON",Integer.toString(casella0.getWidth()));
+        casella0.setTextSize((casella0.getWidth()/2f)/2.65f);
         Float width = (casella0.getWidth()/2f)/2.65f;
-        TextView testo0 = (TextView)findViewById(R.id.testo0);
-        testo0.setTextSize(width);
         TextView testo1 = (TextView)findViewById(R.id.testo1);
         testo1.setTextSize(width);
         TextView testo2 = (TextView)findViewById(R.id.testo2);

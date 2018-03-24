@@ -8,16 +8,12 @@
     android:weightSum="1"
     android:baselineAligned="false">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="0dip"
-        android:layout_height="match_parent"
-        android:layout_weight="0.7">
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.85"
+
+    <TableLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
             tools:ignore="NestedWeights"
             android:weightSum="9">
 
@@ -29,7 +25,22 @@
                 android:weightSum="1"
                 android:baselineAligned="false">
 
-                <FrameLayout android:layout_height="match_parent"
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_weight="0.1"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/casella0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:background="@drawable/casella_left_top"
+                        />
+
+                </RelativeLayout>
+
+                <!--<FrameLayout android:layout_height="match_parent"
                     android:layout_width="0dip"
                     android:layout_weight="0.1">
 
@@ -39,7 +50,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella0"
+                        android:contentDescription="@string/casella0"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -52,7 +63,7 @@
                         android:text="1"
                         android:textAppearance="@style/TextAppearance.AppCompat.Button"/>
 
-                </FrameLayout>
+                </FrameLayout>-->
 
                 <FrameLayout android:layout_height="match_parent"
                     android:layout_width="0dip"
@@ -64,7 +75,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella1"
+                        android:contentDescription="@string/casella1"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -89,7 +100,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella2"
+                        android:contentDescription="@string/casella2"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -114,7 +125,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella3"
+                        android:contentDescription="@string/casella3"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -139,7 +150,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella4"
+                        android:contentDescription="@string/casella4"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -164,7 +175,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella5"
+                        android:contentDescription="@string/casella5"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -189,7 +200,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella6"
+                        android:contentDescription="@string/casella6"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -214,7 +225,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella7"
+                        android:contentDescription="@string/casella7"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -239,7 +250,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella8"
+                        android:contentDescription="@string/casella8"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -264,7 +275,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella9"
+                        android:contentDescription="@string/casella9"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -299,7 +310,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella10"
+                        android:contentDescription="@string/casella10"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -324,7 +335,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella11"
+                        android:contentDescription="@string/casella11"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -349,7 +360,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella12"
+                        android:contentDescription="12"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -374,7 +385,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella13"
+                        android:contentDescription="@string/casella13"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -399,7 +410,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella14"
+                        android:contentDescription="@string/casella14"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -424,7 +435,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella15"
+                        android:contentDescription="@string/casella15"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -449,7 +460,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella16"
+                        android:contentDescription="@string/casella16"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -474,7 +485,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella17"
+                        android:contentDescription="@string/casella17"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -499,7 +510,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella18"
+                        android:contentDescription="@string/casella18"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -524,7 +535,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella19"
+                        android:contentDescription="@string/casella19"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -559,7 +570,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella20"
+                        android:contentDescription="@string/casella20"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -584,7 +595,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella21"
+                        android:contentDescription="@string/casella21"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -609,7 +620,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella22"
+                        android:contentDescription="@string/casella22"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -634,7 +645,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella23"
+                        android:contentDescription="@string/casella23"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -659,7 +670,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella24"
+                        android:contentDescription="@string/casella24"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -684,7 +695,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella25"
+                        android:contentDescription="@string/casella25"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -709,7 +720,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella26"
+                        android:contentDescription="@string/casella26"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -734,7 +745,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella27"
+                        android:contentDescription="@string/casella27"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -759,7 +770,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella28"
+                        android:contentDescription="@string/casella28"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -784,7 +795,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella29"
+                        android:contentDescription="@string/casella29"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -819,7 +830,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella30"
+                        android:contentDescription="@string/casella30"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -844,7 +855,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella31"
+                        android:contentDescription="@string/casella31"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -869,7 +880,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella32"
+                        android:contentDescription="@string/casella32"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -894,7 +905,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella33"
+                        android:contentDescription="@string/casella33"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -919,7 +930,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella34"
+                        android:contentDescription="@string/casella34"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -944,7 +955,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella35"
+                        android:contentDescription="@string/casella35"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -969,7 +980,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella36"
+                        android:contentDescription="@string/casella36"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -994,7 +1005,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella37"
+                        android:contentDescription="@string/casella37"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1019,7 +1030,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella38"
+                        android:contentDescription="@string/casella38"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1044,7 +1055,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella39"
+                        android:contentDescription="@string/casella39"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1079,7 +1090,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella40"
+                        android:contentDescription="@string/casella40"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1104,7 +1115,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella41"
+                        android:contentDescription="@string/casella41"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1129,7 +1140,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella42"
+                        android:contentDescription="@string/casella42"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1154,7 +1165,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella43"
+                        android:contentDescription="@string/casella43"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1179,7 +1190,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella44"
+                        android:contentDescription="@string/casella44"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1204,7 +1215,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella45"
+                        android:contentDescription="@string/casella45"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1229,7 +1240,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella46"
+                        android:contentDescription="@string/casella46"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1254,7 +1265,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella47"
+                        android:contentDescription="@string/casella47"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1279,7 +1290,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella48"
+                        android:contentDescription="@string/casella48"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1304,7 +1315,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella49"
+                        android:contentDescription="@string/casella49"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1339,7 +1350,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella50"
+                        android:contentDescription="@string/casella50"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1364,7 +1375,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella51"
+                        android:contentDescription="@string/casella51"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1389,7 +1400,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella52"
+                        android:contentDescription="@string/casella52"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1414,7 +1425,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella53"
+                        android:contentDescription="@string/casella53"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1439,7 +1450,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella54"
+                        android:contentDescription="@string/casella54"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1464,7 +1475,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella55"
+                        android:contentDescription="@string/casella55"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1489,7 +1500,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella56"
+                        android:contentDescription="@string/casella56"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1514,7 +1525,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella57"
+                        android:contentDescription="@string/casella57"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1539,7 +1550,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella58"
+                        android:contentDescription="@string/casella58"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1564,7 +1575,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella59"
+                        android:contentDescription="@string/casella59"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1599,7 +1610,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella60"
+                        android:contentDescription="@string/casella60"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1624,7 +1635,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella61"
+                        android:contentDescription="@string/casella61"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1649,7 +1660,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella62"
+                        android:contentDescription="@string/casella62"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1674,7 +1685,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella63"
+                        android:contentDescription="@string/casella63"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1699,7 +1710,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella64"
+                        android:contentDescription="@string/casella64"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1724,7 +1735,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella65"
+                        android:contentDescription="@string/casella65"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1749,7 +1760,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella66"
+                        android:contentDescription="@string/casella66"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1774,7 +1785,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella67"
+                        android:contentDescription="@string/casella67"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1799,7 +1810,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella68"
+                        android:contentDescription="@string/casella68"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1824,7 +1835,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella69"
+                        android:contentDescription="@string/casella69"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1859,7 +1870,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella70"
+                        android:contentDescription="@string/casella70"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1884,7 +1895,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella71"
+                        android:contentDescription="@string/casella71"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1909,7 +1920,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella72"
+                        android:contentDescription="@string/casella72"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1934,7 +1945,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella73"
+                        android:contentDescription="@string/casella73"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1959,7 +1970,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella74"
+                        android:contentDescription="@string/casella74"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -1984,7 +1995,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella75"
+                        android:contentDescription="@string/casella75"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -2009,7 +2020,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella76"
+                        android:contentDescription="@string/casella76"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -2034,7 +2045,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella77"
+                        android:contentDescription="@string/casella77"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -2059,7 +2070,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella78"
+                        android:contentDescription="@string/casella78"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -2084,7 +2095,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella79"
+                        android:contentDescription="@string/casella79"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -2119,7 +2130,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella80"
+                        android:contentDescription="@string/casella80"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -2144,7 +2155,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella81"
+                        android:contentDescription="@string/casella81"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -2169,7 +2180,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella82"
+                        android:contentDescription="@string/casella82"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -2194,7 +2205,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella83"
+                        android:contentDescription="@string/casella83"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -2219,7 +2230,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella84"
+                        android:contentDescription="@string/casella84"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -2244,7 +2255,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella85"
+                        android:contentDescription="@string/casella85"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -2269,7 +2280,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella86"
+                        android:contentDescription="@string/casella86"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -2294,7 +2305,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella87"
+                        android:contentDescription="@string/casella87"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -2319,7 +2330,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella88"
+                        android:contentDescription="@string/casella88"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -2344,7 +2355,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="?android:selectableItemBackground"
-                        android:contentDescription="casella89"
+                        android:contentDescription="@string/casella89"
                         android:scaleType="fitXY"
                         app:srcCompat="@drawable/casella" />
 
@@ -2363,66 +2374,8 @@
 
         </TableLayout>
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="0dip"
-            android:layout_weight="0.15"
-            android:baselineAligned="false">
-
-            <RelativeLayout android:layout_height="match_parent"
-                android:layout_width="0dip"
-                android:layout_weight="0.33">
-
-                <ImageButton
-                    android:id="@+id/cinquina"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="?android:selectableItemBackground"
-                    android:contentDescription="@string/verde"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/cinquina_verde" />
-
-            </RelativeLayout>
-
-            <RelativeLayout android:layout_height="match_parent"
-                android:layout_width="0dip"
-                android:layout_weight="0.33">
-
-                <ImageButton
-                    android:id="@+id/decima"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="?android:selectableItemBackground"
-                    android:contentDescription="@string/verde"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/decima_verde" />
-
-            </RelativeLayout>
-
-            <RelativeLayout android:layout_height="match_parent"
-                android:layout_width="0dip"
-                android:layout_weight="0.33">
-
-                <ImageButton
-                    android:id="@+id/tombola"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="?android:selectableItemBackground"
-                    android:contentDescription="@string/verde"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/tombola_verde" />
-
-            </RelativeLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout android:layout_height="match_parent"
+    <LinearLayout
+        android:layout_height="match_parent"
         android:layout_width="0dip"
         android:layout_weight="0.3"
         android:orientation="vertical">
@@ -2431,7 +2384,7 @@
             android:layout_width="match_parent"
             android:orientation="horizontal"
             android:layout_height="0dip"
-            android:layout_weight="0.5"
+            android:layout_weight="0.3"
             tools:ignore="NestedWeights"
             android:weightSum="1"
             android:baselineAligned="false">
@@ -2445,15 +2398,15 @@
 
                 <FrameLayout android:layout_height="0dip"
                     android:layout_width="match_parent"
-                    android:layout_weight="0.75">
+                    android:layout_weight="0.7">
 
                     <ImageButton
                         android:id="@+id/casella_ultimo_numero"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="?android:selectableItemBackground"
+                        android:padding="20dp"
                         android:scaleType="fitXY"
-                        android:padding="5dp"
                         app:srcCompat="@drawable/casella" />
 
                     <TextView
@@ -2468,7 +2421,7 @@
 
                 <RelativeLayout android:layout_height="0dip"
                     android:layout_width="match_parent"
-                    android:layout_weight="0.25">
+                    android:layout_weight="0.3">
 
                     <ImageButton
                         android:id="@+id/annulla"
@@ -2496,12 +2449,13 @@
 
                     <ImageButton
                         android:id="@+id/casella_penultimo_numero"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="?android:selectableItemBackground"
+                        android:padding="20dp"
                         android:scaleType="fitXY"
-                        android:padding="5dp"
-                        app:srcCompat="@drawable/casella" />
+                        app:srcCompat="@drawable/casella"
+                        android:contentDescription="penultimo" />
 
                     <TextView
                         android:id="@+id/penultimo_numero"
@@ -2519,12 +2473,13 @@
 
                     <ImageButton
                         android:id="@+id/casella_terzultimo_numero"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="?android:selectableItemBackground"
+                        android:padding="20dp"
                         android:scaleType="fitXY"
-                        android:padding="5dp"
-                        app:srcCompat="@drawable/casella" />
+                        app:srcCompat="@drawable/casella"
+                        android:contentDescription="terzultimo" />
 
                     <TextView
                         android:id="@+id/terzultimo_numero"
@@ -2542,72 +2497,193 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
             android:layout_height="0dip"
-            android:layout_weight="0.5"
-            tools:ignore="NestedWeights"
-            android:weightSum="1">
+            android:layout_weight="0.33"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            android:weightSum="3"
+            tools:ignore="NestedWeights">
 
-            <FrameLayout android:layout_height="0dip"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_weight="0.75">
+                android:layout_height="0dip"
+                android:layout_weight="1">
 
                 <ImageButton
-                    android:id="@+id/casella_giro"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="?android:selectableItemBackground"
-                    android:padding="15dp"
-                    android:scaleType="centerInside"
-                    app:srcCompat="@drawable/casella" />
-
-                <TextView
-                    android:id="@+id/giro"
+                    android:id="@+id/cinquina"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:clickable="false"
-                    android:text="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Button"/>
+                    android:background="?android:selectableItemBackground"
+                    android:contentDescription="@string/verde"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/cinquina_verde" />
 
-            </FrameLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/decima"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="?android:selectableItemBackground"
+                    android:contentDescription="@string/verde"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/decima_verde" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/tombola"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="?android:selectableItemBackground"
+                    android:contentDescription="@string/verde"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/tombola_verde" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="0dip"
+            android:layout_weight="0.3"
+            tools:ignore="NestedWeights"
+            android:weightSum="1"
+            android:baselineAligned="false">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="0dip"
-                android:layout_weight="0.25"
+                android:layout_width="0dip"
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
                 tools:ignore="NestedWeights"
-                android:weightSum="1"
-                android:baselineAligned="false">
+                android:weightSum="1">
 
-                <RelativeLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.5">
-
-                    <ImageButton
-                        android:id="@+id/meno"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:scaleType="fitCenter"
-                        android:background="?android:selectableItemBackground"
-                        app:srcCompat="@drawable/meno" />
-
-                </RelativeLayout>
-
-                <RelativeLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.5">
+                <FrameLayout
+                    android:layout_height="0dip"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.7">
 
                     <ImageButton
-                        android:id="@+id/piu"
-                        android:layout_width="match_parent"
+                        android:id="@+id/casella_giro"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:scaleType="fitCenter"
                         android:background="?android:selectableItemBackground"
-                        app:srcCompat="@drawable/piu" />
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/casella" />
 
-                </RelativeLayout>
+                    <TextView
+                        android:id="@+id/giro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:clickable="false"
+                        android:text="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="0.3"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    tools:ignore="NestedWeights">
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+
+                        <ImageButton
+                            android:id="@+id/meno"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?android:selectableItemBackground"
+                            android:padding="5dp"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/meno" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+
+                        <ImageButton
+                            android:id="@+id/piu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?android:selectableItemBackground"
+                            android:padding="5dp"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/piu" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                tools:ignore="NestedWeights"
+                android:weightSum="1">
+
+                <FrameLayout android:layout_height="0dip"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.7">
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="0dip"
+                    android:layout_weight="0.3"
+                    tools:ignore="NestedWeights"
+                    android:weightSum="1"
+                    android:baselineAligned="false">
+
+                    <RelativeLayout
+                        android:layout_height="match_parent"
+                        android:layout_width="0dip"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/set"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitCenter"
+                            android:background="?android:selectableItemBackground"
+                            app:srcCompat="@drawable/meno" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
 
             </LinearLayout>
 
