@@ -39,7 +39,7 @@ public class AscoltatoreActivityMain implements View.OnClickListener {
                 else {
                     b = BitmapFactory.decodeResource(activity.getResources(), R.drawable.cinquina_verde);
                     activity.getCinquina().setContentDescription("verde");
-                };
+                }
                 activity.getCinquina().setImageBitmap(b);
                 break;
             case R.id.decima:
@@ -66,11 +66,11 @@ public class AscoltatoreActivityMain implements View.OnClickListener {
                 break;
             case R.id.piu:
                 numeroGiro = numeroGiro + 1;
-                activity.getGiro().setText(Integer.toString(numeroGiro));
+                activity.getGiro().setText(String.format("%s",numeroGiro));
                 break;
             case R.id.meno:
                 numeroGiro = numeroGiro - 1;
-                activity.getGiro().setText(Integer.toString(numeroGiro));
+                activity.getGiro().setText(String.format("%s",numeroGiro));
                 break;
             case R.id.annulla:
                 if (ultimo_numero != 0) {
@@ -80,15 +80,15 @@ public class AscoltatoreActivityMain implements View.OnClickListener {
                     penultimo_numero = terzultimo_numero;
                     terzultimo_numero = back;
                     if (terzultimo_numero != 0)
-                        activity.getTerzultimo().setText(Integer.toString(terzultimo_numero));
+                        activity.getTerzultimo().setText(String.format("%s",terzultimo_numero));
                     else
                         activity.getTerzultimo().setText("");
                     if (penultimo_numero != 0)
-                        activity.getPenultimo().setText(Integer.toString(penultimo_numero));
+                        activity.getPenultimo().setText(String.format("%s",penultimo_numero));
                     else
                         activity.getPenultimo().setText("");
                     if (ultimo_numero != 0)
-                        activity.getUltimo().setText(Integer.toString(ultimo_numero));
+                        activity.getUltimo().setText(String.format("%s",ultimo_numero));
                     else
                         activity.getUltimo().setText("");
                 }
@@ -105,10 +105,10 @@ public class AscoltatoreActivityMain implements View.OnClickListener {
                     penultimo_numero = ultimo_numero;
                     ultimo_numero = numero;
                     if (terzultimo_numero != 0)
-                        activity.getTerzultimo().setText(Integer.toString(terzultimo_numero));
+                        activity.getTerzultimo().setText(String.format("%s",terzultimo_numero));
                     if (penultimo_numero != 0)
-                        activity.getPenultimo().setText(Integer.toString(penultimo_numero));
-                    activity.getUltimo().setText(Integer.toString(ultimo_numero));
+                        activity.getPenultimo().setText(String.format("%s",penultimo_numero));
+                    activity.getUltimo().setText(String.format("%s",ultimo_numero));
                 }
                 break;
         }

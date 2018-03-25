@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Tombola</string>
     <string name="verde">verde</string>
+    <string name="annulla">annulla</string>
+    <string name="piu">piu</string>
+    <string name="meno">meno</string>
+    <string name="giro">1</string>
+    <string name="set">set</string>
 
     <string name="casella0">casella0</string>
     <string name="casella1">casella1</string>

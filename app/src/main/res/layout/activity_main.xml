@@ -32,7 +32,6 @@
                     android:id="@+id/casella0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -46,7 +45,6 @@
                     android:id="@+id/casella1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -60,7 +58,6 @@
                     android:id="@+id/casella2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="3"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -74,7 +71,6 @@
                     android:id="@+id/casella3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="4"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -88,7 +84,6 @@
                     android:id="@+id/casella4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="5"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -102,7 +97,6 @@
                     android:id="@+id/casella5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="6"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -116,7 +110,6 @@
                     android:id="@+id/casella6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="7"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -130,7 +123,6 @@
                     android:id="@+id/casella7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="8"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -144,7 +136,6 @@
                     android:id="@+id/casella8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="9"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -158,7 +149,6 @@
                     android:id="@+id/casella9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="10"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -182,7 +172,6 @@
                     android:id="@+id/casella10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="11"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -196,7 +185,6 @@
                     android:id="@+id/casella11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="12"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -210,7 +198,6 @@
                     android:id="@+id/casella12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="13"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -224,7 +211,6 @@
                     android:id="@+id/casella13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="14"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -238,7 +224,6 @@
                     android:id="@+id/casella14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="15"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -252,7 +237,6 @@
                     android:id="@+id/casella15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="16"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -266,7 +250,6 @@
                     android:id="@+id/casella16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="17"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -280,7 +263,6 @@
                     android:id="@+id/casella17"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="18"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -294,7 +276,6 @@
                     android:id="@+id/casella18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="19"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -308,7 +289,6 @@
                     android:id="@+id/casella19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="20"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -332,7 +312,6 @@
                     android:id="@+id/casella20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="21"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -346,7 +325,6 @@
                     android:id="@+id/casella21"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="22"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -360,7 +338,6 @@
                     android:id="@+id/casella22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="23"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -374,7 +351,6 @@
                     android:id="@+id/casella23"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="24"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -388,7 +364,6 @@
                     android:id="@+id/casella24"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="25"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -402,7 +377,6 @@
                     android:id="@+id/casella25"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="26"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -416,7 +390,6 @@
                     android:id="@+id/casella26"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="27"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -430,7 +403,6 @@
                     android:id="@+id/casella27"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="28"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -444,7 +416,6 @@
                     android:id="@+id/casella28"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="29"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -458,7 +429,6 @@
                     android:id="@+id/casella29"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="30"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -482,7 +452,6 @@
                     android:id="@+id/casella30"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="31"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -496,7 +465,6 @@
                     android:id="@+id/casella31"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="32"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -510,7 +478,6 @@
                     android:id="@+id/casella32"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="33"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -524,7 +491,6 @@
                     android:id="@+id/casella33"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="34"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -538,7 +504,6 @@
                     android:id="@+id/casella34"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="35"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -552,7 +517,6 @@
                     android:id="@+id/casella35"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="36"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -566,7 +530,6 @@
                     android:id="@+id/casella36"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="37"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -580,7 +543,6 @@
                     android:id="@+id/casella37"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="38"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -594,7 +556,6 @@
                     android:id="@+id/casella38"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="39"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -608,7 +569,6 @@
                     android:id="@+id/casella39"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="40"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -632,7 +592,6 @@
                     android:id="@+id/casella40"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="41"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -646,7 +605,6 @@
                     android:id="@+id/casella41"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="42"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -660,7 +618,6 @@
                     android:id="@+id/casella42"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="43"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -674,7 +631,6 @@
                     android:id="@+id/casella43"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="44"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -688,7 +644,6 @@
                     android:id="@+id/casella44"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="45"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -702,7 +657,6 @@
                     android:id="@+id/casella45"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="46"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -716,7 +670,6 @@
                     android:id="@+id/casella46"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="47"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -730,7 +683,6 @@
                     android:id="@+id/casella47"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="48"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -744,7 +696,6 @@
                     android:id="@+id/casella48"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="49"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -758,7 +709,6 @@
                     android:id="@+id/casella49"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="50"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -782,7 +732,6 @@
                     android:id="@+id/casella50"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="51"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -796,7 +745,6 @@
                     android:id="@+id/casella51"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="52"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -810,7 +758,6 @@
                     android:id="@+id/casella52"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="53"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -824,7 +771,6 @@
                     android:id="@+id/casella53"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="54"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -838,7 +784,6 @@
                     android:id="@+id/casella54"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="55"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -852,7 +797,6 @@
                     android:id="@+id/casella55"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="56"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -866,7 +810,6 @@
                     android:id="@+id/casella56"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="57"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -880,7 +823,6 @@
                     android:id="@+id/casella57"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="58"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -894,7 +836,6 @@
                     android:id="@+id/casella58"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="59"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -908,7 +849,6 @@
                     android:id="@+id/casella59"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="60"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -932,7 +872,6 @@
                     android:id="@+id/casella60"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="61"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -946,7 +885,6 @@
                     android:id="@+id/casella61"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="62"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -960,7 +898,6 @@
                     android:id="@+id/casella62"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="63"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -974,7 +911,6 @@
                     android:id="@+id/casella63"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="64"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -988,7 +924,6 @@
                     android:id="@+id/casella64"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="65"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1002,7 +937,6 @@
                     android:id="@+id/casella65"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="66"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1016,7 +950,6 @@
                     android:id="@+id/casella66"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="67"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1030,7 +963,6 @@
                     android:id="@+id/casella67"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="68"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1044,7 +976,6 @@
                     android:id="@+id/casella68"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="69"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1058,7 +989,6 @@
                     android:id="@+id/casella69"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="70"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1082,7 +1012,6 @@
                     android:id="@+id/casella70"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="71"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1096,7 +1025,6 @@
                     android:id="@+id/casella71"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="72"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1110,7 +1038,6 @@
                     android:id="@+id/casella72"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="73"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1124,7 +1051,6 @@
                     android:id="@+id/casella73"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="74"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1138,7 +1064,6 @@
                     android:id="@+id/casella74"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="75"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1152,7 +1077,6 @@
                     android:id="@+id/casella75"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="76"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1166,7 +1090,6 @@
                     android:id="@+id/casella76"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="77"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1180,7 +1103,6 @@
                     android:id="@+id/casella77"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="78"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1194,7 +1116,6 @@
                     android:id="@+id/casella78"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="79"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1208,7 +1129,6 @@
                     android:id="@+id/casella79"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="80"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1232,7 +1152,6 @@
                     android:id="@+id/casella80"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="81"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1246,7 +1165,6 @@
                     android:id="@+id/casella81"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="82"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1260,7 +1178,6 @@
                     android:id="@+id/casella82"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="83"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1274,7 +1191,6 @@
                     android:id="@+id/casella83"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="84"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1288,7 +1204,6 @@
                     android:id="@+id/casella84"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="85"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1302,7 +1217,6 @@
                     android:id="@+id/casella85"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="86"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1316,7 +1230,6 @@
                     android:id="@+id/casella86"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="87"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1330,7 +1243,6 @@
                     android:id="@+id/casella87"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="88"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1344,7 +1256,6 @@
                     android:id="@+id/casella88"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="89"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1358,7 +1269,6 @@
                     android:id="@+id/casella89"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="90"
                     android:background="@drawable/casella"/>
 
             </RelativeLayout>
@@ -1414,7 +1324,8 @@
                         android:background="?android:selectableItemBackground"
                         android:scaleType="fitXY"
                         android:padding="5dp"
-                        app:srcCompat="@drawable/annulla" />
+                        app:srcCompat="@drawable/annulla"
+                        android:contentDescription="@string/annulla" />
 
                 </RelativeLayout>
 
@@ -1548,7 +1459,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:clickable="false"
-                        android:text="1"
+                        android:text="@string/giro"
                         android:background="@drawable/casella"/>
 
                 </RelativeLayout>
@@ -1574,7 +1485,8 @@
                             android:background="?android:selectableItemBackground"
                             android:padding="5dp"
                             android:scaleType="fitCenter"
-                            app:srcCompat="@drawable/meno" />
+                            app:srcCompat="@drawable/meno"
+                            android:contentDescription="@string/meno" />
 
                     </RelativeLayout>
 
@@ -1590,7 +1502,8 @@
                             android:background="?android:selectableItemBackground"
                             android:padding="5dp"
                             android:scaleType="fitCenter"
-                            app:srcCompat="@drawable/piu" />
+                            app:srcCompat="@drawable/piu"
+                            android:contentDescription="@string/piu" />
 
                     </RelativeLayout>
 
@@ -1623,7 +1536,8 @@
                         android:layout_height="wrap_content"
                         android:scaleType="fitCenter"
                         android:background="?android:selectableItemBackground"
-                        app:srcCompat="@drawable/meno" />
+                        app:srcCompat="@drawable/meno"
+                        android:contentDescription="@string/set" />
 
                 </RelativeLayout>
 

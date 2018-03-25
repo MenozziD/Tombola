@@ -151,8 +151,10 @@ public class ActivityMain  extends AppCompatActivity {
         caselle.add((Button) findViewById(R.id.casella87));
         caselle.add((Button) findViewById(R.id.casella88));
         caselle.add((Button) findViewById(R.id.casella89));
-        for (int i =0;i<caselle.size();i++)
+        for (int i =0;i<caselle.size();i++){
             caselle.get(i).setOnClickListener(ascoltatore);
+            caselle.get(i).setText(String.format("%s",i+1));
+        }
         cinquina.setOnClickListener(ascoltatore);
         decima.setOnClickListener(ascoltatore);
         tombola.setOnClickListener(ascoltatore);
@@ -170,7 +172,7 @@ public class ActivityMain  extends AppCompatActivity {
         setButton(ultimo, 18, 18, 18, 18, Color.GREEN, Color.RED, Color.WHITE);
         setButton(penultimo, 18, 18, 18, 18, Color.YELLOW, Color.RED, Color.WHITE);
         setButton(terzultimo, 18, 18, 18, 18, Color.GRAY, Color.RED, Color.WHITE);
-        setButton(giro, 18, 18, 18, 18, Color.BLUE, Color.RED, Color.WHITE);
+        setButton(giro, 9, 9, 9, 9, Color.BLUE, Color.RED, Color.WHITE);
         for (int i = 0; i< caselle.size(); i++)
             setButton(caselle.get(i), 18, 18, 18, 18, Color.BLUE, Color.RED, Color.WHITE);
     }
