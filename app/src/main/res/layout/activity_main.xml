@@ -8,2371 +8,1364 @@
     android:weightSum="1"
     android:baselineAligned="false">
 
-
-
     <TableLayout
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="0.7"
-            tools:ignore="NestedWeights"
-            android:weightSum="9">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dip"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:weightSum="1"
-                android:baselineAligned="false">
-
-                <RelativeLayout
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1"
-                    android:layout_height="match_parent">
-
-                    <Button
-                        android:id="@+id/casella0"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="1"
-                        android:background="@drawable/casella_left_top"
-                        />
-
-                </RelativeLayout>
-
-                <!--<FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella0"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella0"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo0"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="1"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button"/>
-
-                </FrameLayout>-->
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella1"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="2"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella2"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="3"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella3"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="4"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella4"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="5"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella5"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="6"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella6"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="7"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella7"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="8"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella8"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="9"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella9"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="10"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dip"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:weightSum="1"
-                android:baselineAligned="false">
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella10"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="11"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella11"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella11"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo11"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="12"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella12"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="12"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo12"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="13"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella13"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella13"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo13"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="14"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella14"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella14"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo14"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="15"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella15"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella15"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo15"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="16"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella16"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella16"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo16"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="17"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella17"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella17"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo17"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="18"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella18"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella18"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo18"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="19"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella19"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella19"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo19"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="20"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dip"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:weightSum="1"
-                android:baselineAligned="false">
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella20"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella20"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo20"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="21"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella21"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella21"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo21"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="22"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella22"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella22"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo22"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="23"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella23"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella23"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo23"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="24"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella24"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella24"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo24"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="25"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella25"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella25"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo25"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="26"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella26"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella26"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo26"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="27"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella27"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella27"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo27"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="28"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella28"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella28"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo28"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="29"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella29"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella29"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo29"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="30"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dip"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:weightSum="1"
-                android:baselineAligned="false">
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella30"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella30"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo30"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="31"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella31"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella31"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo31"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="32"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella32"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella32"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo32"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="33"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella33"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella33"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo33"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="34"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella34"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella34"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo34"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="35"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella35"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella35"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo35"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="36"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella36"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella36"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo36"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="37"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella37"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella37"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo37"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="38"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella38"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella38"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo38"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="39"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella39"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella39"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo39"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="40"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dip"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:weightSum="1"
-                android:baselineAligned="false">
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella40"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella40"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo40"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="41"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella41"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella41"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo41"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="42"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella42"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella42"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo42"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="43"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella43"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella43"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo43"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="44"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella44"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella44"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo44"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="45"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella45"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella45"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo45"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="46"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella46"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella46"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo46"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="47"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella47"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella47"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo47"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="48"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella48"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella48"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo48"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="49"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella49"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella49"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo49"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="50"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dip"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:weightSum="1"
-                android:baselineAligned="false">
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella50"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella50"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo50"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="51"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella51"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella51"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo51"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="52"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella52"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella52"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo52"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="53"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella53"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella53"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo53"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="54"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella54"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella54"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo54"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="55"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella55"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella55"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo55"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="56"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella56"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella56"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo56"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="57"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella57"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella57"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo57"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="58"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella58"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella58"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo58"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="59"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella59"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella59"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo59"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="60"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dip"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:weightSum="1"
-                android:baselineAligned="false">
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella60"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella60"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo60"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="61"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella61"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella61"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo61"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="62"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella62"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella62"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo62"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="63"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella63"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella63"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo63"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="64"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella64"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella64"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo64"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="65"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella65"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella65"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo65"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="66"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella66"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella66"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo66"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="67"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella67"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella67"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo67"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="68"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella68"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella68"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo68"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="69"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella69"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella69"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo69"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="70"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dip"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:weightSum="1"
-                android:baselineAligned="false">
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella70"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella70"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo70"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="71"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella71"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella71"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo71"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="72"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella72"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella72"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo72"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="73"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella73"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella73"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo73"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="74"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella74"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella74"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo74"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="75"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella75"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella75"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo75"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="76"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella76"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella76"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo76"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="77"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella77"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella77"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo77"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="78"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella78"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella78"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo78"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="79"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella79"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella79"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo79"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="80"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dip"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:weightSum="1"
-                android:baselineAligned="false">
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella80"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella80"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo80"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="81"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella81"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella81"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo81"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="82"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella82"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella82"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo82"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="83"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella83"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella83"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo83"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="84"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella84"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella84"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo84"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="85"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella85"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella85"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo85"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="86"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella86"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella86"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo86"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="87"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella87"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella87"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo87"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="88"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella88"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella88"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo88"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="89"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-                <FrameLayout android:layout_height="match_parent"
-                    android:layout_width="0dip"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/casella89"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="?android:selectableItemBackground"
-                        android:contentDescription="@string/casella89"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/testo89"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:clickable="false"
-                        android:text="90"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
-
-                </FrameLayout>
-
-            </LinearLayout>
-
-        </TableLayout>
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        tools:ignore="NestedWeights"
+        android:weightSum="9">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="13"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="17"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="21"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="22"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="26"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="27"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="28"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="29"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="31"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="32"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="33"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="34"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="35"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="36"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="37"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="38"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="39"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="40"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="41"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="42"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella42"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="43"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="44"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="45"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="46"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella46"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="47"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="48"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella48"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="49"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella49"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="51"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella51"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="52"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella52"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="53"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella53"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="54"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella54"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="55"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella55"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="56"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella56"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="57"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella57"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="58"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella58"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="59"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella59"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="60"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella60"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="61"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella61"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="62"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella62"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="63"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella63"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="64"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella64"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="65"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella65"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="66"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella66"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="67"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella67"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="68"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella68"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="69"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella69"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella70"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="71"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella71"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="72"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella72"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="73"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella73"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="74"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella74"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="75"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella75"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="76"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella76"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="77"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella77"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="78"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella78"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="79"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella79"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="80"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella80"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="81"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella81"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="82"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella82"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="83"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella83"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="84"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella84"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="85"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella85"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="86"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella86"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="87"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella87"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="88"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella88"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="89"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_weight="0.1"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/casella89"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="90"
+                    android:background="@drawable/casella"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </TableLayout>
 
     <LinearLayout
         android:layout_height="match_parent"
@@ -2396,28 +1389,19 @@
                 android:layout_weight="0.6"
                 android:weightSum="1">
 
-                <FrameLayout android:layout_height="0dip"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_weight="0.7">
+                    android:layout_weight="0.7"
+                    android:layout_height="0dip">
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/casella_ultimo_numero"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="?android:selectableItemBackground"
-                        android:padding="20dp"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/ultimo_numero"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:clickable="false"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button"/>
+                        android:background="@drawable/casella"/>
 
-                </FrameLayout>
+                </RelativeLayout>
 
                 <RelativeLayout android:layout_height="0dip"
                     android:layout_width="match_parent"
@@ -2443,53 +1427,33 @@
                 android:layout_weight="0.4"
                 android:weightSum="1">
 
-                <FrameLayout android:layout_height="0dip"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_weight="0.5">
+                    android:layout_weight="0.5"
+                    android:layout_height="0dip">
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/casella_penultimo_numero"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="?android:selectableItemBackground"
-                        android:padding="20dp"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella"
-                        android:contentDescription="penultimo" />
-
-                    <TextView
-                        android:id="@+id/penultimo_numero"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:clickable="false"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button"/>
+                        android:background="@drawable/casella"/>
 
-                </FrameLayout>
+                </RelativeLayout>
 
-                <FrameLayout android:layout_height="0dip"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_weight="0.5">
+                    android:layout_weight="0.5"
+                    android:layout_height="0dip">
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/casella_terzultimo_numero"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="?android:selectableItemBackground"
-                        android:padding="20dp"
-                        android:scaleType="fitXY"
-                        app:srcCompat="@drawable/casella"
-                        android:contentDescription="terzultimo" />
-
-                    <TextView
-                        android:id="@+id/terzultimo_numero"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:clickable="false"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button"/>
+                        android:background="@drawable/casella"/>
 
-                </FrameLayout>
+                </RelativeLayout>
 
             </LinearLayout>
 
@@ -2574,29 +1538,20 @@
                 tools:ignore="NestedWeights"
                 android:weightSum="1">
 
-                <FrameLayout
-                    android:layout_height="0dip"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_weight="0.7">
+                    android:layout_weight="0.7"
+                    android:layout_height="0dip">
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/casella_giro"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="?android:selectableItemBackground"
-                        android:scaleType="centerInside"
-                        app:srcCompat="@drawable/casella" />
-
-                    <TextView
-                        android:id="@+id/giro"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|center_horizontal"
                         android:clickable="false"
                         android:text="1"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+                        android:background="@drawable/casella"/>
 
-                </FrameLayout>
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -2657,33 +1612,20 @@
 
                 </FrameLayout>
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:orientation="horizontal"
                     android:layout_height="0dip"
-                    android:layout_weight="0.3"
-                    tools:ignore="NestedWeights"
-                    android:weightSum="1"
-                    android:baselineAligned="false">
+                    android:layout_weight="0.3">
 
-                    <RelativeLayout
-                        android:layout_height="match_parent"
-                        android:layout_width="0dip"
-                        android:layout_weight="1">
+                    <ImageButton
+                        android:id="@+id/set"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:background="?android:selectableItemBackground"
+                        app:srcCompat="@drawable/meno" />
 
-                        <ImageButton
-                            android:id="@+id/set"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:scaleType="fitCenter"
-                            android:background="?android:selectableItemBackground"
-                            app:srcCompat="@drawable/meno" />
-
-                    </RelativeLayout>
-
-
-                </LinearLayout>
-
+                </RelativeLayout>
 
             </LinearLayout>
 

@@ -2,7 +2,10 @@ package com.example.admin.tombola;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.view.View;
+import android.widget.Button;
+
 import java.util.Objects;
 
 public class AscoltatoreActivityMain implements View.OnClickListener {
@@ -27,24 +30,6 @@ public class AscoltatoreActivityMain implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         Bitmap b;
-        if (view.getContentDescription() != null && view.getContentDescription().toString().length() >= 7) {
-            switch (view.getContentDescription().toString().substring(0, 7)) {
-                case "casella":
-                    b = BitmapFactory.decodeResource(activity.getResources(),R.drawable.casella_tappata);
-                    int numero = Integer.parseInt(view.getContentDescription().toString().substring(7));
-                    activity.getCaselle().get(numero).setImageBitmap(b);
-                    back = terzultimo_numero;
-                    terzultimo_numero = penultimo_numero;
-                    penultimo_numero = ultimo_numero;
-                    ultimo_numero = numero + 1;
-                    if (terzultimo_numero != 0)
-                        activity.getTerzultimo().setText(Integer.toString(terzultimo_numero));
-                    if (penultimo_numero != 0)
-                        activity.getPenultimo().setText(Integer.toString(penultimo_numero));
-                    activity.getUltimo().setText(Integer.toString(ultimo_numero));
-                    break;
-            }
-        }
         switch (view.getId()) {
             case R.id.cinquina:
                 if (Objects.equals(activity.getCinquina().getContentDescription().toString(), "verde")){
@@ -88,23 +73,43 @@ public class AscoltatoreActivityMain implements View.OnClickListener {
                 activity.getGiro().setText(Integer.toString(numeroGiro));
                 break;
             case R.id.annulla:
-                b = BitmapFactory.decodeResource(activity.getResources(),R.drawable.casella);
-                activity.getCaselle().get(ultimo_numero-1).setImageBitmap(b);
-                ultimo_numero = penultimo_numero;
-                penultimo_numero = terzultimo_numero;
-                terzultimo_numero = back;
-                if (terzultimo_numero != 0)
-                    activity.getTerzultimo().setText(Integer.toString(terzultimo_numero));
-                else
-                    activity.getTerzultimo().setText("");
-                if (penultimo_numero != 0)
-                    activity.getPenultimo().setText(Integer.toString(penultimo_numero));
-                else
-                    activity.getPenultimo().setText("");
-                if (ultimo_numero != 0)
+                if (ultimo_numero != 0) {
+                    activity.getCaselle().get(ultimo_numero-1).setClickable(true);
+                    activity.setButton(activity.getCaselle().get(ultimo_numero - 1), 18, 18, 18, 18, Color.BLUE, Color.RED, Color.WHITE);
+                    ultimo_numero = penultimo_numero;
+                    penultimo_numero = terzultimo_numero;
+                    terzultimo_numero = back;
+                    if (terzultimo_numero != 0)
+                        activity.getTerzultimo().setText(Integer.toString(terzultimo_numero));
+                    else
+                        activity.getTerzultimo().setText("");
+                    if (penultimo_numero != 0)
+                        activity.getPenultimo().setText(Integer.toString(penultimo_numero));
+                    else
+                        activity.getPenultimo().setText("");
+                    if (ultimo_numero != 0)
+                        activity.getUltimo().setText(Integer.toString(ultimo_numero));
+                    else
+                        activity.getUltimo().setText("");
+                }
+                break;
+
+            default:
+                Button casella = (Button) view;
+                if (casella.getText()!= null) {
+                    int numero = Integer.parseInt(casella.getText().toString());
+                    activity.getCaselle().get(numero-1).setClickable(false);
+                    activity.setButton(activity.getCaselle().get(numero-1),18, 18, 18, 18, Color.BLUE, Color.WHITE, Color.BLACK);
+                    back = terzultimo_numero;
+                    terzultimo_numero = penultimo_numero;
+                    penultimo_numero = ultimo_numero;
+                    ultimo_numero = numero;
+                    if (terzultimo_numero != 0)
+                        activity.getTerzultimo().setText(Integer.toString(terzultimo_numero));
+                    if (penultimo_numero != 0)
+                        activity.getPenultimo().setText(Integer.toString(penultimo_numero));
                     activity.getUltimo().setText(Integer.toString(ultimo_numero));
-                else
-                    activity.getUltimo().setText("");
+                }
                 break;
         }
     }
