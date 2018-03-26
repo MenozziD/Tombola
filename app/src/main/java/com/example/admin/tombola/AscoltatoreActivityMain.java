@@ -1,5 +1,6 @@
 package com.example.admin.tombola;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -72,6 +73,11 @@ public class AscoltatoreActivityMain implements View.OnClickListener {
                 numeroGiro = numeroGiro - 1;
                 activity.getGiro().setText(String.format("%s",numeroGiro));
                 break;
+            case R.id.set:
+                Intent setPage = new Intent(activity,ActivitySetting.class);
+                activity.startActivity(setPage);
+                break;
+
             case R.id.annulla:
                 if (ultimo_numero != 0) {
                     activity.getCaselle().get(ultimo_numero-1).setClickable(true);
@@ -79,6 +85,7 @@ public class AscoltatoreActivityMain implements View.OnClickListener {
                     ultimo_numero = penultimo_numero;
                     penultimo_numero = terzultimo_numero;
                     terzultimo_numero = back;
+                    back=0;
                     if (terzultimo_numero != 0)
                         activity.getTerzultimo().setText(String.format("%s",terzultimo_numero));
                     else

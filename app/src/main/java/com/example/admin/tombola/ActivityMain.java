@@ -56,6 +56,7 @@ public class ActivityMain  extends AppCompatActivity {
         ImageButton piu = (ImageButton) findViewById(R.id.piu);
         ImageButton meno = (ImageButton) findViewById(R.id.meno);
         ImageButton annulla = (ImageButton) findViewById(R.id.annulla);
+        ImageButton impostazioni = (ImageButton) findViewById(R.id.set);
         cinquina =(ImageButton)findViewById(R.id.cinquina);
         decima =(ImageButton)findViewById(R.id.decima);
         tombola =(ImageButton)findViewById(R.id.tombola);
@@ -161,6 +162,7 @@ public class ActivityMain  extends AppCompatActivity {
         piu.setOnClickListener(ascoltatore);
         meno.setOnClickListener(ascoltatore);
         annulla.setOnClickListener(ascoltatore);
+        impostazioni.setOnClickListener(ascoltatore);
 }
 
     @Override
