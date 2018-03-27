@@ -9,6 +9,7 @@
     android:baselineAligned="false">
 
     <TableLayout
+        android:id="@+id/LTabellone"
         android:layout_width="0dip"
         android:layout_height="match_parent"
         android:layout_weight="0.7"
@@ -1278,6 +1279,7 @@
     </TableLayout>
 
     <LinearLayout
+        android:id="@+id/LComandi"
         android:layout_width="0dip"
         android:layout_height="match_parent"
         android:layout_weight="0.3"
@@ -1523,7 +1525,7 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dip"
-                    android:layout_weight="0.7">
+                    android:layout_weight="0.4">
 
                 </FrameLayout>
 
@@ -1543,33 +1545,55 @@
 
                 </RelativeLayout>
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="0.3">
+
+                    <ImageButton
+                        android:id="@+id/reset"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:selectableItemBackground"
+                        android:contentDescription="@string/set"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/reset" />
+
+                </RelativeLayout>
+
             </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
-
-    <FrameLayout
+    <LinearLayout
+        android:id="@+id/logo"
         android:layout_width="0dip"
         android:layout_height="match_parent"
-        android:layout_weight="0">
+        android:layout_weight="0"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        tools:ignore="NestedWeights">
 
-        <ImageButton
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/sfondo_nero"
-            android:scaleType="fitXY"
-            />
+            android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginBottom="100dp"
-            android:layout_gravity="bottom"
-            android:textColor="@color/white"
-            android:textAlignment="center"
-            android:textSize="75dp"
-            android:text="SI RIPRENDE TRA: 20 SECONDI"/>
-    </FrameLayout>
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/sfondo_nero" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="100dp"
+                android:text="SI RIPRENDE TRA: 20 SECONDI"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="75dp" />
+        </FrameLayout>
+    </LinearLayout>
 </LinearLayout>

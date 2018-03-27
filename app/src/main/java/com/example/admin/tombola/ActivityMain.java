@@ -6,8 +6,12 @@ import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import java.util.ArrayList;
 
@@ -21,6 +25,12 @@ public class ActivityMain  extends AppCompatActivity {
     private Button penultimo;
     private Button terzultimo;
     private Button giro;
+    private TableLayout layoutTabellone;
+    private LinearLayout layoutComandi;
+    private LinearLayout layoutLogo;
+
+    public int risultatoConferma;
+
     private boolean start = false;
 
     public TextView getUltimo() { return ultimo;}
@@ -45,12 +55,25 @@ public class ActivityMain  extends AppCompatActivity {
         return tombola;
     }
 
+    public TableLayout getLayoutTabellone() {
+        return layoutTabellone;
+    }
+    public LinearLayout getLayoutComandi() {
+        return layoutComandi;
+    }
+    public LinearLayout getLayoutLogo() {
+        return layoutLogo;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         start = true;
+        layoutTabellone=(TableLayout) findViewById(R.id.LTabellone);
+        layoutComandi=(LinearLayout) findViewById(R.id.LComandi);
+        layoutLogo=(LinearLayout) findViewById(R.id.logo);
         ultimo = (Button) findViewById(R.id.casella_ultimo_numero);
         penultimo = (Button) findViewById(R.id.casella_penultimo_numero);
         terzultimo = (Button) findViewById(R.id.casella_terzultimo_numero);
@@ -59,6 +82,7 @@ public class ActivityMain  extends AppCompatActivity {
         ImageButton meno = (ImageButton) findViewById(R.id.meno);
         ImageButton annulla = (ImageButton) findViewById(R.id.annulla);
         ImageButton impostazioni = (ImageButton) findViewById(R.id.set);
+        ImageButton reset = (ImageButton) findViewById(R.id.reset);
         cinquina =(ImageButton)findViewById(R.id.cinquina);
         decima =(ImageButton)findViewById(R.id.decima);
         tombola =(ImageButton)findViewById(R.id.tombola);
@@ -165,6 +189,7 @@ public class ActivityMain  extends AppCompatActivity {
         meno.setOnClickListener(ascoltatore);
         annulla.setOnClickListener(ascoltatore);
         impostazioni.setOnClickListener(ascoltatore);
+        reset.setOnClickListener(ascoltatore);
 }
 
     @Override
@@ -182,6 +207,46 @@ public class ActivityMain  extends AppCompatActivity {
             for (int i = 0; i < caselle.size(); i++)
                 setButton(caselle.get(i), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
         }
+    }
+
+    public void nascondiLayout()
+    {
+
+        LinearLayout.LayoutParams par3 = (LinearLayout.LayoutParams) layoutLogo.getLayoutParams();
+        par3.width=0;
+        par3.weight=1;
+        par3.height=LinearLayout.LayoutParams.MATCH_PARENT;
+        layoutLogo.setLayoutParams(par3);
+
+        //layoutLogo.setVisibility(View.VISIBLE);
+
+
+        TableLayout.LayoutParams par1 = (TableLayout.LayoutParams) layoutTabellone.getLayoutParams();
+        par1.width=0;
+        par1.weight=0;
+        par1.height=TableLayout.LayoutParams.MATCH_PARENT;
+        layoutTabellone.setLayoutParams(par1);
+
+        //layoutTabellone.setVisibility(View.INVISIBLE);
+
+        LinearLayout.LayoutParams par2 = (LinearLayout.LayoutParams) layoutComandi.getLayoutParams();
+        par2.width=0;
+        par2.weight=0;
+        par2.height=LinearLayout.LayoutParams.MATCH_PARENT;
+        layoutComandi.setLayoutParams(par2);
+
+        //layoutComandi.setVisibility(View.INVISIBLE);
+    }
+
+    public void resetGrafica()
+    {
+
+        setButton(ultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+        setButton(penultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+        setButton(terzultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+        for (int i = 0; i < caselle.size(); i++)
+            setButton(caselle.get(i), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+
     }
 
     public void setButton(Button casella, int l, int t, int r, int b, int colore_bordo, int colore_sfondo, int colore_testo){
