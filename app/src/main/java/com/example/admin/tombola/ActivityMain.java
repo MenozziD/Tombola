@@ -21,6 +21,7 @@ public class ActivityMain  extends AppCompatActivity {
     private Button penultimo;
     private Button terzultimo;
     private Button giro;
+    private boolean start = false;
 
     public TextView getUltimo() { return ultimo;}
 
@@ -49,6 +50,7 @@ public class ActivityMain  extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        start = true;
         ultimo = (Button) findViewById(R.id.casella_ultimo_numero);
         penultimo = (Button) findViewById(R.id.casella_penultimo_numero);
         terzultimo = (Button) findViewById(R.id.casella_terzultimo_numero);
@@ -171,12 +173,15 @@ public class ActivityMain  extends AppCompatActivity {
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
-        setButton(ultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-        setButton(penultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-        setButton(terzultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-        setButton(giro, 9, 9, 9, 9, Color.BLACK, Color.WHITE, Color.BLACK);
-        for (int i = 0; i< caselle.size(); i++)
-            setButton(caselle.get(i), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+        if (start) {
+            start=false;
+            setButton(ultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+            setButton(penultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+            setButton(terzultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+            setButton(giro, 9, 9, 9, 9, Color.BLACK, Color.WHITE, Color.BLACK);
+            for (int i = 0; i < caselle.size(); i++)
+                setButton(caselle.get(i), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+        }
     }
 
     public void setButton(Button casella, int l, int t, int r, int b, int colore_bordo, int colore_sfondo, int colore_testo){
