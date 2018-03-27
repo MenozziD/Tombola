@@ -171,12 +171,12 @@ public class ActivityMain  extends AppCompatActivity {
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
-        setButton(ultimo, 18, 18, 18, 18, Color.GREEN, Color.RED, Color.WHITE);
-        setButton(penultimo, 18, 18, 18, 18, Color.YELLOW, Color.RED, Color.WHITE);
-        setButton(terzultimo, 18, 18, 18, 18, Color.GRAY, Color.RED, Color.WHITE);
-        setButton(giro, 9, 9, 9, 9, Color.BLUE, Color.RED, Color.WHITE);
+        setButton(ultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+        setButton(penultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+        setButton(terzultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+        setButton(giro, 9, 9, 9, 9, Color.BLACK, Color.WHITE, Color.BLACK);
         for (int i = 0; i< caselle.size(); i++)
-            setButton(caselle.get(i), 18, 18, 18, 18, Color.BLUE, Color.RED, Color.WHITE);
+            setButton(caselle.get(i), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
     }
 
     public void setButton(Button casella, int l, int t, int r, int b, int colore_bordo, int colore_sfondo, int colore_testo){

@@ -81,7 +81,7 @@ public class AscoltatoreActivityMain implements View.OnClickListener {
             case R.id.annulla:
                 if (ultimo_numero != 0) {
                     activity.getCaselle().get(ultimo_numero-1).setClickable(true);
-                    activity.setButton(activity.getCaselle().get(ultimo_numero - 1), 18, 18, 18, 18, Color.BLUE, Color.RED, Color.WHITE);
+                    activity.setButton(activity.getCaselle().get(ultimo_numero - 1), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
                     ultimo_numero = penultimo_numero;
                     penultimo_numero = terzultimo_numero;
                     terzultimo_numero = back;
@@ -106,7 +106,7 @@ public class AscoltatoreActivityMain implements View.OnClickListener {
                 if (casella.getText()!= null) {
                     int numero = Integer.parseInt(casella.getText().toString());
                     activity.getCaselle().get(numero-1).setClickable(false);
-                    activity.setButton(activity.getCaselle().get(numero-1),18, 18, 18, 18, Color.BLUE, Color.WHITE, Color.BLACK);
+                    activity.setButton(activity.getCaselle().get(numero-1),18, 18, 18, 18, Color.BLACK, Color.BLACK, Color.WHITE);
                     back = terzultimo_numero;
                     terzultimo_numero = penultimo_numero;
                     penultimo_numero = ultimo_numero;

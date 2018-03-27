@@ -23,7 +23,7 @@
             tools:ignore="NestedWeights">
 
             <Button
-                android:id="@+id/b_casella_libera"
+                android:id="@+id/casella_libera"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
@@ -32,7 +32,7 @@
                 tools:ignore="NestedWeights" />
 
             <Button
-                android:id="@+id/b_casella_tap"
+                android:id="@+id/casella_tap"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
@@ -40,7 +40,7 @@
                 android:text="CASELLA ESTRATTA" />
 
             <Button
-                android:id="@+id/b_bordo"
+                android:id="@+id/bordo"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
@@ -48,7 +48,7 @@
                 android:text="BORDO" />
 
             <Button
-                android:id="@+id/b_tempo"
+                android:id="@+id/pausa"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
@@ -65,18 +65,20 @@
             android:weightSum="2">
 
             <Button
+                android:id="@+id/sfondo"
                 android:layout_width="0dip"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/casella"
-                android:text="SFONDO"/>
+                android:text="SFONDO" />
 
             <Button
+                android:id="@+id/testo"
                 android:layout_width="0dip"
                 android:layout_height="match_parent"
-                android:background="@drawable/casella"
                 android:layout_weight="1"
-                android:text="TESTO"/>
+                android:background="@drawable/casella"
+                android:text="TESTO" />
         </LinearLayout>
 
     </LinearLayout>
@@ -93,9 +95,11 @@
             android:layout_height="match_parent"
             android:textAlignment="center"
             android:layout_weight="1"
+            android:background="@color/crimson"
             android:text="R"/>
 
         <SeekBar
+            android:id="@+id/rosso"
             android:layout_width="0dip"
             android:layout_height="match_parent"
             android:layout_weight="7"
@@ -103,11 +107,12 @@
             android:progress="100" />
 
         <TextView
+            android:id="@+id/value_rosso"
             android:layout_width="0dip"
             android:layout_height="match_parent"
-            android:textAlignment="center"
             android:layout_weight="2"
-            android:text="100"/>
+            android:text="100"
+            android:textAlignment="center" />
     </LinearLayout>
 
     <LinearLayout
@@ -122,9 +127,11 @@
             android:layout_height="match_parent"
             android:textAlignment="center"
             android:layout_weight="1"
+            android:background="@color/greenyellow"
             android:text="G"/>
 
         <SeekBar
+            android:id="@+id/verde"
             android:layout_width="0dip"
             android:layout_height="match_parent"
             android:layout_weight="7"
@@ -132,11 +139,12 @@
             android:progress="100" />
 
         <TextView
+            android:id="@+id/value_verde"
             android:layout_width="0dip"
             android:layout_height="match_parent"
-            android:textAlignment="center"
             android:layout_weight="2"
-            android:text="100"/>
+            android:text="100"
+            android:textAlignment="center" />
     </LinearLayout>
 
     <LinearLayout
@@ -151,9 +159,11 @@
             android:layout_height="match_parent"
             android:textAlignment="center"
             android:layout_weight="1"
+            android:background="@color/mediumblue"
             android:text="B"/>
 
         <SeekBar
+            android:id="@+id/blu"
             android:layout_width="0dip"
             android:layout_height="match_parent"
             android:layout_weight="7"
@@ -161,22 +171,119 @@
             android:progress="100" />
 
         <TextView
+            android:id="@+id/value_blu"
             android:layout_width="0dip"
             android:layout_height="match_parent"
-            android:textAlignment="center"
             android:layout_weight="2"
-            android:text="100"/>
+            android:text="100"
+            android:textAlignment="center" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dip"
-        android:layout_weight="2"
-        android:orientation="horizontal"></LinearLayout>
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        android:weightSum="10">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"></LinearLayout>
+        <Button
+            android:id="@+id/run_color"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:clickable="false"
+            android:background="@drawable/casella"
+            tools:ignore="NestedWeights" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="8"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.7"
+                android:weightSum="7">
+
+                <Button
+                    android:id="@+id/orange"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/dark_orange" />
+
+                <Button
+                    android:id="@+id/azure"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/skyblue" />
+
+                <Button
+                    android:id="@+id/green"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/forestgreen" />
+
+                <Button
+                    android:id="@+id/gray"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/lightgray" />
+
+                <Button
+                    android:id="@+id/red"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/orangered" />
+
+                <Button
+                    android:id="@+id/yellow"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/gold" />
+
+                <Button
+                    android:id="@+id/my_color"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/casella" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.3"
+                android:weightSum="7">
+
+                <Button
+                    android:id="@+id/imposta"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:background="@drawable/casella"
+                    android:text="IMPOSTA" />
+
+                <Button
+                    android:id="@+id/salva"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/casella"
+                    android:text="SALVA COLORE" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
