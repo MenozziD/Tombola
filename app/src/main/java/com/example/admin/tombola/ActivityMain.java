@@ -1,14 +1,15 @@
 package com.example.admin.tombola;
 
+import android.app.AlertDialog;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
@@ -28,10 +29,10 @@ public class ActivityMain  extends AppCompatActivity {
     private TableLayout layoutTabellone;
     private LinearLayout layoutComandi;
     private LinearLayout layoutLogo;
-
-    public int risultatoConferma;
-
     private boolean start = false;
+    private AlertDialog dialog;
+
+    public AlertDialog getDialog() { return dialog; }
 
     public TextView getUltimo() { return ultimo;}
 
@@ -53,16 +54,6 @@ public class ActivityMain  extends AppCompatActivity {
 
     public ImageButton getTombola() {
         return tombola;
-    }
-
-    public TableLayout getLayoutTabellone() {
-        return layoutTabellone;
-    }
-    public LinearLayout getLayoutComandi() {
-        return layoutComandi;
-    }
-    public LinearLayout getLayoutLogo() {
-        return layoutLogo;
     }
 
     @Override
@@ -190,7 +181,14 @@ public class ActivityMain  extends AppCompatActivity {
         annulla.setOnClickListener(ascoltatore);
         impostazioni.setOnClickListener(ascoltatore);
         reset.setOnClickListener(ascoltatore);
-}
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle("Reset Tabellone");
+        builder.setMessage("Sei sicuro di voler resettare il tabellone?");
+        builder.setPositiveButton("Si", ascoltatore);
+        builder.setNegativeButton(android.R.string.cancel, ascoltatore);
+        dialog = builder.create();
+    }
 
     @Override
     protected void onResume() {super.onResume();}
@@ -200,53 +198,37 @@ public class ActivityMain  extends AppCompatActivity {
         super.onWindowFocusChanged(hasFocus);
         if (start) {
             start=false;
-            setButton(ultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-            setButton(penultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-            setButton(terzultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
             setButton(giro, 9, 9, 9, 9, Color.BLACK, Color.WHITE, Color.BLACK);
-            for (int i = 0; i < caselle.size(); i++)
-                setButton(caselle.get(i), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+            resetGrafica();
         }
     }
 
     public void nascondiLayout()
     {
-
-        LinearLayout.LayoutParams par3 = (LinearLayout.LayoutParams) layoutLogo.getLayoutParams();
-        par3.width=0;
-        par3.weight=1;
-        par3.height=LinearLayout.LayoutParams.MATCH_PARENT;
-        layoutLogo.setLayoutParams(par3);
-
-        //layoutLogo.setVisibility(View.VISIBLE);
-
-
-        TableLayout.LayoutParams par1 = (TableLayout.LayoutParams) layoutTabellone.getLayoutParams();
-        par1.width=0;
-        par1.weight=0;
-        par1.height=TableLayout.LayoutParams.MATCH_PARENT;
-        layoutTabellone.setLayoutParams(par1);
-
-        //layoutTabellone.setVisibility(View.INVISIBLE);
-
-        LinearLayout.LayoutParams par2 = (LinearLayout.LayoutParams) layoutComandi.getLayoutParams();
-        par2.width=0;
-        par2.weight=0;
-        par2.height=LinearLayout.LayoutParams.MATCH_PARENT;
-        layoutComandi.setLayoutParams(par2);
-
-        //layoutComandi.setVisibility(View.INVISIBLE);
+        layoutComandi.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 0));
+        layoutTabellone.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 0));
+        layoutLogo.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 1));
     }
 
     public void resetGrafica()
     {
-
         setButton(ultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
         setButton(penultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
         setButton(terzultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+        ultimo.setText("");
+        penultimo.setText("");
+        terzultimo.setText("");
+        Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.cinquina_verde);
+        cinquina.setContentDescription("verde");
+        cinquina.setImageBitmap(b);
+        b = BitmapFactory.decodeResource(getResources(), R.drawable.decima_verde);
+        decima.setContentDescription("verde");
+        decima.setImageBitmap(b);
+        b = BitmapFactory.decodeResource(getResources(), R.drawable.tombola_verde);
+        tombola.setContentDescription("verde");
+        tombola.setImageBitmap(b);
         for (int i = 0; i < caselle.size(); i++)
             setButton(caselle.get(i), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-
     }
 
     public void setButton(Button casella, int l, int t, int r, int b, int colore_bordo, int colore_sfondo, int colore_testo){

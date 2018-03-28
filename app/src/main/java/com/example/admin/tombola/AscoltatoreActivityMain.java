@@ -1,6 +1,5 @@
 package com.example.admin.tombola;
 
-import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -8,13 +7,9 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.view.View;
 import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-import android.widget.TableLayout;
-
 import java.util.Objects;
 
-public class AscoltatoreActivityMain implements View.OnClickListener {
+public class AscoltatoreActivityMain implements View.OnClickListener, DialogInterface.OnClickListener {
 
     private ActivityMain activity;
     private int numeroGiro;
@@ -82,42 +77,9 @@ public class AscoltatoreActivityMain implements View.OnClickListener {
                 Intent setPage = new Intent(activity,ActivitySetting.class);
                 activity.startActivity(setPage);
                 break;
-
             case R.id.reset:
-
-                AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-                builder.setCancelable(true);
-                builder.setTitle("Reset Tabellone");
-                builder.setMessage("Sei sicuro di voler resettare il tabellone?");
-                builder.setPositiveButton("Si",
-                        new DialogInterface.OnClickListener()
-                        {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which)
-                            {
-
-                                activity.resetGrafica();
-                                activity.nascondiLayout();
-                                // Resetto variabili conteggi
-                                // Sga ma si può fare?? Non ho idea di come puntare le variabili dell'ascoltatore da qua!
-                                ultimo_numero = 0;
-                                penultimo_numero = 0;
-                                terzultimo_numero = 0;
-                                back = 0;
-                                dialog.dismiss();
-                            }
-                        });
-                builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener()
-                {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) { dialog.dismiss(); }
-                });
-
-                AlertDialog dialog = builder.create();
-                dialog.show();
-
-
-
+                activity.getDialog().show();
+                break;
             case R.id.annulla:
                 if (ultimo_numero != 0) {
                     activity.getCaselle().get(ultimo_numero-1).setClickable(true);
@@ -159,6 +121,19 @@ public class AscoltatoreActivityMain implements View.OnClickListener {
                 }
                 break;
         }
+    }
+
+    @Override
+    public void onClick(DialogInterface dialogInterface, int i) {
+        if (i == -1) {
+            activity.resetGrafica();
+            activity.nascondiLayout();
+            ultimo_numero = 0;
+            penultimo_numero = 0;
+            terzultimo_numero = 0;
+            back = 0;
+        }
+        dialogInterface.dismiss();
     }
 }
 

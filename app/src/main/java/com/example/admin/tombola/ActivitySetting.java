@@ -30,6 +30,7 @@ public class ActivitySetting extends AppCompatActivity
     private TextView value_rosso;
     private TextView value_verde;
     private TextView value_blu;
+    private boolean start = false;
 
     public SeekBar getRosso() {
         return rosso;
@@ -91,6 +92,7 @@ public class ActivitySetting extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+        start = true;
         Button orange = (Button) findViewById(R.id.orange);
         Button azure = (Button) findViewById(R.id.azure);
         Button green = (Button) findViewById(R.id.green);
@@ -140,14 +142,17 @@ public class ActivitySetting extends AppCompatActivity
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
-        setButton(casella_estratta, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-        setButton(casella_in_gioco, 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
-        setButton(bordo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-        setButton(impostazioni_pausa, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-        setButton(sfondo, 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
-        setButton(testo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-        setButton(imposta, 60, 9, 60, 9, Color.BLACK, Color.WHITE, Color.BLACK);
-        setButton(salva, 9, 9, 9, 9, Color.BLACK, Color.WHITE, Color.BLACK);
+        if (start) {
+            setButton(casella_estratta, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+            setButton(casella_in_gioco, 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
+            setButton(bordo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+            setButton(impostazioni_pausa, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+            setButton(sfondo, 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
+            setButton(testo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+            setButton(imposta, 60, 9, 60, 9, Color.BLACK, Color.WHITE, Color.BLACK);
+            setButton(salva, 9, 9, 9, 9, Color.BLACK, Color.WHITE, Color.BLACK);
+            start = false;
+        }
     }
 
     public void setButton(Button casella, float l, float t, float r, float b, int colore_bordo, int colore_sfondo, int colore_testo){
