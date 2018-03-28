@@ -9,7 +9,9 @@ import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
@@ -28,7 +30,7 @@ public class ActivityMain  extends AppCompatActivity {
     private Button giro;
     private TableLayout layoutTabellone;
     private LinearLayout layoutComandi;
-    private LinearLayout layoutLogo;
+    private FrameLayout layoutLogo;
     private boolean start = false;
     private AlertDialog dialog;
 
@@ -64,7 +66,7 @@ public class ActivityMain  extends AppCompatActivity {
         start = true;
         layoutTabellone=(TableLayout) findViewById(R.id.LTabellone);
         layoutComandi=(LinearLayout) findViewById(R.id.LComandi);
-        layoutLogo=(LinearLayout) findViewById(R.id.logo);
+        layoutLogo=(FrameLayout) findViewById(R.id.logo);
         ultimo = (Button) findViewById(R.id.casella_ultimo_numero);
         penultimo = (Button) findViewById(R.id.casella_penultimo_numero);
         terzultimo = (Button) findViewById(R.id.casella_terzultimo_numero);

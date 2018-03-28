@@ -1566,34 +1566,28 @@
         </LinearLayout>
 
     </LinearLayout>
-    <LinearLayout
+
+    <FrameLayout
         android:id="@+id/logo"
         android:layout_width="0dip"
         android:layout_height="match_parent"
-        android:layout_weight="0"
-        android:baselineAligned="false"
-        android:orientation="horizontal"
-        tools:ignore="NestedWeights">
+        android:layout_weight="0">
 
-        <FrameLayout
+        <ImageButton
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:background="?android:selectableItemBackground"
+            app:srcCompat="@drawable/sfondo_nero" />
 
-            <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                app:srcCompat="@drawable/sfondo_nero" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:text="SI RIPRENDE TRA: 20 SECONDI"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="100dp"
-                android:text="SI RIPRENDE TRA: 20 SECONDI"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="75dp" />
-        </FrameLayout>
-    </LinearLayout>
+    </FrameLayout>
+
 </LinearLayout>
