@@ -4,7 +4,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.view.View;
 import android.widget.Button;
 import java.util.Objects;
@@ -83,7 +82,7 @@ public class AscoltatoreActivityMain implements View.OnClickListener, DialogInte
             case R.id.annulla:
                 if (ultimo_numero != 0) {
                     activity.getCaselle().get(ultimo_numero-1).setClickable(true);
-                    activity.setButton(activity.getCaselle().get(ultimo_numero - 1), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+                    activity.setButton(activity.getCaselle().get(ultimo_numero - 1), 18, 18, 18, 18, activity.getManageXml().getColore_bordo(), activity.getManageXml().getColore_casella_libera_sfondo(), activity.getManageXml().getColore_casella_libera_testo());
                     ultimo_numero = penultimo_numero;
                     penultimo_numero = terzultimo_numero;
                     terzultimo_numero = back;
@@ -108,7 +107,7 @@ public class AscoltatoreActivityMain implements View.OnClickListener, DialogInte
                 if (casella.getText()!= null) {
                     int numero = Integer.parseInt(casella.getText().toString());
                     activity.getCaselle().get(numero-1).setClickable(false);
-                    activity.setButton(activity.getCaselle().get(numero-1),18, 18, 18, 18, Color.BLACK, Color.BLACK, Color.WHITE);
+                    activity.setButton(activity.getCaselle().get(numero-1),18, 18, 18, 18, activity.getManageXml().getColore_bordo(), activity.getManageXml().getColore_casella_tappata_sfondo(), activity.getManageXml().getColore_casella_tappata_testo());
                     back = terzultimo_numero;
                     terzultimo_numero = penultimo_numero;
                     penultimo_numero = ultimo_numero;

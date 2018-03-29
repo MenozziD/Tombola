@@ -1,28 +1,16 @@
 package com.example.admin.tombola;
 
-import android.content.res.XmlResourceParser;
 import android.graphics.Color;
-import android.util.Log;
 import android.view.View;
 import android.widget.SeekBar;
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
-import java.io.IOException;
-import java.util.ArrayList;
+import java.io.File;
+import java.io.FileNotFoundException;
+import static android.content.Context.MODE_PRIVATE;
 
 public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBar.OnSeekBarChangeListener{
 
     private ActivitySetting activity;
-    private ArrayList<Integer> colore_casella_libera_testo;
-    private ArrayList<Integer> colore_casella_libera_sfondo;
-    private ArrayList<Integer> colore_casella_tappata_testo;
-    private ArrayList<Integer> colore_casella_tappata_sfondo;
-    private ArrayList<Integer> colore_bordo;
-    private ArrayList<Integer> mio_colore_casella_libera_testo;
-    private ArrayList<Integer> mio_colore_casella_libera_sfondo;
-    private ArrayList<Integer> mio_colore_casella_tappata_testo;
-    private ArrayList<Integer> mio_colore_casella_tappata_sfondo;
-    private ArrayList<Integer> mio_colore_bordo;
+    private ManageXml manageXml;
     /*
         0 -> Casella libera sfondo
         1 -> Casella libera testo
@@ -35,127 +23,24 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
 
     AscoltatoreActivitySettings(ActivitySetting activity)
     {
-        boolean casella_libera = false;
-        boolean casella_tappata = false;
-        boolean bordo_tag = false;
-        boolean testo = false;
-        boolean sfondo = false;
+        manageXml = new ManageXml();
         this.activity= activity;
         the_view = 0;
-        colore_casella_libera_testo = new ArrayList<>(3);
-        colore_casella_libera_sfondo = new ArrayList<>(3);
-        colore_casella_tappata_testo = new ArrayList<>(3);
-        colore_casella_tappata_sfondo = new ArrayList<>(3);
-        colore_bordo = new ArrayList<>(3);
-        mio_colore_casella_libera_testo = new ArrayList<>(3);
-        mio_colore_casella_libera_sfondo = new ArrayList<>(3);
-        mio_colore_casella_tappata_testo = new ArrayList<>(3);
-        mio_colore_casella_tappata_sfondo = new ArrayList<>(3);
-        mio_colore_bordo = new ArrayList<>(3);
-        XmlResourceParser xrp = activity.getResources().getXml(R.xml.config);
-        try {
-            int event = xrp.getEventType();
-            while (event != XmlPullParser.END_DOCUMENT)  {
-                String name=xrp.getName();
-                switch (event){
-                    case XmlPullParser.START_TAG:
-                        Log.i("START",name);
-                        if(name.equals("casella_libera"))
-                            casella_libera = true;
-                        if(name.equals("casella_tappata"))
-                            casella_tappata = true;
-                        if(name.equals("bordo"))
-                            bordo_tag = true;
-                        if(name.equals("testo"))
-                            testo = true;
-                        if(name.equals("sfondo"))
-                            sfondo = true;
-                        if (name.equals("color")){
-                            if (casella_libera && testo){
-                                colore_casella_libera_testo.add(Integer.parseInt(xrp.getAttributeValue(0)));
-                                colore_casella_libera_testo.add(Integer.parseInt(xrp.getAttributeValue(1)));
-                                colore_casella_libera_testo.add(Integer.parseInt(xrp.getAttributeValue(2)));
-                            }
-                            if (casella_libera && sfondo){
-                                colore_casella_libera_sfondo.add(Integer.parseInt(xrp.getAttributeValue(0)));
-                                colore_casella_libera_sfondo.add(Integer.parseInt(xrp.getAttributeValue(1)));
-                                colore_casella_libera_sfondo.add(Integer.parseInt(xrp.getAttributeValue(2)));
-                            }
-                            if (casella_tappata && testo){
-                                colore_casella_tappata_testo.add(Integer.parseInt(xrp.getAttributeValue(0)));
-                                colore_casella_tappata_testo.add(Integer.parseInt(xrp.getAttributeValue(1)));
-                                colore_casella_tappata_testo.add(Integer.parseInt(xrp.getAttributeValue(2)));
-                            }
-                            if (casella_tappata && sfondo){
-                                colore_casella_tappata_sfondo.add(Integer.parseInt(xrp.getAttributeValue(0)));
-                                colore_casella_tappata_sfondo.add(Integer.parseInt(xrp.getAttributeValue(1)));
-                                colore_casella_tappata_sfondo.add(Integer.parseInt(xrp.getAttributeValue(2)));
-                            }
-                            if (bordo_tag){
-                                colore_bordo.add(Integer.parseInt(xrp.getAttributeValue(0)));
-                                colore_bordo.add(Integer.parseInt(xrp.getAttributeValue(1)));
-                                colore_bordo.add(Integer.parseInt(xrp.getAttributeValue(2)));
-                            }
-                        }
-                        if (name.equals("my_color")){
-                            if (casella_libera && testo) {
-                                testo = false;
-                                casella_libera = false;
-                                mio_colore_casella_libera_testo.add(Integer.parseInt(xrp.getAttributeValue(0)));
-                                mio_colore_casella_libera_testo.add(Integer.parseInt(xrp.getAttributeValue(1)));
-                                mio_colore_casella_libera_testo.add(Integer.parseInt(xrp.getAttributeValue(2)));
-                            }
-                            if (casella_libera && sfondo) {
-                                sfondo = false;
-                                mio_colore_casella_libera_sfondo.add(Integer.parseInt(xrp.getAttributeValue(0)));
-                                mio_colore_casella_libera_sfondo.add(Integer.parseInt(xrp.getAttributeValue(1)));
-                                mio_colore_casella_libera_sfondo.add(Integer.parseInt(xrp.getAttributeValue(2)));
-                            }
-                            if (casella_tappata && testo){
-                                testo = false;
-                                casella_tappata = false;
-                                mio_colore_casella_tappata_testo.add(Integer.parseInt(xrp.getAttributeValue(0)));
-                                mio_colore_casella_tappata_testo.add(Integer.parseInt(xrp.getAttributeValue(1)));
-                                mio_colore_casella_tappata_testo.add(Integer.parseInt(xrp.getAttributeValue(2)));
-                            }
-                            if (casella_tappata && sfondo) {
-                                sfondo = false;
-                                mio_colore_casella_tappata_sfondo.add(Integer.parseInt(xrp.getAttributeValue(0)));
-                                mio_colore_casella_tappata_sfondo.add(Integer.parseInt(xrp.getAttributeValue(1)));
-                                mio_colore_casella_tappata_sfondo.add(Integer.parseInt(xrp.getAttributeValue(2)));}
-                            if (bordo_tag) {
-                                bordo_tag = false;
-                                mio_colore_bordo.add(Integer.parseInt(xrp.getAttributeValue(0)));
-                                mio_colore_bordo.add(Integer.parseInt(xrp.getAttributeValue(1)));
-                                mio_colore_bordo.add(Integer.parseInt(xrp.getAttributeValue(2)));
-                            }
-                        }
-                        break;
-                }
-                event = xrp.next();
+        File f = new File(activity.getFilesDir(), "config.xml");
+        if (f.exists()) {
+            try {
+                manageXml.setIst(activity.openFileInput("config.xml"));
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
             }
-        } catch (XmlPullParserException | IOException e) {
-            e.printStackTrace();
+            manageXml.readXml(true);
         }
-        setColor(colore_casella_libera_sfondo.get(0),colore_casella_libera_sfondo.get(1),colore_casella_libera_sfondo.get(2));
-        activity.getMy_color().setBackgroundColor(Color.rgb(mio_colore_casella_libera_sfondo.get(0),mio_colore_casella_libera_sfondo.get(1),mio_colore_casella_libera_sfondo.get(2)));
-    }
-
-    private void resetButton(){
-        activity.setButton(activity.getCasella_in_gioco(), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-        activity.setButton(activity.getCasella_estratta(), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-        activity.setButton(activity.getBordo(), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-        activity.setButton(activity.getImpostazioni_pausa(), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-    }
-
-    private void setColor(int red, int green, int blu){
-        activity.getRosso().setProgress(red);
-        activity.getVerde().setProgress(green);
-        activity.getBlu().setProgress(blu);
-        activity.getValue_rosso().setText(String.format("%s",red));
-        activity.getValue_verde().setText(String.format("%s",green));
-        activity.getValue_blu().setText(String.format("%s",blu));
-        activity.getRun_color().setBackgroundColor(Color.rgb(Integer.parseInt(activity.getValue_rosso().getText().toString()),Integer.parseInt(activity.getValue_verde().getText().toString()),Integer.parseInt(activity.getValue_blu().getText().toString())));
+        else{
+            manageXml.setXrp(activity.getResources().getXml(R.xml.config));
+            manageXml.readXml(false);
+        }
+        setColor(manageXml.getColore_casella_libera_sfondo().get(0),manageXml.getColore_casella_libera_sfondo().get(1),manageXml.getColore_casella_libera_sfondo().get(2));
+        activity.getMy_color().setBackgroundColor(Color.rgb(manageXml.getMio_colore_casella_libera_sfondo().get(0),manageXml.getMio_colore_casella_libera_sfondo().get(1),manageXml.getMio_colore_casella_libera_sfondo().get(2)));
     }
 
     @Override
@@ -168,8 +53,8 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
                 activity.setButton(activity.getCasella_in_gioco(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
                 activity.setButton(activity.getSfondo(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
                 activity.setButton(activity.getTesto(), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-                setColor(colore_casella_libera_sfondo.get(0),colore_casella_libera_sfondo.get(1),colore_casella_libera_sfondo.get(2));
-                activity.getMy_color().setBackgroundColor(Color.rgb(mio_colore_casella_libera_sfondo.get(0),mio_colore_casella_libera_sfondo.get(1),mio_colore_casella_libera_sfondo.get(2)));
+                setColor(manageXml.getColore_casella_libera_sfondo().get(0),manageXml.getColore_casella_libera_sfondo().get(1),manageXml.getColore_casella_libera_sfondo().get(2));
+                activity.getMy_color().setBackgroundColor(Color.rgb(manageXml.getMio_colore_casella_libera_sfondo().get(0),manageXml.getMio_colore_casella_libera_sfondo().get(1),manageXml.getMio_colore_casella_libera_sfondo().get(2)));
                 the_view = 0;
                 break;
             case R.id.casella_tap:
@@ -179,8 +64,8 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
                 activity.setButton(activity.getCasella_estratta(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
                 activity.setButton(activity.getSfondo(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
                 activity.setButton(activity.getTesto(), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-                setColor(colore_casella_tappata_sfondo.get(0),colore_casella_tappata_sfondo.get(1),colore_casella_tappata_sfondo.get(2));
-                activity.getMy_color().setBackgroundColor(Color.rgb(mio_colore_casella_tappata_sfondo.get(0),mio_colore_casella_tappata_sfondo.get(1),mio_colore_casella_tappata_sfondo.get(2)));
+                setColor(manageXml.getColore_casella_tappata_sfondo().get(0),manageXml.getColore_casella_tappata_sfondo().get(1),manageXml.getColore_casella_tappata_sfondo().get(2));
+                activity.getMy_color().setBackgroundColor(Color.rgb(manageXml.getMio_colore_casella_tappata_sfondo().get(0),manageXml.getMio_colore_casella_tappata_sfondo().get(1),manageXml.getMio_colore_casella_tappata_sfondo().get(2)));
                 the_view = 2;
                 break;
             case R.id.bordo:
@@ -188,8 +73,8 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
                 activity.getSfondo().setVisibility(View.INVISIBLE);
                 activity.getTesto().setVisibility(View.INVISIBLE);
                 activity.setButton(activity.getBordo(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
-                setColor(colore_bordo.get(0),colore_bordo.get(1),colore_bordo.get(2));
-                activity.getMy_color().setBackgroundColor(Color.rgb(mio_colore_bordo.get(0),mio_colore_bordo.get(1),mio_colore_bordo.get(2)));
+                setColor(manageXml.getColore_bordo().get(0),manageXml.getColore_bordo().get(1),manageXml.getColore_bordo().get(2));
+                activity.getMy_color().setBackgroundColor(Color.rgb(manageXml.getMio_colore_bordo().get(0),manageXml.getMio_colore_bordo().get(1),manageXml.getMio_colore_bordo().get(2)));
                 the_view = 4;
                 break;
             case R.id.pausa:
@@ -204,13 +89,13 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
                 activity.setButton(activity.getTesto(), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
                 if (the_view == 1){
                     the_view = 0;
-                    setColor(colore_casella_libera_sfondo.get(0),colore_casella_libera_sfondo.get(1),colore_casella_libera_sfondo.get(2));
-                    activity.getMy_color().setBackgroundColor(Color.rgb(mio_colore_casella_libera_sfondo.get(0),mio_colore_casella_libera_sfondo.get(1),mio_colore_casella_libera_sfondo.get(2)));
+                    setColor(manageXml.getColore_casella_libera_sfondo().get(0),manageXml.getColore_casella_libera_sfondo().get(1),manageXml.getColore_casella_libera_sfondo().get(2));
+                    activity.getMy_color().setBackgroundColor(Color.rgb(manageXml.getMio_colore_casella_libera_sfondo().get(0),manageXml.getMio_colore_casella_libera_sfondo().get(1),manageXml.getMio_colore_casella_libera_sfondo().get(2)));
                 }
                 if (the_view == 3){
                     the_view = 2;
-                    setColor(colore_casella_tappata_sfondo.get(0),colore_casella_tappata_sfondo.get(1),colore_casella_tappata_sfondo.get(2));
-                    activity.getMy_color().setBackgroundColor(Color.rgb(mio_colore_casella_tappata_sfondo.get(0),mio_colore_casella_tappata_sfondo.get(1),mio_colore_casella_tappata_sfondo.get(2)));
+                    setColor(manageXml.getColore_casella_tappata_sfondo().get(0),manageXml.getColore_casella_tappata_sfondo().get(1),manageXml.getColore_casella_tappata_sfondo().get(2));
+                    activity.getMy_color().setBackgroundColor(Color.rgb(manageXml.getMio_colore_casella_tappata_sfondo().get(0),manageXml.getMio_colore_casella_tappata_sfondo().get(1),manageXml.getMio_colore_casella_tappata_sfondo().get(2)));
                 }
                 break;
             case R.id.testo:
@@ -218,13 +103,13 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
                 activity.setButton(activity.getSfondo(), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
                 if (the_view == 0){
                     the_view = 1;
-                    setColor(colore_casella_libera_testo.get(0),colore_casella_libera_testo.get(1),colore_casella_libera_testo.get(2));
-                    activity.getMy_color().setBackgroundColor(Color.rgb(mio_colore_casella_libera_testo.get(0),mio_colore_casella_libera_testo.get(1),mio_colore_casella_libera_testo.get(2)));
+                    setColor(manageXml.getColore_casella_libera_testo().get(0),manageXml.getColore_casella_libera_testo().get(1),manageXml.getColore_casella_libera_testo().get(2));
+                    activity.getMy_color().setBackgroundColor(Color.rgb(manageXml.getMio_colore_casella_libera_testo().get(0),manageXml.getMio_colore_casella_libera_testo().get(1),manageXml.getMio_colore_casella_libera_testo().get(2)));
                 }
                 if (the_view == 2){
                     the_view = 3;
-                    setColor(colore_casella_tappata_testo.get(0),colore_casella_tappata_testo.get(1),colore_casella_tappata_testo.get(2));
-                    activity.getMy_color().setBackgroundColor(Color.rgb(mio_colore_casella_tappata_testo.get(0),mio_colore_casella_tappata_testo.get(1),mio_colore_casella_tappata_testo.get(2)));
+                    setColor(manageXml.getColore_casella_tappata_testo().get(0),manageXml.getColore_casella_tappata_testo().get(1),manageXml.getColore_casella_tappata_testo().get(2));
+                    activity.getMy_color().setBackgroundColor(Color.rgb(manageXml.getMio_colore_casella_tappata_testo().get(0),manageXml.getMio_colore_casella_tappata_testo().get(1),manageXml.getMio_colore_casella_tappata_testo().get(2)));
                 }
                 break;
             case R.id.orange:
@@ -253,29 +138,37 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
                 int v = Integer.parseInt(activity.getValue_verde().getText().toString());
                 int b = Integer.parseInt(activity.getValue_blu().getText().toString());
                 if (the_view == 0){
-                    colore_casella_libera_sfondo.set(0,r);
-                    colore_casella_libera_sfondo.set(1,v);
-                    colore_casella_libera_sfondo.set(2,b);
+                    manageXml.getColore_casella_libera_sfondo().set(0,r);
+                    manageXml.getColore_casella_libera_sfondo().set(1,v);
+                    manageXml.getColore_casella_libera_sfondo().set(2,b);
                 }
                 if (the_view == 1){
-                    colore_casella_libera_testo.set(0,r);
-                    colore_casella_libera_testo.set(1,v);
-                    colore_casella_libera_testo.set(2,b);
+                    manageXml.getColore_casella_libera_testo().set(0,r);
+                    manageXml.getColore_casella_libera_testo().set(1,v);
+                    manageXml.getColore_casella_libera_testo().set(2,b);
                 }
                 if (the_view == 2){
-                    colore_casella_tappata_sfondo.set(0,r);
-                    colore_casella_tappata_sfondo.set(1,v);
-                    colore_casella_tappata_sfondo.set(2,b);
+                    manageXml.getColore_casella_tappata_sfondo().set(0,r);
+                    manageXml.getColore_casella_tappata_sfondo().set(1,v);
+                    manageXml.getColore_casella_tappata_sfondo().set(2,b);
                 }
                 if (the_view == 3){
-                    colore_casella_tappata_testo.set(0,r);
-                    colore_casella_tappata_testo.set(1,v);
-                    colore_casella_tappata_testo.set(2,b);
+                    manageXml.getColore_casella_tappata_testo().set(0,r);
+                    manageXml.getColore_casella_tappata_testo().set(1,v);
+                    manageXml.getColore_casella_tappata_testo().set(2,b);
                 }
                 if (the_view == 4){
-                    colore_bordo.set(0,r);
-                    colore_bordo.set(1,v);
-                    colore_bordo.set(2,b);
+                    manageXml.getColore_bordo().set(0,r);
+                    manageXml.getColore_bordo().set(1,v);
+                    manageXml.getColore_bordo().set(2,b);
+                }
+                try {
+                    manageXml.setOst(activity.openFileOutput("config.xml", MODE_PRIVATE));
+                    manageXml.writeXml(manageXml.getColore_casella_libera_sfondo(), manageXml.getMio_colore_casella_libera_sfondo(), manageXml.getColore_casella_libera_testo(),
+                            manageXml.getMio_colore_casella_libera_testo(), manageXml.getColore_casella_tappata_sfondo(), manageXml.getMio_colore_casella_tappata_sfondo(),
+                            manageXml.getColore_casella_tappata_testo(), manageXml.getMio_colore_casella_tappata_testo(), manageXml.getColore_bordo(), manageXml.getMio_colore_bordo());
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
                 }
                 break;
             case R.id.salva:
@@ -284,29 +177,37 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
                 int bM = Integer.parseInt(activity.getValue_blu().getText().toString());
                 activity.getMy_color().setBackgroundColor(Color.rgb(rM,vM,bM));
                 if (the_view == 0){
-                    mio_colore_casella_libera_sfondo.set(0,rM);
-                    mio_colore_casella_libera_sfondo.set(1,vM);
-                    mio_colore_casella_libera_sfondo.set(2,bM);
+                    manageXml.getMio_colore_casella_libera_sfondo().set(0,rM);
+                    manageXml.getMio_colore_casella_libera_sfondo().set(1,vM);
+                    manageXml.getMio_colore_casella_libera_sfondo().set(2,bM);
                 }
                 if (the_view == 1){
-                    mio_colore_casella_libera_testo.set(0,rM);
-                    mio_colore_casella_libera_testo.set(1,vM);
-                    mio_colore_casella_libera_testo.set(2,bM);
+                    manageXml.getMio_colore_casella_libera_testo().set(0,rM);
+                    manageXml.getMio_colore_casella_libera_testo().set(1,vM);
+                    manageXml.getMio_colore_casella_libera_testo().set(2,bM);
                 }
                 if (the_view == 2){
-                    mio_colore_casella_tappata_sfondo.set(0,rM);
-                    mio_colore_casella_tappata_sfondo.set(1,vM);
-                    mio_colore_casella_tappata_sfondo.set(2,bM);
+                    manageXml.getMio_colore_casella_tappata_sfondo().set(0,rM);
+                    manageXml.getMio_colore_casella_tappata_sfondo().set(1,vM);
+                    manageXml.getMio_colore_casella_tappata_sfondo().set(2,bM);
                 }
                 if (the_view == 3){
-                    mio_colore_casella_tappata_testo.set(0,rM);
-                    mio_colore_casella_tappata_testo.set(1,vM);
-                    mio_colore_casella_tappata_testo.set(2,bM);
+                    manageXml.getMio_colore_casella_tappata_testo().set(0,rM);
+                    manageXml.getMio_colore_casella_tappata_testo().set(1,vM);
+                    manageXml.getMio_colore_casella_tappata_testo().set(2,bM);
                 }
                 if (the_view == 4){
-                    mio_colore_bordo.set(0,rM);
-                    mio_colore_bordo.set(1,vM);
-                    mio_colore_bordo.set(2,bM);
+                    manageXml.getMio_colore_bordo().set(0,rM);
+                    manageXml.getMio_colore_bordo().set(1,vM);
+                    manageXml.getMio_colore_bordo().set(2,bM);
+                }
+                try {
+                    manageXml.setOst(activity.openFileOutput("config.xml", MODE_PRIVATE));
+                    manageXml.writeXml(manageXml.getColore_casella_libera_sfondo(), manageXml.getMio_colore_casella_libera_sfondo(), manageXml.getColore_casella_libera_testo(),
+                            manageXml.getMio_colore_casella_libera_testo(), manageXml.getColore_casella_tappata_sfondo(), manageXml.getMio_colore_casella_tappata_sfondo(),
+                            manageXml.getColore_casella_tappata_testo(), manageXml.getMio_colore_casella_tappata_testo(), manageXml.getColore_bordo(), manageXml.getMio_colore_bordo());
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
                 }
                 break;
         }
@@ -336,5 +237,22 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
 
+    }
+
+    private void resetButton(){
+        activity.setButton(activity.getCasella_in_gioco(), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+        activity.setButton(activity.getCasella_estratta(), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+        activity.setButton(activity.getBordo(), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+        activity.setButton(activity.getImpostazioni_pausa(), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+    }
+
+    private void setColor(int red, int green, int blu){
+        activity.getRosso().setProgress(red);
+        activity.getVerde().setProgress(green);
+        activity.getBlu().setProgress(blu);
+        activity.getValue_rosso().setText(String.format("%s",red));
+        activity.getValue_verde().setText(String.format("%s",green));
+        activity.getValue_blu().setText(String.format("%s",blu));
+        activity.getRun_color().setBackgroundColor(Color.rgb(Integer.parseInt(activity.getValue_rosso().getText().toString()),Integer.parseInt(activity.getValue_verde().getText().toString()),Integer.parseInt(activity.getValue_blu().getText().toString())));
     }
 }

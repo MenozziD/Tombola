@@ -9,13 +9,14 @@ import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 public class ActivityMain  extends AppCompatActivity {
@@ -33,6 +34,13 @@ public class ActivityMain  extends AppCompatActivity {
     private FrameLayout layoutLogo;
     private boolean start = false;
     private AlertDialog dialog;
+    private ManageXml manageXml;
+    private ArrayList<Integer> white;
+    private ArrayList<Integer> black;
+
+    public ManageXml getManageXml() {
+        return manageXml;
+    }
 
     public AlertDialog getDialog() { return dialog; }
 
@@ -63,6 +71,14 @@ public class ActivityMain  extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        white = new ArrayList<>(3);
+        black = new ArrayList<>(3);
+        white.add(255);
+        white.add(255);
+        white.add(255);
+        black.add(0);
+        black.add(0);
+        black.add(0);
         start = true;
         layoutTabellone=(TableLayout) findViewById(R.id.LTabellone);
         layoutComandi=(LinearLayout) findViewById(R.id.LComandi);
@@ -193,14 +209,29 @@ public class ActivityMain  extends AppCompatActivity {
     }
 
     @Override
-    protected void onResume() {super.onResume();}
+    protected void onResume() {
+        super.onResume();
+        manageXml = new ManageXml();
+        File f = new File(getFilesDir(), "config.xml");
+        if (f.exists()) {
+            try {
+                manageXml.setIst(openFileInput("config.xml"));
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            manageXml.readXml(true);
+        }
+        else{
+            manageXml.setXrp(getResources().getXml(R.xml.config));
+            manageXml.readXml(false);
+        }
+    }
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         if (start) {
             start=false;
-            setButton(giro, 9, 9, 9, 9, Color.BLACK, Color.WHITE, Color.BLACK);
             resetGrafica();
         }
     }
@@ -214,9 +245,10 @@ public class ActivityMain  extends AppCompatActivity {
 
     public void resetGrafica()
     {
-        setButton(ultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-        setButton(penultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-        setButton(terzultimo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+        setButton(giro, 9, 9, 9, 9, black, white, black);
+        setButton(ultimo, 18, 18, 18, 18, black, white, black);
+        setButton(penultimo, 18, 18, 18, 18, black, white, black);
+        setButton(terzultimo, 18, 18, 18, 18, black, white, black);
         ultimo.setText("");
         penultimo.setText("");
         terzultimo.setText("");
@@ -230,18 +262,18 @@ public class ActivityMain  extends AppCompatActivity {
         tombola.setContentDescription("verde");
         tombola.setImageBitmap(b);
         for (int i = 0; i < caselle.size(); i++)
-            setButton(caselle.get(i), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+            setButton(caselle.get(i), 18, 18, 18, 18, manageXml.getColore_bordo(), manageXml.getColore_casella_libera_sfondo(), manageXml.getColore_casella_libera_testo());
     }
 
-    public void setButton(Button casella, int l, int t, int r, int b, int colore_bordo, int colore_sfondo, int colore_testo){
+    public void setButton(Button casella, int l, int t, int r, int b, ArrayList<Integer> colore_bordo, ArrayList<Integer> colore_sfondo, ArrayList<Integer> colore_testo){
         LayerDrawable layerDrawable = (LayerDrawable) ContextCompat.getDrawable(this, R.drawable.casella);
         layerDrawable.setLayerInset(1, casella.getWidth()/l, casella.getHeight()/t, casella.getWidth()/r,casella.getHeight()/b);
         GradientDrawable bordo = (GradientDrawable)layerDrawable.findDrawableByLayerId(R.id.bordo);
-        bordo.setColor(colore_bordo);
+        bordo.setColor(Color.rgb(colore_bordo.get(0),colore_bordo.get(1),colore_bordo.get(2)));
         GradientDrawable sfondo = (GradientDrawable)layerDrawable.findDrawableByLayerId(R.id.sfondo);
-        sfondo.setColor(colore_sfondo);
+        sfondo.setColor(Color.rgb(colore_sfondo.get(0),colore_sfondo.get(1),colore_sfondo.get(2)));
         casella.setBackground(layerDrawable);
         casella.setTextSize((casella.getWidth()/2f)/2.65f);
-        casella.setTextColor(colore_testo);
+        casella.setTextColor(Color.rgb(colore_testo.get(0),colore_testo.get(1),colore_testo.get(2)));
     }
 }
