@@ -50,7 +50,7 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
         switch (view.getId()) {
             case R.id.casella_libera:
                 resetButton();
-                activity.modificaLayout(1.5f, 1.5f, 1.5f, 3);
+                activity.modificaLayout(1.5f, 1.5f, 1.5f, 3, 0);
                 activity.getSfondo().setVisibility(View.VISIBLE);
                 activity.getTesto().setVisibility(View.VISIBLE);
                 activity.setButton(activity.getCasella_in_gioco(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
@@ -62,7 +62,7 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
                 break;
             case R.id.casella_tap:
                 resetButton();
-                activity.modificaLayout(1.5f, 1.5f, 1.5f, 3);
+                activity.modificaLayout(1.5f, 1.5f, 1.5f, 3, 0);
                 activity.getSfondo().setVisibility(View.VISIBLE);
                 activity.getTesto().setVisibility(View.VISIBLE);
                 activity.setButton(activity.getCasella_estratta(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
@@ -74,7 +74,7 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
                 break;
             case R.id.bordo:
                 resetButton();
-                activity.modificaLayout(1.5f, 1.5f, 1.5f, 3);
+                activity.modificaLayout(1.5f, 1.5f, 1.5f, 3, 0);
                 activity.getSfondo().setVisibility(View.INVISIBLE);
                 activity.getTesto().setVisibility(View.INVISIBLE);
                 activity.setButton(activity.getBordo(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
@@ -86,7 +86,7 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
                 resetButton();
                 activity.getSfondo().setVisibility(View.INVISIBLE);
                 activity.getTesto().setVisibility(View.INVISIBLE);
-                activity.modificaLayout(0,0,0,0);
+                activity.modificaLayout(0,0,0,0, 7.5f);
                 activity.setButton(activity.getImpostazioni_pausa(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
                 the_view = 5;
                 break;
@@ -139,6 +139,16 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
             case R.id.my_color:
                 setColor(255,215,0);
                 break;
+            case R.id.salva_tempo:
+                String tempo = activity.getValore_tempo().getText().toString();
+                manageXml.setTempo(Integer.parseInt(tempo));
+                try {
+                    manageXml.setOst(activity.openFileOutput("config.xml", MODE_PRIVATE));
+                    manageXml.writeXml();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+                break;
             case R.id.imposta:
                 int r = Integer.parseInt(activity.getValue_rosso().getText().toString());
                 int v = Integer.parseInt(activity.getValue_verde().getText().toString());
@@ -170,9 +180,7 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
                 }
                 try {
                     manageXml.setOst(activity.openFileOutput("config.xml", MODE_PRIVATE));
-                    manageXml.writeXml(manageXml.getColore_casella_libera_sfondo(), manageXml.getMio_colore_casella_libera_sfondo(), manageXml.getColore_casella_libera_testo(),
-                            manageXml.getMio_colore_casella_libera_testo(), manageXml.getColore_casella_tappata_sfondo(), manageXml.getMio_colore_casella_tappata_sfondo(),
-                            manageXml.getColore_casella_tappata_testo(), manageXml.getMio_colore_casella_tappata_testo(), manageXml.getColore_bordo(), manageXml.getMio_colore_bordo());
+                    manageXml.writeXml();
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -209,9 +217,7 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
                 }
                 try {
                     manageXml.setOst(activity.openFileOutput("config.xml", MODE_PRIVATE));
-                    manageXml.writeXml(manageXml.getColore_casella_libera_sfondo(), manageXml.getMio_colore_casella_libera_sfondo(), manageXml.getColore_casella_libera_testo(),
-                            manageXml.getMio_colore_casella_libera_testo(), manageXml.getColore_casella_tappata_sfondo(), manageXml.getMio_colore_casella_tappata_sfondo(),
-                            manageXml.getColore_casella_tappata_testo(), manageXml.getMio_colore_casella_tappata_testo(), manageXml.getColore_bordo(), manageXml.getMio_colore_bordo());
+                    manageXml.writeXml();
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }

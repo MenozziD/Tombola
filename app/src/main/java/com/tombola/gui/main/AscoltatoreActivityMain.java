@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import com.tombola.gui.settings.ActivitySetting;
@@ -130,11 +131,30 @@ public class AscoltatoreActivityMain implements View.OnClickListener, DialogInte
     public void onClick(DialogInterface dialogInterface, int i) {
         if (i == -1) {
             activity.resetGrafica();
-            activity.nascondiLayout();
+            activity.nascondiLayout(0,0,1);
+            int tempo = activity.getManageXml().getTempo();
             ultimo_numero = 0;
             penultimo_numero = 0;
             terzultimo_numero = 0;
             back = 0;
+            activity.getTesto_tempo().setText(String.format(activity.getResources().getString(R.string.messaggio_tempo), tempo));
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    activity.nascondiLayout(0.3f,0.7f,0);
+                }
+            }, tempo*1000);
+            for (int j=1; j<tempo; j++) {
+                Handler handler1 = new Handler();
+                handler1.postDelayed(new Runnable() {
+                    public void run() {
+                        String[] stringhe = activity.getTesto_tempo().getText().toString().split(" ");
+                        int t = Integer.parseInt(stringhe[3]);
+                        t = t -1;
+                        activity.getTesto_tempo().setText(String.format(activity.getResources().getString(R.string.messaggio_tempo), t));
+                    }
+                }, j*1000);
+            }
         }
         dialogInterface.dismiss();
     }

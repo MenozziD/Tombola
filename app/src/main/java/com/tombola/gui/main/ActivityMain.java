@@ -24,6 +24,7 @@ import java.util.Objects;
 
 public class ActivityMain  extends AppCompatActivity {
 
+    private boolean start = false;
     private ArrayList<Button> caselle;
     private ImageButton cinquina;
     private ImageButton decima;
@@ -35,11 +36,15 @@ public class ActivityMain  extends AppCompatActivity {
     private TableLayout layoutTabellone;
     private LinearLayout layoutComandi;
     private FrameLayout layoutLogo;
-    private boolean start = false;
     private AlertDialog dialog;
     private ManageXml manageXml;
     private ArrayList<Integer> white;
     private ArrayList<Integer> black;
+    private TextView testo_tempo;
+
+    public TextView getTesto_tempo() {
+        return testo_tempo;
+    }
 
     public ManageXml getManageXml() {
         return manageXml;
@@ -98,6 +103,7 @@ public class ActivityMain  extends AppCompatActivity {
         cinquina =(ImageButton)findViewById(R.id.cinquina);
         decima =(ImageButton)findViewById(R.id.decima);
         tombola =(ImageButton)findViewById(R.id.tombola);
+        testo_tempo = (TextView) findViewById(R.id.testo_tempo);
         caselle = new ArrayList<>(90);
         AscoltatoreActivityMain ascoltatore = new AscoltatoreActivityMain(this);
         caselle.add((Button) findViewById(R.id.casella0));
@@ -240,11 +246,11 @@ public class ActivityMain  extends AppCompatActivity {
         }
     }
 
-    public void nascondiLayout()
+    public void nascondiLayout(float wC, float wT, float wL)
     {
-        layoutComandi.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 0));
-        layoutTabellone.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 0));
-        layoutLogo.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, 1));
+        layoutComandi.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, wC));
+        layoutTabellone.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, wT));
+        layoutLogo.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, wL));
     }
 
     public void resetGrafica()

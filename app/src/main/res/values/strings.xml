@@ -18,4 +18,6 @@
     <string name="b">B</string>
     <string name="imposta">IMPOSTA</string>
     <string name="salva">SALVA COLORE</string>
+    <string name="imposta_tempo">IMPOSTA TEMPO</string>
+    <string name="messaggio_tempo">SI RIPRENDE TRA: %1$d SECONDI</string>
 </resources>

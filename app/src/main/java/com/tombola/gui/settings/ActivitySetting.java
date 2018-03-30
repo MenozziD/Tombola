@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -26,6 +27,8 @@ public class ActivitySetting extends AppCompatActivity
     private Button testo;
     private Button salva;
     private Button imposta;
+    private Button salva_tempo;
+    private EditText valore_tempo;
     private SeekBar rosso;
     private SeekBar verde;
     private SeekBar blu;
@@ -36,6 +39,7 @@ public class ActivitySetting extends AppCompatActivity
     private LinearLayout barraRosso;
     private LinearLayout barraBlu;
     private LinearLayout colori;
+    private LinearLayout pausa;
     private boolean start = false;
 
     public SeekBar getRosso() {
@@ -94,6 +98,10 @@ public class ActivitySetting extends AppCompatActivity
         return value_blu;
     }
 
+    public EditText getValore_tempo() {
+        return valore_tempo;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,6 +113,7 @@ public class ActivitySetting extends AppCompatActivity
         Button gray = (Button) findViewById(R.id.gray);
         Button red = (Button) findViewById(R.id.red);
         Button yellow = (Button) findViewById(R.id.yellow);
+        salva_tempo = (Button) findViewById(R.id.salva_tempo);
         imposta = (Button) findViewById(R.id.imposta);
         salva = (Button) findViewById(R.id.salva);
         my_color = (Button) findViewById(R.id.my_color);
@@ -121,10 +130,12 @@ public class ActivitySetting extends AppCompatActivity
         value_rosso = (TextView) findViewById(R.id.value_rosso);
         value_verde = (TextView) findViewById(R.id.value_verde);
         value_blu = (TextView) findViewById(R.id.value_blu);
+        valore_tempo = (EditText) findViewById(R.id.valore_tempo);
         barraVerde = (LinearLayout) findViewById(R.id.barra_verde);
         barraRosso = (LinearLayout) findViewById(R.id.barra_rosso);
         barraBlu = (LinearLayout) findViewById(R.id.barra_blu);
         colori = (LinearLayout) findViewById(R.id.colori);
+        pausa = (LinearLayout) findViewById(R.id.impostazioni_pausa);
         AscoltatoreActivitySettings ascoltatore = new AscoltatoreActivitySettings(this);
         imposta.setOnClickListener(ascoltatore);
         salva.setOnClickListener(ascoltatore);
@@ -141,6 +152,7 @@ public class ActivitySetting extends AppCompatActivity
         impostazioni_pausa.setOnClickListener(ascoltatore);
         sfondo.setOnClickListener(ascoltatore);
         testo.setOnClickListener(ascoltatore);
+        salva_tempo.setOnClickListener(ascoltatore);
         rosso.setOnSeekBarChangeListener(ascoltatore);
         verde.setOnSeekBarChangeListener(ascoltatore);
         blu.setOnSeekBarChangeListener(ascoltatore);
@@ -153,14 +165,15 @@ public class ActivitySetting extends AppCompatActivity
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         if (start) {
-            setButton(casella_estratta, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-            setButton(casella_in_gioco, 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
-            setButton(bordo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-            setButton(impostazioni_pausa, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-            setButton(sfondo, 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
-            setButton(testo, 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-            setButton(imposta, 60, 9, 60, 9, Color.BLACK, Color.WHITE, Color.BLACK);
-            setButton(salva, 9, 9, 9, 9, Color.BLACK, Color.WHITE, Color.BLACK);
+            setButton(casella_estratta,18,18,18,18, Color.BLACK, Color.WHITE, Color.BLACK);
+            setButton(casella_in_gioco,18,18,18,18, Color.WHITE, Color.BLACK, Color.WHITE);
+            setButton(bordo,18,18,18,18, Color.BLACK, Color.WHITE, Color.BLACK);
+            setButton(impostazioni_pausa,18,18,18,18, Color.BLACK, Color.WHITE, Color.BLACK);
+            setButton(sfondo,18,18,18,18, Color.WHITE, Color.BLACK, Color.WHITE);
+            setButton(testo,18,18,18,18, Color.BLACK, Color.WHITE, Color.BLACK);
+            setButton(imposta,60,9,60,9, Color.BLACK, Color.WHITE, Color.BLACK);
+            setButton(salva,9,9,9,9, Color.BLACK, Color.WHITE, Color.BLACK);
+            setButton(salva_tempo,9,9,9,9,Color.BLACK, Color.WHITE, Color.BLACK);
             start = false;
         }
     }
@@ -177,11 +190,12 @@ public class ActivitySetting extends AppCompatActivity
         casella.setTextColor(colore_testo);
     }
 
-    public void modificaLayout(float wR, float wG, float wB, float wC)
+    public void modificaLayout(float wR, float wG, float wB, float wC, float wP)
     {
         barraBlu.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wR));
         barraVerde.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wG));
         barraRosso.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wB));
         colori.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wC));
+        pausa.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wP));
     }
 }

@@ -1672,10 +1672,10 @@
             android:contentDescription="@string/sfondo" />
 
         <TextView
+            android:id="@+id/testo_tempo"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_gravity="bottom"
-            android:text="SI RIPRENDE TRA: 20 SECONDI"
             android:textAlignment="center"
             android:textColor="@color/white" />
 

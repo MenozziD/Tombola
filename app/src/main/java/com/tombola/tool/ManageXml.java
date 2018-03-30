@@ -26,6 +26,7 @@ public class ManageXml {
     private ArrayList<Integer> mio_colore_casella_tappata_testo;
     private ArrayList<Integer> mio_colore_casella_tappata_sfondo;
     private ArrayList<Integer> mio_colore_bordo;
+    private int tempo;
 
     public ManageXml(){
         colore_casella_libera_testo = new ArrayList<>(3);
@@ -38,13 +39,10 @@ public class ManageXml {
         mio_colore_casella_tappata_testo = new ArrayList<>(3);
         mio_colore_casella_tappata_sfondo = new ArrayList<>(3);
         mio_colore_bordo = new ArrayList<>(3);
+        tempo = 0;
     }
 
-    public void writeXml(ArrayList<Integer> colore_casella_libera_sfondo, ArrayList<Integer> mio_colore_casella_libera_sfondo,
-                  ArrayList<Integer> colore_casella_libera_testo, ArrayList<Integer> mio_colore_casella_libera_testo,
-                  ArrayList<Integer> colore_casella_tappata_sfondo, ArrayList<Integer> mio_colore_casella_tappata_sfondo,
-                  ArrayList<Integer> colore_casella_tappata_testo, ArrayList<Integer> mio_colore_casella_tappata_testo,
-                  ArrayList<Integer> colore_bordo, ArrayList<Integer> mio_colore_bordo) {
+    public void writeXml() {
         XmlSerializer xmlSerializer = Xml.newSerializer();
         StringWriter writer = new StringWriter();
         try {
@@ -62,6 +60,9 @@ public class ManageXml {
             xmlSerializer.startTag("", "bordo");
             xmlSerializer = colorXml( xmlSerializer,"", colore_bordo, mio_colore_bordo);
             xmlSerializer.endTag("", "bordo");
+            xmlSerializer.startTag("", "tempo");
+            xmlSerializer.attribute("","t", Integer.toString(tempo));
+            xmlSerializer.endTag("", "tempo");
             xmlSerializer.endTag("", "settings");
             xmlSerializer.endDocument();
             ost.write(writer.toString().getBytes());
@@ -105,6 +106,8 @@ public class ManageXml {
                 String name=xrp.getName();
                 switch (event){
                     case XmlPullParser.START_TAG:
+                        if(name.equals("tempo"))
+                            tempo = Integer.parseInt(xrp.getAttributeValue(0));
                         if(name.equals("casella_libera"))
                             casella_libera = true;
                         if(name.equals("casella_tappata"))
@@ -234,5 +237,13 @@ public class ManageXml {
 
     public ArrayList<Integer> getMio_colore_bordo() {
         return mio_colore_bordo;
+    }
+
+    public int getTempo() {
+        return tempo;
+    }
+
+    public void setTempo(int tempo) {
+        this.tempo = tempo;
     }
 }

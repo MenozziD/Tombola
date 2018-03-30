@@ -306,4 +306,31 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/impostazioni_pausa"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:orientation="vertical"
+        android:layout_weight="0"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/valore_tempo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:ems="10"
+            android:inputType="textPersonName"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/salva_tempo"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:background="@drawable/casella"
+            android:text="@string/imposta_tempo"
+            android:layout_weight="0.5"/>
+
+    </LinearLayout>
+
 </LinearLayout>
