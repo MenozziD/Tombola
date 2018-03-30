@@ -18,6 +18,7 @@ import android.widget.TextView;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class ActivityMain  extends AppCompatActivity {
 
@@ -225,6 +226,7 @@ public class ActivityMain  extends AppCompatActivity {
             manageXml.setXrp(getResources().getXml(R.xml.config));
             manageXml.readXml(false);
         }
+        updatetabellone();
     }
 
     @Override
@@ -275,5 +277,14 @@ public class ActivityMain  extends AppCompatActivity {
         casella.setBackground(layerDrawable);
         casella.setTextSize((casella.getWidth()/2f)/2.65f);
         casella.setTextColor(Color.rgb(colore_testo.get(0),colore_testo.get(1),colore_testo.get(2)));
+    }
+
+    public void updatetabellone(){
+        for (int i = 0; i < caselle.size(); i++){
+            if (Objects.equals(caselle.get(i).getContentDescription().toString(), "libera"))
+                setButton(caselle.get(i), 18, 18, 18, 18, manageXml.getColore_bordo(), manageXml.getColore_casella_libera_sfondo(), manageXml.getColore_casella_libera_testo());
+            if (Objects.equals(caselle.get(i).getContentDescription().toString(), "tappata"))
+                setButton(caselle.get(i), 18, 18, 18, 18, manageXml.getColore_bordo(), manageXml.getColore_casella_tappata_sfondo(), manageXml.getColore_casella_tappata_testo());
+        }
     }
 }

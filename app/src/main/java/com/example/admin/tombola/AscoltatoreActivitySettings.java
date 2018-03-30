@@ -48,6 +48,7 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
         switch (view.getId()) {
             case R.id.casella_libera:
                 resetButton();
+                activity.modificaLayout(1.5f, 1.5f, 1.5f, 3);
                 activity.getSfondo().setVisibility(View.VISIBLE);
                 activity.getTesto().setVisibility(View.VISIBLE);
                 activity.setButton(activity.getCasella_in_gioco(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
@@ -59,6 +60,7 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
                 break;
             case R.id.casella_tap:
                 resetButton();
+                activity.modificaLayout(1.5f, 1.5f, 1.5f, 3);
                 activity.getSfondo().setVisibility(View.VISIBLE);
                 activity.getTesto().setVisibility(View.VISIBLE);
                 activity.setButton(activity.getCasella_estratta(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
@@ -70,6 +72,7 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
                 break;
             case R.id.bordo:
                 resetButton();
+                activity.modificaLayout(1.5f, 1.5f, 1.5f, 3);
                 activity.getSfondo().setVisibility(View.INVISIBLE);
                 activity.getTesto().setVisibility(View.INVISIBLE);
                 activity.setButton(activity.getBordo(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
@@ -81,6 +84,7 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
                 resetButton();
                 activity.getSfondo().setVisibility(View.INVISIBLE);
                 activity.getTesto().setVisibility(View.INVISIBLE);
+                activity.modificaLayout(0,0,0,0);
                 activity.setButton(activity.getImpostazioni_pausa(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
                 the_view = 5;
                 break;

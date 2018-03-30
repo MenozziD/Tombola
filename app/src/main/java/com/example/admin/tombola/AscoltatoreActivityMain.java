@@ -83,6 +83,7 @@ public class AscoltatoreActivityMain implements View.OnClickListener, DialogInte
                 if (ultimo_numero != 0) {
                     activity.getCaselle().get(ultimo_numero-1).setClickable(true);
                     activity.setButton(activity.getCaselle().get(ultimo_numero - 1), 18, 18, 18, 18, activity.getManageXml().getColore_bordo(), activity.getManageXml().getColore_casella_libera_sfondo(), activity.getManageXml().getColore_casella_libera_testo());
+                    activity.getCaselle().get(ultimo_numero-1).setContentDescription("libera");
                     ultimo_numero = penultimo_numero;
                     penultimo_numero = terzultimo_numero;
                     terzultimo_numero = back;
@@ -108,6 +109,7 @@ public class AscoltatoreActivityMain implements View.OnClickListener, DialogInte
                     int numero = Integer.parseInt(casella.getText().toString());
                     activity.getCaselle().get(numero-1).setClickable(false);
                     activity.setButton(activity.getCaselle().get(numero-1),18, 18, 18, 18, activity.getManageXml().getColore_bordo(), activity.getManageXml().getColore_casella_tappata_sfondo(), activity.getManageXml().getColore_casella_tappata_testo());
+                    activity.getCaselle().get(numero-1).setContentDescription("tappata");
                     back = terzultimo_numero;
                     terzultimo_numero = penultimo_numero;
                     penultimo_numero = ultimo_numero;

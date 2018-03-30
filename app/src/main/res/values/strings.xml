@@ -6,104 +6,16 @@
     <string name="meno">meno</string>
     <string name="giro">1</string>
     <string name="set">set</string>
-
-    <string name="casella0">casella0</string>
-    <string name="casella1">casella1</string>
-    <string name="casella2">casella2</string>
-    <string name="casella3">casella3</string>
-    <string name="casella4">casella4</string>
-    <string name="casella5">casella5</string>
-    <string name="casella6">casella6</string>
-    <string name="casella7">casella7</string>
-    <string name="casella8">casella8</string>
-    <string name="casella9">casella9</string>
-
-    <string name="casella10">casella10</string>
-    <string name="casella11">casella11</string>
-    <string name="casella12">casella12</string>
-    <string name="casella13">casella13</string>
-    <string name="casella14">casella14</string>
-    <string name="casella15">casella15</string>
-    <string name="casella16">casella16</string>
-    <string name="casella17">casella17</string>
-    <string name="casella18">casella18</string>
-    <string name="casella19">casella19</string>
-
-    <string name="casella20">casella20</string>
-    <string name="casella21">casella21</string>
-    <string name="casella22">casella22</string>
-    <string name="casella23">casella23</string>
-    <string name="casella24">casella24</string>
-    <string name="casella25">casella25</string>
-    <string name="casella26">casella26</string>
-    <string name="casella27">casella27</string>
-    <string name="casella28">casella28</string>
-    <string name="casella29">casella29</string>
-
-    <string name="casella30">casella30</string>
-    <string name="casella31">casella31</string>
-    <string name="casella32">casella32</string>
-    <string name="casella33">casella33</string>
-    <string name="casella34">casella34</string>
-    <string name="casella35">casella35</string>
-    <string name="casella36">casella36</string>
-    <string name="casella37">casella37</string>
-    <string name="casella38">casella38</string>
-    <string name="casella39">casella39</string>
-
-    <string name="casella40">casella40</string>
-    <string name="casella41">casella41</string>
-    <string name="casella42">casella42</string>
-    <string name="casella43">casella43</string>
-    <string name="casella44">casella44</string>
-    <string name="casella45">casella45</string>
-    <string name="casella46">casella46</string>
-    <string name="casella47">casella47</string>
-    <string name="casella48">casella48</string>
-    <string name="casella49">casella49</string>
-
-    <string name="casella50">casella50</string>
-    <string name="casella51">casella51</string>
-    <string name="casella52">casella52</string>
-    <string name="casella53">casella53</string>
-    <string name="casella54">casella54</string>
-    <string name="casella55">casella55</string>
-    <string name="casella56">casella56</string>
-    <string name="casella57">casella57</string>
-    <string name="casella58">casella58</string>
-    <string name="casella59">casella59</string>
-
-    <string name="casella60">casella60</string>
-    <string name="casella61">casella61</string>
-    <string name="casella62">casella62</string>
-    <string name="casella63">casella63</string>
-    <string name="casella64">casella64</string>
-    <string name="casella65">casella65</string>
-    <string name="casella66">casella66</string>
-    <string name="casella67">casella67</string>
-    <string name="casella68">casella68</string>
-    <string name="casella69">casella69</string>
-
-    <string name="casella70">casella70</string>
-    <string name="casella71">casella71</string>
-    <string name="casella72">casella72</string>
-    <string name="casella73">casella73</string>
-    <string name="casella74">casella74</string>
-    <string name="casella75">casella75</string>
-    <string name="casella76">casella76</string>
-    <string name="casella77">casella77</string>
-    <string name="casella78">casella78</string>
-    <string name="casella79">casella79</string>
-
-    <string name="casella80">casella80</string>
-    <string name="casella81">casella81</string>
-    <string name="casella82">casella82</string>
-    <string name="casella83">casella83</string>
-    <string name="casella84">casella84</string>
-    <string name="casella85">casella85</string>
-    <string name="casella86">casella86</string>
-    <string name="casella87">casella87</string>
-    <string name="casella88">casella88</string>
-    <string name="casella89">casella89</string>
-
+    <string name="libera">libera</string>
+    <string name="in_gioco">CASELLA IN GIOCO</string>
+    <string name="estratta">CASELLA ESTRATTA</string>
+    <string name="bordo">BORDO</string>
+    <string name="pausa">IMPOSTAZIONI PAUSA</string>
+    <string name="sfondo">SFONDO</string>
+    <string name="testo">TESTO</string>
+    <string name="r">R</string>
+    <string name="g">G</string>
+    <string name="b">B</string>
+    <string name="imposta">IMPOSTA</string>
+    <string name="salva">SALVA COLORE</string>
 </resources>

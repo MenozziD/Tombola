@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -30,6 +31,10 @@ public class ActivitySetting extends AppCompatActivity
     private TextView value_rosso;
     private TextView value_verde;
     private TextView value_blu;
+    private LinearLayout barraVerde;
+    private LinearLayout barraRosso;
+    private LinearLayout barraBlu;
+    private LinearLayout colori;
     private boolean start = false;
 
     public SeekBar getRosso() {
@@ -115,6 +120,10 @@ public class ActivitySetting extends AppCompatActivity
         value_rosso = (TextView) findViewById(R.id.value_rosso);
         value_verde = (TextView) findViewById(R.id.value_verde);
         value_blu = (TextView) findViewById(R.id.value_blu);
+        barraVerde = (LinearLayout) findViewById(R.id.barra_verde);
+        barraRosso = (LinearLayout) findViewById(R.id.barra_rosso);
+        barraBlu = (LinearLayout) findViewById(R.id.barra_blu);
+        colori = (LinearLayout) findViewById(R.id.colori);
         AscoltatoreActivitySettings ascoltatore = new AscoltatoreActivitySettings(this);
         imposta.setOnClickListener(ascoltatore);
         salva.setOnClickListener(ascoltatore);
@@ -165,5 +174,13 @@ public class ActivitySetting extends AppCompatActivity
         casella.setBackground(layerDrawable);
         casella.setTextSize((casella.getWidth()/16f)/2.65f);
         casella.setTextColor(colore_testo);
+    }
+
+    public void modificaLayout(float wR, float wG, float wB, float wC)
+    {
+        barraBlu.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wR));
+        barraVerde.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wG));
+        barraRosso.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wB));
+        colori.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wC));
     }
 }
