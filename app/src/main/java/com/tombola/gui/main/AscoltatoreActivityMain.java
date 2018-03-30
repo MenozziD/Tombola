@@ -1,4 +1,4 @@
-package com.example.admin.tombola;
+package com.tombola.gui.main;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -6,6 +6,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.View;
 import android.widget.Button;
+import com.tombola.gui.settings.ActivitySetting;
+import com.tombola.R;
 import java.util.Objects;
 
 public class AscoltatoreActivityMain implements View.OnClickListener, DialogInterface.OnClickListener {

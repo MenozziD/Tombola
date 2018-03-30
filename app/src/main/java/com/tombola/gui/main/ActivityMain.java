@@ -1,4 +1,4 @@
-package com.example.admin.tombola;
+package com.tombola.gui.main;
 
 import android.app.AlertDialog;
 import android.graphics.Bitmap;
@@ -15,6 +15,8 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import com.tombola.tool.ManageXml;
+import com.tombola.R;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.admin.tombola">
+    package="com.tombola">
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.example.admin.tombola.ActivityMain"
+            android:name="com.tombola.gui.main.ActivityMain"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.admin.tombola.ActivitySetting"
+            android:name="com.tombola.gui.settings.ActivitySetting"
             android:screenOrientation="landscape">
         </activity>
     </application>

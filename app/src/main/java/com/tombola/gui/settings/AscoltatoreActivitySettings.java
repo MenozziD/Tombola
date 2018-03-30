@@ -1,8 +1,10 @@
-package com.example.admin.tombola;
+package com.tombola.gui.settings;
 
 import android.graphics.Color;
 import android.view.View;
 import android.widget.SeekBar;
+import com.tombola.tool.ManageXml;
+import com.tombola.R;
 import java.io.File;
 import java.io.FileNotFoundException;
 import static android.content.Context.MODE_PRIVATE;

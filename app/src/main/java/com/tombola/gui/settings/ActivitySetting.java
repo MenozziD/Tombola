@@ -1,4 +1,4 @@
-package com.example.admin.tombola;
+package com.tombola.gui.settings;
 
 
 import android.graphics.Color;
@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import com.tombola.R;
 
 
 public class ActivitySetting extends AppCompatActivity
