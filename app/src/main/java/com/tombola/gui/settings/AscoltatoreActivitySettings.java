@@ -137,7 +137,16 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
                 setColor(255,215,0);
                 break;
             case R.id.my_color:
-                setColor(255,215,0);
+                if (the_view == 0)
+                    setColor(manageXml.getMio_colore_casella_libera_sfondo().get(0),manageXml.getMio_colore_casella_libera_sfondo().get(1),manageXml.getMio_colore_casella_libera_sfondo().get(2));
+                if (the_view == 1)
+                    setColor(manageXml.getMio_colore_casella_libera_testo().get(0),manageXml.getMio_colore_casella_libera_testo().get(1),manageXml.getMio_colore_casella_libera_testo().get(2));
+                if (the_view == 2)
+                    setColor(manageXml.getMio_colore_casella_tappata_sfondo().get(0),manageXml.getMio_colore_casella_tappata_sfondo().get(1),manageXml.getMio_colore_casella_tappata_sfondo().get(2));
+                if (the_view == 3)
+                    setColor(manageXml.getMio_colore_casella_tappata_testo().get(0),manageXml.getMio_colore_casella_tappata_testo().get(1),manageXml.getMio_colore_casella_tappata_testo().get(2));
+                if (the_view == 4)
+                    setColor(manageXml.getMio_colore_bordo().get(0),manageXml.getMio_colore_bordo().get(1),manageXml.getMio_colore_bordo().get(2));
                 break;
             case R.id.salva_tempo:
                 String tempo = activity.getValore_tempo().getText().toString();
