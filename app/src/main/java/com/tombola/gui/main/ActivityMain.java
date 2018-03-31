@@ -9,10 +9,12 @@ import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.TypedValue;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
 import com.tombola.tool.ManageXml;
@@ -222,10 +224,12 @@ public class ActivityMain  extends AppCompatActivity {
     }
 
     public void resetGrafica() {
-        setButton(giro, preparaBordi(100), black, white, black);
-        setButton(ultimo, preparaBordi(101), black, white, black);
-        setButton(penultimo, preparaBordi(102), black, white, black);
-        setButton(terzultimo, preparaBordi(103), black, white, black);
+        TypedValue outValue = new TypedValue();
+        getResources().getValue(R.dimen.testo_grande, outValue, true);
+        setButton(giro, preparaBordi(100), preparaPadding(3), black, white, black,outValue.getFloat());
+        setButton(ultimo, preparaBordi(101), preparaPadding(2),black, white, black,outValue.getFloat());
+        setButton(penultimo, preparaBordi(102), preparaPadding(2),black, white, black,outValue.getFloat());
+        setButton(terzultimo, preparaBordi(103), preparaPadding(2),black, white, black,outValue.getFloat());
         ultimo.setText("");
         penultimo.setText("");
         terzultimo.setText("");
@@ -238,6 +242,7 @@ public class ActivityMain  extends AppCompatActivity {
         b = BitmapFactory.decodeResource(getResources(), R.drawable.tombola_verde);
         tombola.setContentDescription("verde");
         tombola.setImageBitmap(b);
+        layoutTabellone.setPadding(layoutTabellone.getWidth()/getResources().getInteger(R.integer.padding_minuscolo),layoutTabellone.getHeight()/getResources().getInteger(R.integer.padding_minuscolo),layoutTabellone.getWidth()/getResources().getInteger(R.integer.padding_minuscolo),layoutTabellone.getHeight()/getResources().getInteger(R.integer.padding_minuscolo));
         for (int i = 0; i < caselle.size(); i++) {
             caselle.get(i).setContentDescription("libera");
             caselle.get(i).setClickable(true);
@@ -245,15 +250,18 @@ public class ActivityMain  extends AppCompatActivity {
         updatetabellone();
     }
     //left, top, rigth, bottom
-    public void setButton(Button casella, ArrayList<Integer> bordi, ArrayList<Integer> colore_bordo, ArrayList<Integer> colore_sfondo, ArrayList<Integer> colore_testo){
+    public void setButton(Button casella, ArrayList<Integer> bordi, ArrayList<Integer> padding, ArrayList<Integer> colore_bordo, ArrayList<Integer> colore_sfondo, ArrayList<Integer> colore_testo, float textSize){
         LayerDrawable layerDrawable = (LayerDrawable) ContextCompat.getDrawable(this, R.drawable.casella);
         layerDrawable.setLayerInset(1, casella.getWidth()/bordi.get(0), casella.getHeight()/bordi.get(1), casella.getWidth()/bordi.get(2),casella.getHeight()/bordi.get(3));
         GradientDrawable bordo = (GradientDrawable)layerDrawable.findDrawableByLayerId(R.id.bordo);
         bordo.setColor(Color.rgb(colore_bordo.get(0),colore_bordo.get(1),colore_bordo.get(2)));
         GradientDrawable sfondo = (GradientDrawable)layerDrawable.findDrawableByLayerId(R.id.sfondo);
         sfondo.setColor(Color.rgb(colore_sfondo.get(0),colore_sfondo.get(1),colore_sfondo.get(2)));
+        RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) casella.getLayoutParams();
+        lp.setMargins(casella.getWidth() / padding.get(0), casella.getHeight() / padding.get(1), casella.getWidth() / padding.get(2), casella.getHeight() / padding.get(3));
+        casella.setLayoutParams(lp);
         casella.setBackground(layerDrawable);
-        casella.setTextSize((casella.getWidth()/2f)/2.65f);
+        casella.setTextSize((casella.getHeight()-casella.getHeight() / padding.get(1))/textSize);
         casella.setTextColor(Color.rgb(colore_testo.get(0),colore_testo.get(1),colore_testo.get(2)));
     }
 
@@ -261,11 +269,12 @@ public class ActivityMain  extends AppCompatActivity {
 
         for (int i = 0; i < caselle.size(); i++){
             if (Objects.equals(caselle.get(i).getContentDescription().toString(), "libera"))
-                setButton(caselle.get(i), preparaBordi(i+1), manageXml.getColore_bordo(), manageXml.getColore_casella_libera_sfondo(), manageXml.getColore_casella_libera_testo());
+                setButton(caselle.get(i), preparaBordi(i+1), preparaPadding(1), manageXml.getColore_bordo(), manageXml.getColore_casella_libera_sfondo(), manageXml.getColore_casella_libera_testo(),getResources().getInteger(R.integer.testo_medio));
             if (Objects.equals(caselle.get(i).getContentDescription().toString(), "tappata"))
-                setButton(caselle.get(i), preparaBordi(i+1), manageXml.getColore_bordo(), manageXml.getColore_casella_tappata_sfondo(), manageXml.getColore_casella_tappata_testo());
+                setButton(caselle.get(i), preparaBordi(i+1),preparaPadding(1), manageXml.getColore_bordo(), manageXml.getColore_casella_tappata_sfondo(), manageXml.getColore_casella_tappata_testo(),getResources().getInteger(R.integer.testo_medio));
         }
     }
+
     //left, top, rigth, bottom
     public ArrayList<Integer> preparaBordi(int numero_casella){
         ArrayList<Integer> bordi = new ArrayList<>(4);
@@ -332,6 +341,29 @@ public class ActivityMain  extends AppCompatActivity {
             }
         }
         return bordi;
+    }
+
+    public ArrayList<Integer> preparaPadding(int tipologia){
+        ArrayList<Integer> padding = new ArrayList<>(4);
+        if (tipologia == 1){
+            padding.add(getResources().getInteger(R.integer.padding_nullo));
+            padding.add(getResources().getInteger(R.integer.padding_nullo));
+            padding.add(getResources().getInteger(R.integer.padding_nullo));
+            padding.add(getResources().getInteger(R.integer.padding_nullo));
+        }
+        if (tipologia == 2){
+            padding.add(getResources().getInteger(R.integer.padding_piccolo));
+            padding.add(getResources().getInteger(R.integer.padding_piccolo));
+            padding.add(getResources().getInteger(R.integer.padding_piccolo));
+            padding.add(getResources().getInteger(R.integer.padding_piccolo));
+        }
+        if (tipologia == 3){
+            padding.add(getResources().getInteger(R.integer.padding_medio));
+            padding.add(getResources().getInteger(R.integer.padding_piccolo));
+            padding.add(getResources().getInteger(R.integer.padding_medio));
+            padding.add(getResources().getInteger(R.integer.padding_nullo));
+        }
+        return padding;
     }
 
     public TextView getTesto_tempo() {
