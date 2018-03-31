@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="bordo_grande">9</integer>
+    <integer name="bordo_medio">18</integer>
+    <integer name="bordo_piccolo">36</integer>
+</resources>
