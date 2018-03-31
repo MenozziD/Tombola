@@ -9,7 +9,6 @@ import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
@@ -270,70 +269,68 @@ public class ActivityMain  extends AppCompatActivity {
     //left, top, rigth, bottom
     public ArrayList<Integer> preparaBordi(int numero_casella){
         ArrayList<Integer> bordi = new ArrayList<>(4);
-        //LEFT
-        Log.i("NUMERO CASELLA",Integer.toString((numero_casella)));
-        Log.i("MODULO",Integer.toString((numero_casella-1)%10));
-        if (numero_casella == 1 || (numero_casella-1)%10 == 0)
-            bordi.add(getResources().getInteger(R.integer.bordo_grande));
-        else{
-            if (numero_casella%10 == 6)
-                bordi.add(getResources().getInteger(R.integer.bordo_medio));
-            else
-                bordi.add(0,getResources().getInteger(R.integer.bordo_piccolo));
+        if (numero_casella <= 90) {
+            //LEFT
+            if (numero_casella == 1 || (numero_casella - 1) % 10 == 0)
+                bordi.add(getResources().getInteger(R.integer.bordo_grande));
+            else {
+                if (numero_casella % 10 == 6)
+                    bordi.add(getResources().getInteger(R.integer.bordo_medio));
+                else
+                    bordi.add(0, getResources().getInteger(R.integer.bordo_piccolo));
+            }
+            //TOP
+            if (numero_casella >= 1 && numero_casella <= 10)
+                bordi.add(getResources().getInteger(R.integer.bordo_grande));
+            else {
+                if ((numero_casella >= 31 && numero_casella <= 40) || (numero_casella >= 61 && numero_casella <= 70))
+                    bordi.add(getResources().getInteger(R.integer.bordo_medio));
+                else
+                    bordi.add(getResources().getInteger(R.integer.bordo_piccolo));
+            }
+            //RIGTH
+            if (numero_casella % 10 == 0)
+                bordi.add(getResources().getInteger(R.integer.bordo_grande));
+            else {
+                if (numero_casella % 10 == 5)
+                    bordi.add(getResources().getInteger(R.integer.bordo_medio));
+                else
+                    bordi.add(getResources().getInteger(R.integer.bordo_piccolo));
+            }
+            //BOTTOM
+            if (numero_casella >= 81 && numero_casella <= 90)
+                bordi.add(getResources().getInteger(R.integer.bordo_grande));
+            else {
+                if ((numero_casella >= 21 && numero_casella <= 30) || (numero_casella >= 51 && numero_casella <= 60))
+                    bordi.add(getResources().getInteger(R.integer.bordo_medio));
+                else
+                    bordi.add(getResources().getInteger(R.integer.bordo_piccolo));
+            }
         }
-        //TOP
-        if (numero_casella >= 1 && numero_casella <=10)
-            bordi.add(getResources().getInteger(R.integer.bordo_grande));
         else {
-            if ((numero_casella >= 31 && numero_casella<= 40) || (numero_casella >= 61 && numero_casella<= 70))
-                bordi.add(getResources().getInteger(R.integer.bordo_medio));
-            else
-                bordi.add(getResources().getInteger(R.integer.bordo_piccolo));
-        }
-        //RIGTH
-        if (numero_casella%10 == 0)
-            bordi.add(getResources().getInteger(R.integer.bordo_grande));
-        else{
-            if (numero_casella%10 == 5)
-                bordi.add(getResources().getInteger(R.integer.bordo_medio));
-            else
-                bordi.add(getResources().getInteger(R.integer.bordo_piccolo));
-        }
-        //BOTTOM
-        if (numero_casella >= 81 && numero_casella <=90)
-            bordi.add(getResources().getInteger(R.integer.bordo_grande));
-        else {
-            if ((numero_casella >= 21 && numero_casella<= 30) || (numero_casella >= 51 && numero_casella<= 60))
-                bordi.add(getResources().getInteger(R.integer.bordo_medio));
-            else
-                bordi.add(getResources().getInteger(R.integer.bordo_piccolo));
-        }
-        //GIRO
-        if (numero_casella == 100 )
-        {
-            bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-            bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-            bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-            bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-        }
+            //GIRO
+            if (numero_casella == 100) {
+                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
+                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
+                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
+                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
+            }
 
-        //ULTIMO ESTRATTO
-        if (numero_casella == 101)
-        {
-            bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-            bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-            bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-            bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
+            //ULTIMO ESTRATTO
+            if (numero_casella == 101) {
+                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
+                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
+                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
+                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
+            }
+            //PENULTIMO ESTRATTO
+            if (numero_casella == 102 || numero_casella == 103) {
+                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
+                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
+                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
+                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
+            }
         }
-        //PENULTIMO ESTRATTO
-        if (numero_casella == 102 || numero_casella == 103)
-        {
-            bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-            bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-            bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-            bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-        }
-
         return bordi;
     }
 
