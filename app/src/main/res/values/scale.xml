@@ -8,7 +8,8 @@
     <integer name="padding_piccolo">15</integer>
     <integer name="padding_medio">8</integer>
     <integer name="padding_grande">4</integer>
-    <integer name="testo_piccolo">8</integer>
+    <integer name="testo_piccolo">10</integer>
     <integer name="testo_medio">4</integer>
-    <item name="testo_grande" format="float" type="dimen">3.5</item>
+    <integer name="testo_grande">2</integer>
+    <item name="testo_float" format="float" type="dimen">3.5</item>
 </resources>

@@ -1,18 +1,16 @@
 package com.tombola.gui.settings;
 
-
-import android.graphics.Color;
-import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import com.tombola.R;
+import com.tombola.tool.ManageButton;
 
 
 public class ActivitySetting extends AppCompatActivity
@@ -40,8 +38,125 @@ public class ActivitySetting extends AppCompatActivity
     private LinearLayout barraBlu;
     private LinearLayout colori;
     private LinearLayout pausa;
+    private ManageButton manageButton;
     private boolean start = false;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_settings);
+        start = true;
+        manageButton = new ManageButton(this);
+        Button orange = (Button) findViewById(R.id.orange);
+        Button azure = (Button) findViewById(R.id.azure);
+        Button green = (Button) findViewById(R.id.green);
+        Button gray = (Button) findViewById(R.id.gray);
+        Button red = (Button) findViewById(R.id.red);
+        Button yellow = (Button) findViewById(R.id.yellow);
+        salva_tempo = (Button) findViewById(R.id.salva_tempo);
+        imposta = (Button) findViewById(R.id.imposta);
+        salva = (Button) findViewById(R.id.salva);
+        my_color = (Button) findViewById(R.id.my_color);
+        run_color= (Button) findViewById(R.id.run_color);
+        casella_in_gioco= (Button) findViewById(R.id.casella_libera);
+        casella_estratta = (Button) findViewById(R.id.casella_tap);
+        bordo = (Button) findViewById(R.id.bordo);
+        impostazioni_pausa = (Button) findViewById(R.id.pausa);
+        sfondo = (Button) findViewById(R.id.sfondo);
+        testo = (Button) findViewById(R.id.testo);
+        rosso = (SeekBar) findViewById(R.id.rosso);
+        verde = (SeekBar) findViewById(R.id.verde);
+        blu = (SeekBar) findViewById(R.id.blu);
+        value_rosso = (TextView) findViewById(R.id.value_rosso);
+        value_verde = (TextView) findViewById(R.id.value_verde);
+        value_blu = (TextView) findViewById(R.id.value_blu);
+        valore_tempo = (EditText) findViewById(R.id.valore_tempo);
+        barraVerde = (LinearLayout) findViewById(R.id.barra_verde);
+        barraRosso = (LinearLayout) findViewById(R.id.barra_rosso);
+        barraBlu = (LinearLayout) findViewById(R.id.barra_blu);
+        colori = (LinearLayout) findViewById(R.id.colori);
+        pausa = (LinearLayout) findViewById(R.id.impostazioni_pausa);
+        AscoltatoreActivitySettings ascoltatore = new AscoltatoreActivitySettings(this, getIntent().getExtras().getString("page"));
+        imposta.setOnClickListener(ascoltatore);
+        salva.setOnClickListener(ascoltatore);
+        orange.setOnClickListener(ascoltatore);
+        azure.setOnClickListener(ascoltatore);
+        green.setOnClickListener(ascoltatore);
+        gray.setOnClickListener(ascoltatore);
+        red.setOnClickListener(ascoltatore);
+        yellow.setOnClickListener(ascoltatore);
+        my_color.setOnClickListener(ascoltatore);
+        casella_estratta.setOnClickListener(ascoltatore);
+        casella_in_gioco.setOnClickListener(ascoltatore);
+        bordo.setOnClickListener(ascoltatore);
+        impostazioni_pausa.setOnClickListener(ascoltatore);
+        sfondo.setOnClickListener(ascoltatore);
+        testo.setOnClickListener(ascoltatore);
+        salva_tempo.setOnClickListener(ascoltatore);
+        rosso.setOnSeekBarChangeListener(ascoltatore);
+        verde.setOnSeekBarChangeListener(ascoltatore);
+        blu.setOnSeekBarChangeListener(ascoltatore);
+        if (getIntent().getExtras().getString("page").equals("pausa"))
+        {
+            modificaLayout(0,0,0,0, 7.5f);
+            sfondo.setVisibility(View.INVISIBLE);
+            testo.setVisibility(View.INVISIBLE);
+        }
+        if (getIntent().getExtras().getString("page").equals("bordo"))
+        {
+            sfondo.setVisibility(View.INVISIBLE);
+            testo.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    @Override
+    protected void onResume() {super.onResume();}
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (start) {
+            resetButton();
+            if (getIntent().getExtras().getString("page").equals("libera")) {
+                manageButton.setButton(casella_in_gioco, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(), getResources().getInteger(R.integer.testo_piccolo));
+                manageButton.setButton(sfondo, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(), getResources().getInteger(R.integer.testo_medio));
+                manageButton.setButton(testo, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(), getResources().getInteger(R.integer.testo_medio));
+            }
+            if (getIntent().getExtras().getString("page").equals("tappata")) {
+                manageButton.setButton(casella_estratta, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(),getResources().getInteger(R.integer.testo_piccolo));
+                manageButton.setButton(sfondo, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(),getResources().getInteger(R.integer.testo_medio));
+                manageButton.setButton(testo, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(),getResources().getInteger(R.integer.testo_medio));
+
+            }
+            if (getIntent().getExtras().getString("page").equals("bordo"))
+                manageButton.setButton(bordo,manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(),getResources().getInteger(R.integer.testo_piccolo));
+
+            if (getIntent().getExtras().getString("page").equals("pausa")) 
+                manageButton.setButton(impostazioni_pausa,manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(),getResources().getInteger(R.integer.testo_piccolo));
+            manageButton.setButton(sfondo, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(), getResources().getInteger(R.integer.testo_medio));
+            manageButton.setButton(testo, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(), getResources().getInteger(R.integer.testo_medio));
+            manageButton.setButton(imposta, manageButton.preparaBordi(110), manageButton.preparaPadding(1), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(), getResources().getInteger(R.integer.testo_medio));
+            manageButton.setButton(salva, manageButton.preparaBordi(110), manageButton.preparaPadding(1), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(), getResources().getInteger(R.integer.testo_piccolo));
+            manageButton.setButton(salva_tempo, manageButton.preparaBordi(111), manageButton.preparaPadding(2), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(), getResources().getInteger(R.integer.testo_piccolo));
+            start = false;
+        }
+    }
+
+    public void modificaLayout(float wR, float wG, float wB, float wC, float wP)
+    {
+        barraBlu.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wR));
+        barraVerde.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wG));
+        barraRosso.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wB));
+        colori.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wC));
+        pausa.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wP));
+    }
+
+    private void resetButton(){
+        manageButton.setButton(casella_in_gioco,manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(),getResources().getInteger(R.integer.testo_piccolo));
+        manageButton.setButton(casella_estratta, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(),getResources().getInteger(R.integer.testo_piccolo));
+        manageButton.setButton(bordo,manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(),getResources().getInteger(R.integer.testo_piccolo));
+        manageButton.setButton(impostazioni_pausa,manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(),getResources().getInteger(R.integer.testo_piccolo));
+    }
     public SeekBar getRosso() {
         return rosso;
     }
@@ -102,100 +217,8 @@ public class ActivitySetting extends AppCompatActivity
         return valore_tempo;
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
-        start = true;
-        Button orange = (Button) findViewById(R.id.orange);
-        Button azure = (Button) findViewById(R.id.azure);
-        Button green = (Button) findViewById(R.id.green);
-        Button gray = (Button) findViewById(R.id.gray);
-        Button red = (Button) findViewById(R.id.red);
-        Button yellow = (Button) findViewById(R.id.yellow);
-        salva_tempo = (Button) findViewById(R.id.salva_tempo);
-        imposta = (Button) findViewById(R.id.imposta);
-        salva = (Button) findViewById(R.id.salva);
-        my_color = (Button) findViewById(R.id.my_color);
-        run_color= (Button) findViewById(R.id.run_color);
-        casella_in_gioco= (Button) findViewById(R.id.casella_libera);
-        casella_estratta = (Button) findViewById(R.id.casella_tap);
-        bordo = (Button) findViewById(R.id.bordo);
-        impostazioni_pausa = (Button) findViewById(R.id.pausa);
-        sfondo = (Button) findViewById(R.id.sfondo);
-        testo = (Button) findViewById(R.id.testo);
-        rosso = (SeekBar) findViewById(R.id.rosso);
-        verde = (SeekBar) findViewById(R.id.verde);
-        blu = (SeekBar) findViewById(R.id.blu);
-        value_rosso = (TextView) findViewById(R.id.value_rosso);
-        value_verde = (TextView) findViewById(R.id.value_verde);
-        value_blu = (TextView) findViewById(R.id.value_blu);
-        valore_tempo = (EditText) findViewById(R.id.valore_tempo);
-        barraVerde = (LinearLayout) findViewById(R.id.barra_verde);
-        barraRosso = (LinearLayout) findViewById(R.id.barra_rosso);
-        barraBlu = (LinearLayout) findViewById(R.id.barra_blu);
-        colori = (LinearLayout) findViewById(R.id.colori);
-        pausa = (LinearLayout) findViewById(R.id.impostazioni_pausa);
-        AscoltatoreActivitySettings ascoltatore = new AscoltatoreActivitySettings(this);
-        imposta.setOnClickListener(ascoltatore);
-        salva.setOnClickListener(ascoltatore);
-        orange.setOnClickListener(ascoltatore);
-        azure.setOnClickListener(ascoltatore);
-        green.setOnClickListener(ascoltatore);
-        gray.setOnClickListener(ascoltatore);
-        red.setOnClickListener(ascoltatore);
-        yellow.setOnClickListener(ascoltatore);
-        my_color.setOnClickListener(ascoltatore);
-        casella_estratta.setOnClickListener(ascoltatore);
-        casella_in_gioco.setOnClickListener(ascoltatore);
-        bordo.setOnClickListener(ascoltatore);
-        impostazioni_pausa.setOnClickListener(ascoltatore);
-        sfondo.setOnClickListener(ascoltatore);
-        testo.setOnClickListener(ascoltatore);
-        salva_tempo.setOnClickListener(ascoltatore);
-        rosso.setOnSeekBarChangeListener(ascoltatore);
-        verde.setOnSeekBarChangeListener(ascoltatore);
-        blu.setOnSeekBarChangeListener(ascoltatore);
+    public ManageButton getManageButton() {
+        return manageButton;
     }
 
-    @Override
-    protected void onResume() {super.onResume();}
-
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        if (start) {
-            setButton(casella_estratta,18,18,18,18, Color.BLACK, Color.WHITE, Color.BLACK);
-            setButton(casella_in_gioco,18,18,18,18, Color.WHITE, Color.BLACK, Color.WHITE);
-            setButton(bordo,18,18,18,18, Color.BLACK, Color.WHITE, Color.BLACK);
-            setButton(impostazioni_pausa,18,18,18,18, Color.BLACK, Color.WHITE, Color.BLACK);
-            setButton(sfondo,18,18,18,18, Color.WHITE, Color.BLACK, Color.WHITE);
-            setButton(testo,18,18,18,18, Color.BLACK, Color.WHITE, Color.BLACK);
-            setButton(imposta,60,9,60,9, Color.BLACK, Color.WHITE, Color.BLACK);
-            setButton(salva,9,9,9,9, Color.BLACK, Color.WHITE, Color.BLACK);
-            setButton(salva_tempo,9,9,9,9,Color.BLACK, Color.WHITE, Color.BLACK);
-            start = false;
-        }
-    }
-
-    public void setButton(Button casella, float l, float t, float r, float b, int colore_bordo, int colore_sfondo, int colore_testo){
-        LayerDrawable layerDrawable = (LayerDrawable) ContextCompat.getDrawable(this, R.drawable.casella);
-        layerDrawable.setLayerInset(1, Math.round(casella.getWidth()/l), Math.round(casella.getHeight()/t), Math.round(casella.getWidth()/r),Math.round(casella.getHeight()/b));
-        GradientDrawable bordo = (GradientDrawable)layerDrawable.findDrawableByLayerId(R.id.bordo);
-        bordo.setColor(colore_bordo);
-        GradientDrawable sfondo = (GradientDrawable)layerDrawable.findDrawableByLayerId(R.id.sfondo);
-        sfondo.setColor(colore_sfondo);
-        casella.setBackground(layerDrawable);
-        casella.setTextSize((casella.getWidth()/16f)/2.65f);
-        casella.setTextColor(colore_testo);
-    }
-
-    public void modificaLayout(float wR, float wG, float wB, float wC, float wP)
-    {
-        barraBlu.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wR));
-        barraVerde.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wG));
-        barraRosso.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wB));
-        colori.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wC));
-        pausa.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wP));
-    }
 }

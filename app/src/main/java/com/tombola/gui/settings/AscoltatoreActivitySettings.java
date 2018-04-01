@@ -1,5 +1,6 @@
 package com.tombola.gui.settings;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.View;
 import android.widget.SeekBar;
@@ -7,6 +8,8 @@ import com.tombola.tool.ManageXml;
 import com.tombola.R;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Objects;
+
 import static android.content.Context.MODE_PRIVATE;
 
 public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBar.OnSeekBarChangeListener{
@@ -23,11 +26,11 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
     */
     private int the_view;
 
-    AscoltatoreActivitySettings(ActivitySetting activity)
+    AscoltatoreActivitySettings(ActivitySetting activity, String page)
     {
         manageXml = new ManageXml();
         this.activity= activity;
-        the_view = 0;
+        the_view = 5;
         File f = new File(activity.getFilesDir(), "config.xml");
         if (f.exists()) {
             try {
@@ -41,58 +44,41 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
             manageXml.setXrp(activity.getResources().getXml(R.xml.config));
             manageXml.readXml(false);
         }
-        setColor(manageXml.getColore_casella_libera_sfondo().get(0),manageXml.getColore_casella_libera_sfondo().get(1),manageXml.getColore_casella_libera_sfondo().get(2));
-        activity.getMy_color().setBackgroundColor(Color.rgb(manageXml.getMio_colore_casella_libera_sfondo().get(0),manageXml.getMio_colore_casella_libera_sfondo().get(1),manageXml.getMio_colore_casella_libera_sfondo().get(2)));
+        if (Objects.equals(page, "libera")) {
+            the_view = 0;
+            setColor(manageXml.getColore_casella_libera_sfondo().get(0), manageXml.getColore_casella_libera_sfondo().get(1), manageXml.getColore_casella_libera_sfondo().get(2));
+            activity.getMy_color().setBackgroundColor(Color.rgb(manageXml.getMio_colore_casella_libera_sfondo().get(0), manageXml.getMio_colore_casella_libera_sfondo().get(1), manageXml.getMio_colore_casella_libera_sfondo().get(2)));
+        }
+        if (Objects.equals(page, "tappata")) {
+            the_view = 2;
+            setColor(manageXml.getColore_casella_tappata_sfondo().get(0), manageXml.getColore_casella_tappata_sfondo().get(1), manageXml.getColore_casella_tappata_sfondo().get(2));
+            activity.getMy_color().setBackgroundColor(Color.rgb(manageXml.getMio_colore_casella_tappata_sfondo().get(0), manageXml.getMio_colore_casella_tappata_sfondo().get(1), manageXml.getMio_colore_casella_tappata_sfondo().get(2)));
+        }
+        if (Objects.equals(page, "bordo")) {
+            the_view = 4;
+            setColor(manageXml.getColore_bordo().get(0), manageXml.getColore_bordo().get(1), manageXml.getColore_bordo().get(2));
+            activity.getMy_color().setBackgroundColor(Color.rgb(manageXml.getMio_colore_bordo().get(0), manageXml.getMio_colore_bordo().get(1), manageXml.getMio_colore_bordo().get(2)));
+        }
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.casella_libera:
-                resetButton();
-                activity.modificaLayout(1.5f, 1.5f, 1.5f, 3, 0);
-                activity.getSfondo().setVisibility(View.VISIBLE);
-                activity.getTesto().setVisibility(View.VISIBLE);
-                activity.setButton(activity.getCasella_in_gioco(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
-                activity.setButton(activity.getSfondo(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
-                activity.setButton(activity.getTesto(), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-                setColor(manageXml.getColore_casella_libera_sfondo().get(0),manageXml.getColore_casella_libera_sfondo().get(1),manageXml.getColore_casella_libera_sfondo().get(2));
-                activity.getMy_color().setBackgroundColor(Color.rgb(manageXml.getMio_colore_casella_libera_sfondo().get(0),manageXml.getMio_colore_casella_libera_sfondo().get(1),manageXml.getMio_colore_casella_libera_sfondo().get(2)));
-                the_view = 0;
+                reload("libera");
                 break;
             case R.id.casella_tap:
-                resetButton();
-                activity.modificaLayout(1.5f, 1.5f, 1.5f, 3, 0);
-                activity.getSfondo().setVisibility(View.VISIBLE);
-                activity.getTesto().setVisibility(View.VISIBLE);
-                activity.setButton(activity.getCasella_estratta(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
-                activity.setButton(activity.getSfondo(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
-                activity.setButton(activity.getTesto(), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-                setColor(manageXml.getColore_casella_tappata_sfondo().get(0),manageXml.getColore_casella_tappata_sfondo().get(1),manageXml.getColore_casella_tappata_sfondo().get(2));
-                activity.getMy_color().setBackgroundColor(Color.rgb(manageXml.getMio_colore_casella_tappata_sfondo().get(0),manageXml.getMio_colore_casella_tappata_sfondo().get(1),manageXml.getMio_colore_casella_tappata_sfondo().get(2)));
-                the_view = 2;
+                reload("tappata");
                 break;
             case R.id.bordo:
-                resetButton();
-                activity.modificaLayout(1.5f, 1.5f, 1.5f, 3, 0);
-                activity.getSfondo().setVisibility(View.INVISIBLE);
-                activity.getTesto().setVisibility(View.INVISIBLE);
-                activity.setButton(activity.getBordo(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
-                setColor(manageXml.getColore_bordo().get(0),manageXml.getColore_bordo().get(1),manageXml.getColore_bordo().get(2));
-                activity.getMy_color().setBackgroundColor(Color.rgb(manageXml.getMio_colore_bordo().get(0),manageXml.getMio_colore_bordo().get(1),manageXml.getMio_colore_bordo().get(2)));
-                the_view = 4;
+                reload("bordo");
                 break;
             case R.id.pausa:
-                resetButton();
-                activity.getSfondo().setVisibility(View.INVISIBLE);
-                activity.getTesto().setVisibility(View.INVISIBLE);
-                activity.modificaLayout(0,0,0,0, 7.5f);
-                activity.setButton(activity.getImpostazioni_pausa(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
-                the_view = 5;
+                reload("pausa");
                 break;
             case R.id.sfondo:
-                activity.setButton(activity.getSfondo(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
-                activity.setButton(activity.getTesto(), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+                activity.getManageButton().setButton(activity.getSfondo(), activity.getManageButton().preparaBordi(100), activity.getManageButton().preparaPadding(1), activity.getManageButton().getWhite(), activity.getManageButton().getBlack(), activity.getManageButton().getWhite(),activity.getResources().getInteger(R.integer.testo_medio));
+                activity.getManageButton().setButton(activity.getTesto(), activity.getManageButton().preparaBordi(100), activity.getManageButton().preparaPadding(1), activity.getManageButton().getBlack(), activity.getManageButton().getWhite(), activity.getManageButton().getBlack(),activity.getResources().getInteger(R.integer.testo_medio));
                 if (the_view == 1){
                     the_view = 0;
                     setColor(manageXml.getColore_casella_libera_sfondo().get(0),manageXml.getColore_casella_libera_sfondo().get(1),manageXml.getColore_casella_libera_sfondo().get(2));
@@ -105,8 +91,8 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
                 }
                 break;
             case R.id.testo:
-                activity.setButton(activity.getTesto(), 18, 18, 18, 18, Color.WHITE, Color.BLACK, Color.WHITE);
-                activity.setButton(activity.getSfondo(), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
+                activity.getManageButton().setButton(activity.getTesto(), activity.getManageButton().preparaBordi(100), activity.getManageButton().preparaPadding(1), activity.getManageButton().getWhite(), activity.getManageButton().getBlack(), activity.getManageButton().getWhite(),activity.getResources().getInteger(R.integer.testo_medio));
+                activity.getManageButton().setButton(activity.getSfondo(), activity.getManageButton().preparaBordi(100), activity.getManageButton().preparaPadding(1), activity.getManageButton().getBlack(), activity.getManageButton().getWhite(), activity.getManageButton().getBlack(),activity.getResources().getInteger(R.integer.testo_medio));
                 if (the_view == 0){
                     the_view = 1;
                     setColor(manageXml.getColore_casella_libera_testo().get(0),manageXml.getColore_casella_libera_testo().get(1),manageXml.getColore_casella_libera_testo().get(2));
@@ -260,13 +246,6 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
 
     }
 
-    private void resetButton(){
-        activity.setButton(activity.getCasella_in_gioco(), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-        activity.setButton(activity.getCasella_estratta(), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-        activity.setButton(activity.getBordo(), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-        activity.setButton(activity.getImpostazioni_pausa(), 18, 18, 18, 18, Color.BLACK, Color.WHITE, Color.BLACK);
-    }
-
     private void setColor(int red, int green, int blu){
         activity.getRosso().setProgress(red);
         activity.getVerde().setProgress(green);
@@ -275,5 +254,12 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
         activity.getValue_verde().setText(String.format("%s",green));
         activity.getValue_blu().setText(String.format("%s",blu));
         activity.getRun_color().setBackgroundColor(Color.rgb(Integer.parseInt(activity.getValue_rosso().getText().toString()),Integer.parseInt(activity.getValue_verde().getText().toString()),Integer.parseInt(activity.getValue_blu().getText().toString())));
+    }
+
+    private void reload(String page){
+        activity.finish();
+        Intent reload = new Intent(activity,ActivitySetting.class);
+        reload.putExtra("page", page);
+        activity.startActivity(reload);
     }
 }

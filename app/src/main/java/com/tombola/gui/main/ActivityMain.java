@@ -3,20 +3,16 @@ package com.tombola.gui.main;
 import android.app.AlertDialog;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
-import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import com.tombola.tool.ManageButton;
 import com.tombola.tool.ManageXml;
 import com.tombola.R;
 import java.io.File;
@@ -40,8 +36,7 @@ public class ActivityMain  extends AppCompatActivity {
     private FrameLayout layoutLogo;
     private AlertDialog dialog;
     private ManageXml manageXml;
-    private ArrayList<Integer> white;
-    private ArrayList<Integer> black;
+    private ManageButton manageButton;
     private TextView testo_tempo;
 
     @Override
@@ -49,14 +44,7 @@ public class ActivityMain  extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        white = new ArrayList<>(3);
-        black = new ArrayList<>(3);
-        white.add(255);
-        white.add(255);
-        white.add(255);
-        black.add(0);
-        black.add(0);
-        black.add(0);
+        manageButton = new ManageButton(this);
         start = true;
         layoutTabellone=(TableLayout) findViewById(R.id.LTabellone);
         layoutComandi=(LinearLayout) findViewById(R.id.LComandi);
@@ -225,11 +213,11 @@ public class ActivityMain  extends AppCompatActivity {
 
     public void resetGrafica() {
         TypedValue outValue = new TypedValue();
-        getResources().getValue(R.dimen.testo_grande, outValue, true);
-        setButton(giro, preparaBordi(100), preparaPadding(3), black, white, black,outValue.getFloat());
-        setButton(ultimo, preparaBordi(101), preparaPadding(2),black, white, black,outValue.getFloat());
-        setButton(penultimo, preparaBordi(102), preparaPadding(2),black, white, black,outValue.getFloat());
-        setButton(terzultimo, preparaBordi(103), preparaPadding(2),black, white, black,outValue.getFloat());
+        getResources().getValue(R.dimen.testo_float, outValue, true);
+        manageButton.setButton(giro, manageButton.preparaBordi(100), manageButton.preparaPadding(3), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(),outValue.getFloat());
+        manageButton.setButton(ultimo, manageButton.preparaBordi(101), manageButton.preparaPadding(2),manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(),outValue.getFloat());
+        manageButton.setButton(penultimo, manageButton.preparaBordi(102), manageButton.preparaPadding(2),manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(),outValue.getFloat());
+        manageButton.setButton(terzultimo, manageButton.preparaBordi(103), manageButton.preparaPadding(2),manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(),outValue.getFloat());
         ultimo.setText("");
         penultimo.setText("");
         terzultimo.setText("");
@@ -249,121 +237,19 @@ public class ActivityMain  extends AppCompatActivity {
         }
         updatetabellone();
     }
-    //left, top, rigth, bottom
-    public void setButton(Button casella, ArrayList<Integer> bordi, ArrayList<Integer> padding, ArrayList<Integer> colore_bordo, ArrayList<Integer> colore_sfondo, ArrayList<Integer> colore_testo, float textSize){
-        LayerDrawable layerDrawable = (LayerDrawable) ContextCompat.getDrawable(this, R.drawable.casella);
-        layerDrawable.setLayerInset(1, casella.getWidth()/bordi.get(0), casella.getHeight()/bordi.get(1), casella.getWidth()/bordi.get(2),casella.getHeight()/bordi.get(3));
-        GradientDrawable bordo = (GradientDrawable)layerDrawable.findDrawableByLayerId(R.id.bordo);
-        bordo.setColor(Color.rgb(colore_bordo.get(0),colore_bordo.get(1),colore_bordo.get(2)));
-        GradientDrawable sfondo = (GradientDrawable)layerDrawable.findDrawableByLayerId(R.id.sfondo);
-        sfondo.setColor(Color.rgb(colore_sfondo.get(0),colore_sfondo.get(1),colore_sfondo.get(2)));
-        RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) casella.getLayoutParams();
-        lp.setMargins(casella.getWidth() / padding.get(0), casella.getHeight() / padding.get(1), casella.getWidth() / padding.get(2), casella.getHeight() / padding.get(3));
-        casella.setLayoutParams(lp);
-        casella.setBackground(layerDrawable);
-        casella.setTextSize((casella.getHeight()-casella.getHeight() / padding.get(1))/textSize);
-        casella.setTextColor(Color.rgb(colore_testo.get(0),colore_testo.get(1),colore_testo.get(2)));
-    }
 
     public void updatetabellone(){
 
         for (int i = 0; i < caselle.size(); i++){
             if (Objects.equals(caselle.get(i).getContentDescription().toString(), "libera"))
-                setButton(caselle.get(i), preparaBordi(i+1), preparaPadding(1), manageXml.getColore_bordo(), manageXml.getColore_casella_libera_sfondo(), manageXml.getColore_casella_libera_testo(),getResources().getInteger(R.integer.testo_medio));
+                manageButton.setButton(caselle.get(i), manageButton.preparaBordi(i+1),manageButton.preparaPadding(1), manageXml.getColore_bordo(), manageXml.getColore_casella_libera_sfondo(), manageXml.getColore_casella_libera_testo(),getResources().getInteger(R.integer.testo_medio));
             if (Objects.equals(caselle.get(i).getContentDescription().toString(), "tappata"))
-                setButton(caselle.get(i), preparaBordi(i+1),preparaPadding(1), manageXml.getColore_bordo(), manageXml.getColore_casella_tappata_sfondo(), manageXml.getColore_casella_tappata_testo(),getResources().getInteger(R.integer.testo_medio));
+                manageButton.setButton(caselle.get(i), manageButton.preparaBordi(i+1),manageButton.preparaPadding(1), manageXml.getColore_bordo(), manageXml.getColore_casella_tappata_sfondo(), manageXml.getColore_casella_tappata_testo(),getResources().getInteger(R.integer.testo_medio));
         }
     }
 
-    //left, top, rigth, bottom
-    public ArrayList<Integer> preparaBordi(int numero_casella){
-        ArrayList<Integer> bordi = new ArrayList<>(4);
-        if (numero_casella <= 90) {
-            //LEFT
-            if (numero_casella == 1 || (numero_casella - 1) % 10 == 0)
-                bordi.add(getResources().getInteger(R.integer.bordo_grande));
-            else {
-                if (numero_casella % 10 == 6)
-                    bordi.add(getResources().getInteger(R.integer.bordo_medio));
-                else
-                    bordi.add(0, getResources().getInteger(R.integer.bordo_piccolo));
-            }
-            //TOP
-            if (numero_casella >= 1 && numero_casella <= 10)
-                bordi.add(getResources().getInteger(R.integer.bordo_grande));
-            else {
-                if ((numero_casella >= 31 && numero_casella <= 40) || (numero_casella >= 61 && numero_casella <= 70))
-                    bordi.add(getResources().getInteger(R.integer.bordo_medio));
-                else
-                    bordi.add(getResources().getInteger(R.integer.bordo_piccolo));
-            }
-            //RIGTH
-            if (numero_casella % 10 == 0)
-                bordi.add(getResources().getInteger(R.integer.bordo_grande));
-            else {
-                if (numero_casella % 10 == 5)
-                    bordi.add(getResources().getInteger(R.integer.bordo_medio));
-                else
-                    bordi.add(getResources().getInteger(R.integer.bordo_piccolo));
-            }
-            //BOTTOM
-            if (numero_casella >= 81 && numero_casella <= 90)
-                bordi.add(getResources().getInteger(R.integer.bordo_grande));
-            else {
-                if ((numero_casella >= 21 && numero_casella <= 30) || (numero_casella >= 51 && numero_casella <= 60))
-                    bordi.add(getResources().getInteger(R.integer.bordo_medio));
-                else
-                    bordi.add(getResources().getInteger(R.integer.bordo_piccolo));
-            }
-        }
-        else {
-            //GIRO
-            if (numero_casella == 100) {
-                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-            }
-
-            //ULTIMO ESTRATTO
-            if (numero_casella == 101) {
-                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-            }
-            //PENULTIMO ESTRATTO
-            if (numero_casella == 102 || numero_casella == 103) {
-                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-                bordi.add(getResources().getInteger(R.integer.bordo_medio)); //left
-            }
-        }
-        return bordi;
-    }
-
-    public ArrayList<Integer> preparaPadding(int tipologia){
-        ArrayList<Integer> padding = new ArrayList<>(4);
-        if (tipologia == 1){
-            padding.add(getResources().getInteger(R.integer.padding_nullo));
-            padding.add(getResources().getInteger(R.integer.padding_nullo));
-            padding.add(getResources().getInteger(R.integer.padding_nullo));
-            padding.add(getResources().getInteger(R.integer.padding_nullo));
-        }
-        if (tipologia == 2){
-            padding.add(getResources().getInteger(R.integer.padding_piccolo));
-            padding.add(getResources().getInteger(R.integer.padding_piccolo));
-            padding.add(getResources().getInteger(R.integer.padding_piccolo));
-            padding.add(getResources().getInteger(R.integer.padding_piccolo));
-        }
-        if (tipologia == 3){
-            padding.add(getResources().getInteger(R.integer.padding_medio));
-            padding.add(getResources().getInteger(R.integer.padding_piccolo));
-            padding.add(getResources().getInteger(R.integer.padding_medio));
-            padding.add(getResources().getInteger(R.integer.padding_nullo));
-        }
-        return padding;
+    public ManageButton getManageButton() {
+        return manageButton;
     }
 
     public TextView getTesto_tempo() {

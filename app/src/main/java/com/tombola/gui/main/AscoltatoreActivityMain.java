@@ -77,6 +77,7 @@ public class AscoltatoreActivityMain implements View.OnClickListener, DialogInte
                 break;
             case R.id.set:
                 Intent setPage = new Intent(activity,ActivitySetting.class);
+                setPage.putExtra("page", "libera");
                 activity.startActivity(setPage);
                 break;
             case R.id.reset:
@@ -85,7 +86,7 @@ public class AscoltatoreActivityMain implements View.OnClickListener, DialogInte
             case R.id.annulla:
                 if (ultimo_numero != 0) {
                     activity.getCaselle().get(ultimo_numero-1).setClickable(true);
-                    activity.setButton(activity.getCaselle().get(ultimo_numero - 1),activity.preparaBordi(ultimo_numero), activity.preparaPadding(1),activity.getManageXml().getColore_bordo(), activity.getManageXml().getColore_casella_libera_sfondo(), activity.getManageXml().getColore_casella_libera_testo(),activity.getResources().getInteger(R.integer.testo_medio));
+                    activity.getManageButton().setButton(activity.getCaselle().get(ultimo_numero - 1),activity.getManageButton().preparaBordi(ultimo_numero), activity.getManageButton().preparaPadding(1),activity.getManageXml().getColore_bordo(), activity.getManageXml().getColore_casella_libera_sfondo(), activity.getManageXml().getColore_casella_libera_testo(),activity.getResources().getInteger(R.integer.testo_medio));
                     activity.getCaselle().get(ultimo_numero-1).setContentDescription("libera");
                     ultimo_numero = penultimo_numero;
                     penultimo_numero = terzultimo_numero;
@@ -111,7 +112,7 @@ public class AscoltatoreActivityMain implements View.OnClickListener, DialogInte
                 if (casella.getText()!= null) {
                     int numero = Integer.parseInt(casella.getText().toString());
                     activity.getCaselle().get(numero-1).setClickable(false);
-                    activity.setButton(activity.getCaselle().get(numero-1),activity.preparaBordi(numero), activity.preparaPadding(1),activity.getManageXml().getColore_bordo(), activity.getManageXml().getColore_casella_tappata_sfondo(), activity.getManageXml().getColore_casella_tappata_testo(),activity.getResources().getInteger(R.integer.testo_medio));
+                    activity.getManageButton().setButton(activity.getCaselle().get(numero-1),activity.getManageButton().preparaBordi(numero), activity.getManageButton().preparaPadding(1),activity.getManageXml().getColore_bordo(), activity.getManageXml().getColore_casella_tappata_sfondo(), activity.getManageXml().getColore_casella_tappata_testo(),activity.getResources().getInteger(R.integer.testo_medio));
                     activity.getCaselle().get(numero-1).setContentDescription("tappata");
                     back = terzultimo_numero;
                     terzultimo_numero = penultimo_numero;
@@ -131,7 +132,6 @@ public class AscoltatoreActivityMain implements View.OnClickListener, DialogInte
     public void onClick(DialogInterface dialogInterface, int i) {
         if (i == -1) {
             activity.resetGrafica();
-            activity.nascondiLayout(0,0,1);
             int tempo = activity.getManageXml().getTempo();
             ultimo_numero = 0;
             penultimo_numero = 0;
