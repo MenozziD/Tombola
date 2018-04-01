@@ -2,7 +2,6 @@ package com.tombola.gui.settings;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,6 +10,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import com.tombola.R;
 import com.tombola.tool.ManageButton;
+import java.util.Objects;
 
 
 public class ActivitySetting extends AppCompatActivity
@@ -96,13 +96,13 @@ public class ActivitySetting extends AppCompatActivity
         rosso.setOnSeekBarChangeListener(ascoltatore);
         verde.setOnSeekBarChangeListener(ascoltatore);
         blu.setOnSeekBarChangeListener(ascoltatore);
-        if (getIntent().getExtras().getString("page").equals("pausa"))
+        if (Objects.equals(getIntent().getExtras().getString("page"), "pausa"))
         {
-            modificaLayout(0,0,0,0, 7.5f);
+            modificaLayout();
             sfondo.setVisibility(View.INVISIBLE);
             testo.setVisibility(View.INVISIBLE);
         }
-        if (getIntent().getExtras().getString("page").equals("bordo"))
+        if (Objects.equals(getIntent().getExtras().getString("page"), "bordo"))
         {
             sfondo.setVisibility(View.INVISIBLE);
             testo.setVisibility(View.INVISIBLE);
@@ -117,21 +117,19 @@ public class ActivitySetting extends AppCompatActivity
         super.onWindowFocusChanged(hasFocus);
         if (start) {
             resetButton();
-            if (getIntent().getExtras().getString("page").equals("libera")) {
+            if (Objects.equals(getIntent().getExtras().getString("page"), "libera")) {
                 manageButton.setButton(casella_in_gioco, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(), getResources().getInteger(R.integer.testo_piccolo));
                 manageButton.setButton(sfondo, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(), getResources().getInteger(R.integer.testo_medio));
                 manageButton.setButton(testo, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(), getResources().getInteger(R.integer.testo_medio));
             }
-            if (getIntent().getExtras().getString("page").equals("tappata")) {
+            if (Objects.equals(getIntent().getExtras().getString("page"), "tappata")) {
                 manageButton.setButton(casella_estratta, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(),getResources().getInteger(R.integer.testo_piccolo));
                 manageButton.setButton(sfondo, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(),getResources().getInteger(R.integer.testo_medio));
                 manageButton.setButton(testo, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(),getResources().getInteger(R.integer.testo_medio));
-
             }
-            if (getIntent().getExtras().getString("page").equals("bordo"))
+            if (Objects.equals(getIntent().getExtras().getString("page"), "bordo"))
                 manageButton.setButton(bordo,manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(),getResources().getInteger(R.integer.testo_piccolo));
-
-            if (getIntent().getExtras().getString("page").equals("pausa")) 
+            if (Objects.equals(getIntent().getExtras().getString("page"), "pausa"))
                 manageButton.setButton(impostazioni_pausa,manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(),getResources().getInteger(R.integer.testo_piccolo));
             manageButton.setButton(sfondo, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(), getResources().getInteger(R.integer.testo_medio));
             manageButton.setButton(testo, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(), getResources().getInteger(R.integer.testo_medio));
@@ -142,13 +140,13 @@ public class ActivitySetting extends AppCompatActivity
         }
     }
 
-    public void modificaLayout(float wR, float wG, float wB, float wC, float wP)
+    public void modificaLayout()
     {
-        barraBlu.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wR));
-        barraVerde.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wG));
-        barraRosso.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wB));
-        colori.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wC));
-        pausa.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, wP));
+        barraBlu.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 0));
+        barraVerde.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 0));
+        barraRosso.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 0));
+        colori.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 0));
+        pausa.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0, 7.5f));
     }
 
     private void resetButton(){
@@ -175,22 +173,6 @@ public class ActivitySetting extends AppCompatActivity
 
     public Button getRun_color() {
         return run_color;
-    }
-
-    public Button getCasella_in_gioco() {
-        return casella_in_gioco;
-    }
-
-    public Button getCasella_estratta() {
-        return casella_estratta;
-    }
-
-    public Button getBordo() {
-        return bordo;
-    }
-
-    public Button getImpostazioni_pausa() {
-        return impostazioni_pausa;
     }
 
     public Button getSfondo() {

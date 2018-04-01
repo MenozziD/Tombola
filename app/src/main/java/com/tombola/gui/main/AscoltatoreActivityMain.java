@@ -132,6 +132,7 @@ public class AscoltatoreActivityMain implements View.OnClickListener, DialogInte
     public void onClick(DialogInterface dialogInterface, int i) {
         if (i == -1) {
             activity.resetGrafica();
+            activity.nascondiLayout(0,0,1);
             int tempo = activity.getManageXml().getTempo();
             ultimo_numero = 0;
             penultimo_numero = 0;

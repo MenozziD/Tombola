@@ -8,7 +8,6 @@ import android.support.v4.content.ContextCompat;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-
 import com.tombola.R;
 import java.util.ArrayList;
 

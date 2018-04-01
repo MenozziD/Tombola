@@ -16,6 +16,7 @@
     <string name="r">R</string>
     <string name="g">G</string>
     <string name="b">B</string>
+    <string name="tempo">TEMPO IN SECONDI:</string>
     <string name="imposta">IMPOSTA</string>
     <string name="salva">SALVA COLORE</string>
     <string name="imposta_tempo">IMPOSTA TEMPO</string>
