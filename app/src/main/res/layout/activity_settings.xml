@@ -25,36 +25,36 @@
             <Button
                 android:id="@+id/casella_libera"
                 android:layout_width="0dip"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:background="@drawable/casella"
+                android:background="@drawable/tab"
                 android:text="@string/in_gioco"
                 tools:ignore="ButtonStyle,NestedWeights" />
 
             <Button
                 android:id="@+id/casella_tap"
                 android:layout_width="0dip"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:background="@drawable/casella"
+                android:background="@drawable/tab"
                 android:text="@string/estratta"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/bordo"
                 android:layout_width="0dip"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:background="@drawable/casella"
+                android:background="@drawable/tab"
                 android:text="@string/bordo"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/pausa"
                 android:layout_width="0dip"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:background="@drawable/casella"
+                android:background="@drawable/tab"
                 android:text="@string/pausa"
                 tools:ignore="ButtonStyle" />
 
@@ -197,33 +197,34 @@
         android:orientation="horizontal"
         android:weightSum="10">
 
-        <Button
-            android:id="@+id/run_color"
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:background="@drawable/casella"
-            android:clickable="false"
-            tools:ignore="NestedWeights" />
 
         <LinearLayout
             android:layout_width="0dip"
             android:layout_height="match_parent"
-            android:layout_weight="8"
+            android:layout_weight="10"
             android:orientation="vertical"
             android:weightSum="1">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dip"
-                android:layout_weight="0.7"
-                android:weightSum="7">
+                android:layout_weight="0.6"
+                android:weightSum="5">
+
+                <Button
+                    android:id="@+id/run_color"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/casella"
+                    android:clickable="false"
+                    tools:ignore="NestedWeights" />
 
                 <Button
                     android:id="@+id/orange"
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="0.5"
                     android:background="@color/dark_orange"
                     tools:ignore="ButtonStyle,NestedWeights" />
 
@@ -231,7 +232,7 @@
                     android:id="@+id/azure"
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="0.5"
                     android:background="@color/skyblue"
                     tools:ignore="ButtonStyle" />
 
@@ -239,7 +240,7 @@
                     android:id="@+id/green"
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="0.5"
                     android:background="@color/forestgreen"
                     tools:ignore="ButtonStyle" />
 
@@ -247,7 +248,7 @@
                     android:id="@+id/gray"
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="0.5"
                     android:background="@color/lightgray"
                     tools:ignore="ButtonStyle" />
 
@@ -255,7 +256,7 @@
                     android:id="@+id/red"
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="0.5"
                     android:background="@color/orangered"
                     tools:ignore="ButtonStyle" />
 
@@ -263,7 +264,7 @@
                     android:id="@+id/yellow"
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="0.5"
                     android:background="@color/gold"
                     tools:ignore="ButtonStyle" />
 
@@ -271,34 +272,35 @@
                     android:id="@+id/my_color"
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="0.5"
                     android:background="@drawable/casella"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/salva"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/casella"
+                    android:text="@string/salva"
                     tools:ignore="ButtonStyle" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dip"
-                android:layout_weight="0.3"
+                android:layout_weight="0.4"
                 android:weightSum="7">
 
                 <Button
                     android:id="@+id/imposta"
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
-                    android:layout_weight="6"
+                    android:layout_weight="7"
                     android:background="@drawable/casella"
                     android:text="@string/imposta"
                     tools:ignore="ButtonStyle,NestedWeights" />
 
-                <Button
-                    android:id="@+id/salva"
-                    android:layout_width="0dip"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/casella"
-                    android:text="@string/salva"
-                    tools:ignore="ButtonStyle" />
 
             </LinearLayout>
 
@@ -310,39 +312,103 @@
         android:id="@+id/impostazioni_pausa"
         android:layout_width="match_parent"
         android:layout_height="0dip"
-        android:orientation="vertical"
         android:layout_weight="0"
-        android:weightSum="1">
+        android:orientation="vertical"
+        android:weightSum="7.5">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dip"
-            android:layout_weight="0.5"
-            android:weightSum="1"
-            tools:ignore="NestedWeights">
+            android:layout_weight="4.5"
+            android:orientation="vertical"
+            android:weightSum="5">
 
-            <TextView
-                android:layout_width="0dip"
-                android:layout_height="match_parent"
-                android:text="@string/tempo"
-                android:layout_weight="0.2"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                tools:ignore="NestedWeights">
 
-            <EditText
-                android:id="@+id/valore_tempo"
-                android:layout_width="0dip"
-                android:layout_height="match_parent"
-                android:layout_weight="0.8"
-                tools:ignore="LabelFor,NestedWeights,TextFields" />
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:text="@string/tempo" />
+
+                <EditText
+                    android:id="@+id/valore_tempo"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    tools:ignore="LabelFor,NestedWeights,TextFields" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                tools:ignore="NestedWeights">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                tools:ignore="NestedWeights">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                tools:ignore="NestedWeights">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                tools:ignore="NestedWeights">
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/salva_tempo"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dip"
-            android:background="@drawable/casella"
-            android:text="@string/imposta_tempo"
-            android:layout_weight="0.5"/>
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.6" />
+
+            <Button
+                android:id="@+id/salva_tempo"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.4"
+                android:background="@drawable/casella"
+                android:text="@string/imposta_tempo" />
+
+
+        </LinearLayout>
 
     </LinearLayout>
 

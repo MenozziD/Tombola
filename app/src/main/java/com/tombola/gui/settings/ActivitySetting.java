@@ -116,26 +116,26 @@ public class ActivitySetting extends AppCompatActivity
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         if (start) {
-            resetButton();
+            //resetButton();
             if (Objects.equals(getIntent().getExtras().getString("page"), "libera")) {
-                manageButton.setButton(casella_in_gioco, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(), getResources().getInteger(R.integer.testo_piccolo));
+                //manageButton.setButton(casella_in_gioco, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(), getResources().getInteger(R.integer.testo_piccolo));
                 manageButton.setButton(sfondo, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(), getResources().getInteger(R.integer.testo_medio));
                 manageButton.setButton(testo, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(), getResources().getInteger(R.integer.testo_medio));
             }
             if (Objects.equals(getIntent().getExtras().getString("page"), "tappata")) {
-                manageButton.setButton(casella_estratta, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(),getResources().getInteger(R.integer.testo_piccolo));
+                //manageButton.setButton(casella_estratta, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(),getResources().getInteger(R.integer.testo_piccolo));
                 manageButton.setButton(sfondo, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(),getResources().getInteger(R.integer.testo_medio));
                 manageButton.setButton(testo, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(),getResources().getInteger(R.integer.testo_medio));
             }
             if (Objects.equals(getIntent().getExtras().getString("page"), "bordo"))
-                manageButton.setButton(bordo,manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(),getResources().getInteger(R.integer.testo_piccolo));
+                //manageButton.setButton(bordo,manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(),getResources().getInteger(R.integer.testo_piccolo));
             if (Objects.equals(getIntent().getExtras().getString("page"), "pausa"))
-                manageButton.setButton(impostazioni_pausa,manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(),getResources().getInteger(R.integer.testo_piccolo));
-            manageButton.setButton(sfondo, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(), getResources().getInteger(R.integer.testo_medio));
-            manageButton.setButton(testo, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(), getResources().getInteger(R.integer.testo_medio));
-            manageButton.setButton(imposta, manageButton.preparaBordi(110), manageButton.preparaPadding(1), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(), getResources().getInteger(R.integer.testo_medio));
-            manageButton.setButton(salva, manageButton.preparaBordi(110), manageButton.preparaPadding(1), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(), getResources().getInteger(R.integer.testo_piccolo));
-            manageButton.setButton(salva_tempo, manageButton.preparaBordi(111), manageButton.preparaPadding(2), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(), getResources().getInteger(R.integer.testo_piccolo));
+                //manageButton.setButton(impostazioni_pausa,manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(),getResources().getInteger(R.integer.testo_piccolo));
+                manageButton.setButton(sfondo, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getWhite(), manageButton.getBlack(), manageButton.getWhite(), getResources().getInteger(R.integer.testo_medio));
+                manageButton.setButton(testo, manageButton.preparaBordi(100), manageButton.preparaPadding(1), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(), getResources().getInteger(R.integer.testo_medio));
+                manageButton.setButton(imposta, manageButton.preparaBordi(110), manageButton.preparaPadding(1), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(), getResources().getInteger(R.integer.testo_medio));
+                manageButton.setButton(salva, manageButton.preparaBordi(110), manageButton.preparaPadding(1), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(), getResources().getInteger(R.integer.testo_piccolo));
+                manageButton.setButton(salva_tempo, manageButton.preparaBordi(111), manageButton.preparaPadding(2), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(), getResources().getInteger(R.integer.testo_piccolo));
             start = false;
         }
     }

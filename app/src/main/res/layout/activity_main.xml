@@ -13,154 +13,154 @@
         android:layout_width="0dip"
         android:layout_height="match_parent"
         android:layout_weight="0.7"
-        tools:ignore="NestedWeights"
-        android:weightSum="9">
+        android:weightSum="9"
+        tools:ignore="NestedWeights">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dip"
             android:layout_weight="1"
+            android:baselineAligned="false"
             android:orientation="horizontal"
-            android:weightSum="1"
-            android:baselineAligned="false">
+            android:weightSum="1">
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella" />
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
@@ -170,147 +170,147 @@
             android:layout_width="match_parent"
             android:layout_height="0dip"
             android:layout_weight="1"
+            android:baselineAligned="false"
             android:orientation="horizontal"
-            android:weightSum="1"
-            android:baselineAligned="false">
+            android:weightSum="1">
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella17"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
@@ -320,147 +320,147 @@
             android:layout_width="match_parent"
             android:layout_height="0dip"
             android:layout_weight="1"
+            android:baselineAligned="false"
             android:orientation="horizontal"
-            android:weightSum="1"
-            android:baselineAligned="false">
+            android:weightSum="1">
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella21"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella23"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella24"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella25"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella26"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella27"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella28"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella29"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
@@ -470,147 +470,147 @@
             android:layout_width="match_parent"
             android:layout_height="0dip"
             android:layout_weight="1"
+            android:baselineAligned="false"
             android:orientation="horizontal"
-            android:weightSum="1"
-            android:baselineAligned="false">
+            android:weightSum="1">
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella30"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella31"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella32"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella33"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella34"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella35"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella36"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella37"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella38"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella39"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
@@ -620,147 +620,147 @@
             android:layout_width="match_parent"
             android:layout_height="0dip"
             android:layout_weight="1"
+            android:baselineAligned="false"
             android:orientation="horizontal"
-            android:weightSum="1"
-            android:baselineAligned="false">
+            android:weightSum="1">
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella40"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella41"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella42"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella43"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella44"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella45"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella46"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella47"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella48"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella49"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
@@ -770,147 +770,147 @@
             android:layout_width="match_parent"
             android:layout_height="0dip"
             android:layout_weight="1"
+            android:baselineAligned="false"
             android:orientation="horizontal"
-            android:weightSum="1"
-            android:baselineAligned="false">
+            android:weightSum="1">
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella50"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella51"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella52"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella53"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella54"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella55"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella56"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella57"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella58"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella59"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
@@ -920,147 +920,147 @@
             android:layout_width="match_parent"
             android:layout_height="0dip"
             android:layout_weight="1"
+            android:baselineAligned="false"
             android:orientation="horizontal"
-            android:weightSum="1"
-            android:baselineAligned="false">
+            android:weightSum="1">
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella60"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella61"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella62"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella63"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella64"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella65"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella66"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella67"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella68"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella69"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
@@ -1070,147 +1070,147 @@
             android:layout_width="match_parent"
             android:layout_height="0dip"
             android:layout_weight="1"
+            android:baselineAligned="false"
             android:orientation="horizontal"
-            android:weightSum="1"
-            android:baselineAligned="false">
+            android:weightSum="1">
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella70"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella71"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella72"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella73"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella74"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella75"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella76"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella77"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella78"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella79"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
@@ -1220,147 +1220,147 @@
             android:layout_width="match_parent"
             android:layout_height="0dip"
             android:layout_weight="1"
+            android:baselineAligned="false"
             android:orientation="horizontal"
-            android:weightSum="1"
-            android:baselineAligned="false">
+            android:weightSum="1">
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella80"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella81"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella82"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella83"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella84"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella85"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella86"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella87"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella88"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="0dip"
-                android:layout_weight="0.1"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
 
                 <Button
                     android:id="@+id/casella89"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/libera"
-                    android:background="@drawable/casella"/>
+                    android:background="@drawable/casella"
+                    android:contentDescription="@string/libera" />
 
             </RelativeLayout>
 
@@ -1511,16 +1511,6 @@
                 android:layout_height="0dip"
                 android:layout_weight="1">
 
-                <ImageButton
-                    android:id="@+id/tombola"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="?android:selectableItemBackground"
-                    android:contentDescription="@string/verde"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/tombola_verde" />
-
             </RelativeLayout>
 
         </LinearLayout>
@@ -1617,6 +1607,15 @@
                     android:layout_height="0dip"
                     android:layout_weight="0.4">
 
+                    <TextView
+                        android:id="@+id/numGiri"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:text="GIRI"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black" />
                 </FrameLayout>
 
                 <RelativeLayout
@@ -1661,23 +1660,33 @@
         android:id="@+id/logo"
         android:layout_width="0dip"
         android:layout_height="match_parent"
-        android:layout_weight="0">
+        android:layout_weight="0.0">
 
-        <ImageButton
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:background="?android:selectableItemBackground"
-            app:srcCompat="@drawable/sfondo_nero"
-            android:contentDescription="@string/sfondo" />
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/testo_tempo"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_gravity="bottom"
-            android:textAlignment="center"
-            android:textColor="@color/white" />
+            <!--android:layout_weight="1" - x framelayout sia per text che per image-->
+            <ImageButton
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="0.55"
+                android:background="?android:selectableItemBackground"
+                android:contentDescription="@string/sfondo"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/sfondo_nero" />
+
+            <TextView
+                android:id="@+id/testo_tempo"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.45"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+        </LinearLayout>
 
     </FrameLayout>
 

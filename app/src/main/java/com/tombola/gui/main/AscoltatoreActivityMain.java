@@ -4,12 +4,15 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.MediaPlayer;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import com.tombola.gui.settings.ActivitySetting;
 import com.tombola.R;
 import java.util.Objects;
+
+import static java.lang.Thread.sleep;
 
 public class AscoltatoreActivityMain implements View.OnClickListener, DialogInterface.OnClickListener {
 
@@ -19,6 +22,9 @@ public class AscoltatoreActivityMain implements View.OnClickListener, DialogInte
     private int penultimo_numero;
     private int terzultimo_numero;
     private int back;
+    private int tempo;
+    private float defaultSize;
+    private boolean firstReset;
 
     AscoltatoreActivityMain(ActivityMain activity)
     {
@@ -28,6 +34,7 @@ public class AscoltatoreActivityMain implements View.OnClickListener, DialogInte
         terzultimo_numero = 0;
         back = 0;
         this.activity= activity;
+        firstReset = true;
     }
 
     @Override
@@ -46,6 +53,9 @@ public class AscoltatoreActivityMain implements View.OnClickListener, DialogInte
                 activity.getCinquina().setImageBitmap(b);
                 break;
             case R.id.decima:
+                MediaPlayer audio;
+                audio = MediaPlayer.create(activity, R.raw.uno);
+                audio.start();
                 if (Objects.equals(activity.getDecima().getContentDescription().toString(), "verde")){
                     b = BitmapFactory.decodeResource(activity.getResources(),R.drawable.decima_rossa);
                     activity.getDecima().setContentDescription("rosso");
@@ -55,17 +65,6 @@ public class AscoltatoreActivityMain implements View.OnClickListener, DialogInte
                     activity.getDecima().setContentDescription("verde");
                 }
                 activity.getDecima().setImageBitmap(b);
-                break;
-            case R.id.tombola:
-                if (Objects.equals(activity.getTombola().getContentDescription().toString(), "verde")){
-                    b = BitmapFactory.decodeResource(activity.getResources(),R.drawable.tombola_rossa);
-                    activity.getTombola().setContentDescription("rosso");
-                }
-                else {
-                    b = BitmapFactory.decodeResource(activity.getResources(), R.drawable.tombola_verde);
-                    activity.getTombola().setContentDescription("verde");
-                }
-                activity.getTombola().setImageBitmap(b);
                 break;
             case R.id.piu:
                 numeroGiro = numeroGiro + 1;
@@ -133,26 +132,39 @@ public class AscoltatoreActivityMain implements View.OnClickListener, DialogInte
         if (i == -1) {
             activity.resetGrafica();
             activity.nascondiLayout(0,0,1);
-            int tempo = activity.getManageXml().getTempo();
+            tempo = activity.getManageXml().getTempo();
+            int tempoTotal = activity.getManageXml().getTempo();
             ultimo_numero = 0;
             penultimo_numero = 0;
             terzultimo_numero = 0;
             back = 0;
             activity.getTesto_tempo().setText(String.format(activity.getResources().getString(R.string.messaggio_tempo), tempo));
+            if (firstReset){
+                defaultSize = activity.getTesto_tempo().getHeight();
+                activity.getTesto_tempo().setTextSize(defaultSize*4f);
+                if (tempoTotal>=10)
+                    activity.getTesto_tempo().setTextSize(defaultSize*3f);
+                if (tempoTotal>=100)
+                    activity.getTesto_tempo().setTextSize(defaultSize*2f);
+                firstReset = false;
+            }
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 public void run() {
                     activity.nascondiLayout(0.3f,0.7f,0);
                 }
-            }, tempo*1000);
-            for (int j=1; j<tempo; j++) {
+            }, tempoTotal*1000);
+            for (int j=1; j<tempoTotal; j++) {
                 Handler handler1 = new Handler();
                 handler1.postDelayed(new Runnable() {
                     public void run() {
-                        String[] stringhe = activity.getTesto_tempo().getText().toString().split(" ");
-                        int t = Integer.parseInt(stringhe[3]);
-                        t = t -1;
-                        activity.getTesto_tempo().setText(String.format(activity.getResources().getString(R.string.messaggio_tempo), t));
+                        tempo = tempo-1;
+                        activity.getTesto_tempo().setTextSize(defaultSize*4f);
+                        if (tempo>=10)
+                            activity.getTesto_tempo().setTextSize(defaultSize*3f);
+                        if (tempo>=100)
+                            activity.getTesto_tempo().setTextSize(defaultSize*1.8f);
+                        activity.getTesto_tempo().setText(String.format(activity.getResources().getString(R.string.messaggio_tempo), tempo));
                     }
                 }, j*1000);
             }

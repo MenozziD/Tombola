@@ -26,7 +26,6 @@ public class ActivityMain  extends AppCompatActivity {
     private ArrayList<Button> caselle;
     private ImageButton cinquina;
     private ImageButton decima;
-    private ImageButton tombola;
     private Button ultimo;
     private Button penultimo;
     private Button terzultimo;
@@ -38,6 +37,7 @@ public class ActivityMain  extends AppCompatActivity {
     private ManageXml manageXml;
     private ManageButton manageButton;
     private TextView testo_tempo;
+    private TextView numGiri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -60,7 +60,7 @@ public class ActivityMain  extends AppCompatActivity {
         ImageButton reset = (ImageButton) findViewById(R.id.reset);
         cinquina =(ImageButton)findViewById(R.id.cinquina);
         decima =(ImageButton)findViewById(R.id.decima);
-        tombola =(ImageButton)findViewById(R.id.tombola);
+        numGiri=(TextView) findViewById(R.id.numGiri);
         testo_tempo = (TextView) findViewById(R.id.testo_tempo);
         caselle = new ArrayList<>(90);
         AscoltatoreActivityMain ascoltatore = new AscoltatoreActivityMain(this);
@@ -160,7 +160,6 @@ public class ActivityMain  extends AppCompatActivity {
         }
         cinquina.setOnClickListener(ascoltatore);
         decima.setOnClickListener(ascoltatore);
-        tombola.setOnClickListener(ascoltatore);
         piu.setOnClickListener(ascoltatore);
         meno.setOnClickListener(ascoltatore);
         annulla.setOnClickListener(ascoltatore);
@@ -213,7 +212,10 @@ public class ActivityMain  extends AppCompatActivity {
 
     public void resetGrafica() {
         TypedValue outValue = new TypedValue();
+        TypedValue txtValue = new TypedValue();
         getResources().getValue(R.dimen.testo_float, outValue, true);
+        getResources().getValue(R.dimen.testo_grande, txtValue, true);
+        numGiri.setTextSize(numGiri.getHeight()/5f);
         manageButton.setButton(giro, manageButton.preparaBordi(100), manageButton.preparaPadding(3), manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(),outValue.getFloat());
         manageButton.setButton(ultimo, manageButton.preparaBordi(101), manageButton.preparaPadding(2),manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(),outValue.getFloat());
         manageButton.setButton(penultimo, manageButton.preparaBordi(102), manageButton.preparaPadding(2),manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(),outValue.getFloat());
@@ -228,8 +230,6 @@ public class ActivityMain  extends AppCompatActivity {
         decima.setContentDescription("verde");
         decima.setImageBitmap(b);
         b = BitmapFactory.decodeResource(getResources(), R.drawable.tombola_verde);
-        tombola.setContentDescription("verde");
-        tombola.setImageBitmap(b);
         layoutTabellone.setPadding(layoutTabellone.getWidth()/getResources().getInteger(R.integer.padding_minuscolo),layoutTabellone.getHeight()/getResources().getInteger(R.integer.padding_minuscolo),layoutTabellone.getWidth()/getResources().getInteger(R.integer.padding_minuscolo),layoutTabellone.getHeight()/getResources().getInteger(R.integer.padding_minuscolo));
         for (int i = 0; i < caselle.size(); i++) {
             caselle.get(i).setContentDescription("libera");
@@ -280,7 +280,4 @@ public class ActivityMain  extends AppCompatActivity {
         return decima;
     }
 
-    public ImageButton getTombola() {
-        return tombola;
-    }
 }
