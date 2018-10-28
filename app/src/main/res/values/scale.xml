@@ -3,13 +3,13 @@
     <integer name="bordo_grande">9</integer>
     <integer name="bordo_medio">18</integer>
     <integer name="bordo_piccolo">36</integer>
-    <integer name="padding_nullo">3242354</integer>
-    <integer name="padding_minuscolo">50</integer>
+    <integer name="padding_nullo">3200000</integer><!-- 3242354 x Tablet-->
+    <integer name="padding_minuscolo">500</integer><!-- 50 x Tablet-->
     <integer name="padding_piccolo">15</integer>
     <integer name="padding_medio">8</integer>
     <integer name="padding_grande">4</integer>
     <integer name="testo_piccolo">10</integer>
-    <integer name="testo_medio">4</integer> <!-- 2 x Tablet-->
+    <integer name="testo_medio">2</integer> <!-- 2 x Tablet-->
     <item name="testo_grande" format="float" type="dimen">2</item>
-    <item name="testo_float" format="float" type="dimen">3.5</item> <!-- 2.5 x Tablet -->
+    <item name="testo_float" format="float" type="dimen">2.4</item> <!-- 2.5 x Tablet -->
 </resources>

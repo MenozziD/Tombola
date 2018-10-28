@@ -27,6 +27,7 @@ public class ManageXml {
     private ArrayList<Integer> mio_colore_casella_tappata_sfondo;
     private ArrayList<Integer> mio_colore_bordo;
     private int tempo;
+    private int jolly;
 
     public ManageXml(){
         colore_casella_libera_testo = new ArrayList<>(3);
@@ -40,6 +41,7 @@ public class ManageXml {
         mio_colore_casella_tappata_sfondo = new ArrayList<>(3);
         mio_colore_bordo = new ArrayList<>(3);
         tempo = 0;
+        jolly = 0;
     }
 
     public void writeXml() {
@@ -63,6 +65,9 @@ public class ManageXml {
             xmlSerializer.startTag("", "tempo");
             xmlSerializer.attribute("","t", Integer.toString(tempo));
             xmlSerializer.endTag("", "tempo");
+            xmlSerializer.startTag("", "jolly");
+            xmlSerializer.attribute("","j", Integer.toString(jolly));
+            xmlSerializer.endTag("", "jolly");
             xmlSerializer.endTag("", "settings");
             xmlSerializer.endDocument();
             ost.write(writer.toString().getBytes());
@@ -106,6 +111,8 @@ public class ManageXml {
                 String name=xrp.getName();
                 switch (event){
                     case XmlPullParser.START_TAG:
+                        if(name.equals("jolly"))
+                            jolly = Integer.parseInt(xrp.getAttributeValue(0));
                         if(name.equals("tempo"))
                             tempo = Integer.parseInt(xrp.getAttributeValue(0));
                         if(name.equals("casella_libera"))
@@ -242,8 +249,14 @@ public class ManageXml {
     public int getTempo() {
         return tempo;
     }
+    public int getJolly() {
+        return jolly;
+    }
 
     public void setTempo(int tempo) {
         this.tempo = tempo;
+    }
+    public void setJolly(int jolly) {
+        this.jolly = jolly;
     }
 }

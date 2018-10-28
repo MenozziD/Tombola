@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import com.tombola.gui.settings.ActivitySetting;
 import com.tombola.R;
+
+import java.io.IOException;
 import java.util.Objects;
 
 import static java.lang.Thread.sleep;
@@ -53,9 +55,6 @@ public class AscoltatoreActivityMain implements View.OnClickListener, DialogInte
                 activity.getCinquina().setImageBitmap(b);
                 break;
             case R.id.decima:
-                MediaPlayer audio;
-                audio = MediaPlayer.create(activity, R.raw.uno);
-                audio.start();
                 if (Objects.equals(activity.getDecima().getContentDescription().toString(), "verde")){
                     b = BitmapFactory.decodeResource(activity.getResources(),R.drawable.decima_rossa);
                     activity.getDecima().setContentDescription("rosso");
@@ -100,7 +99,10 @@ public class AscoltatoreActivityMain implements View.OnClickListener, DialogInte
                     else
                         activity.getPenultimo().setText("");
                     if (ultimo_numero != 0)
-                        activity.getUltimo().setText(String.format("%s",ultimo_numero));
+                    {
+                        activity.getUltimo().setText(String.format("%s", ultimo_numero));
+                        //activity.recreateSuoni();
+                    }
                     else
                         activity.getUltimo().setText("");
                 }
@@ -110,6 +112,7 @@ public class AscoltatoreActivityMain implements View.OnClickListener, DialogInte
                 Button casella = (Button) view;
                 if (casella.getText()!= null) {
                     int numero = Integer.parseInt(casella.getText().toString());
+
                     activity.getCaselle().get(numero-1).setClickable(false);
                     activity.getManageButton().setButton(activity.getCaselle().get(numero-1),activity.getManageButton().preparaBordi(numero), activity.getManageButton().preparaPadding(1),activity.getManageXml().getColore_bordo(), activity.getManageXml().getColore_casella_tappata_sfondo(), activity.getManageXml().getColore_casella_tappata_testo(),activity.getResources().getInteger(R.integer.testo_medio));
                     activity.getCaselle().get(numero-1).setContentDescription("tappata");
@@ -122,6 +125,206 @@ public class AscoltatoreActivityMain implements View.OnClickListener, DialogInte
                     if (penultimo_numero != 0)
                         activity.getPenultimo().setText(String.format("%s",penultimo_numero));
                     activity.getUltimo().setText(String.format("%s",ultimo_numero));
+                    /*
+                    if (numero == 1)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 2)
+                        audio = MediaPlayer.create(activity, R.raw.due);
+                    if (numero == 3)
+                        audio = MediaPlayer.create(activity, R.raw.tre);
+                    if (numero == 4)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 5)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 6)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 7)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 8)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 9)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 10)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 11)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 12)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 13)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 14)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 15)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 16)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 17)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 18)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 19)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 20)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 21)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 22)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 23)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 24)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 25)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 26)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 27)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 28)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 29)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 30)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 31)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 32)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 33)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 34)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 35)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 36)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 37)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 38)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 39)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 40)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 41)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 42)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 43)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 44)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 45)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 46)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 47)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 48)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 49)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 50)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 51)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 52)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 53)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 54)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 55)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 56)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 57)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 58)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 59)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 60)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 61)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 62)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 63)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 64)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 65)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 66)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 67)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 68)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 69)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 70)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 71)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 72)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 73)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 74)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 75)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 76)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 77)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 78)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 79)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 80)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 81)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 82)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 83)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 84)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 85)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 86)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 87)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 88)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 89)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    if (numero == 90)
+                        audio = MediaPlayer.create(activity, R.raw.uno);
+                    audio.start();
+                    */
+                    /*
+                    try
+                    {
+                        activity.getSuoni().get(numero-1).start();
+                        while (activity.getSuoni().get(numero-1).isPlaying())
+                        {
+
+                        }
+                        activity.getSuoni().get(numero-1).stop();
+                        activity.getSuoni().get(numero-1).release();
+                    }
+                    catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    */
+
+
                 }
                 break;
         }

@@ -27,6 +27,7 @@ public class ActivitySetting extends AppCompatActivity
     private Button imposta;
     private Button salva_tempo;
     private EditText valore_tempo;
+    private EditText valore_jolly;
     private SeekBar rosso;
     private SeekBar verde;
     private SeekBar blu;
@@ -71,6 +72,7 @@ public class ActivitySetting extends AppCompatActivity
         value_verde = (TextView) findViewById(R.id.value_verde);
         value_blu = (TextView) findViewById(R.id.value_blu);
         valore_tempo = (EditText) findViewById(R.id.valore_tempo);
+        valore_jolly = (EditText) findViewById(R.id.valore_jolly);
         barraVerde = (LinearLayout) findViewById(R.id.barra_verde);
         barraRosso = (LinearLayout) findViewById(R.id.barra_rosso);
         barraBlu = (LinearLayout) findViewById(R.id.barra_blu);
@@ -197,6 +199,9 @@ public class ActivitySetting extends AppCompatActivity
 
     public EditText getValore_tempo() {
         return valore_tempo;
+    }
+    public EditText getValore_jolly() {
+        return valore_jolly;
     }
 
     public ManageButton getManageButton() {

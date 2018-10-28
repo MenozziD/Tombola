@@ -19,6 +19,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Objects;
+import android.media.MediaPlayer;
 
 public class ActivityMain  extends AppCompatActivity {
 
@@ -29,6 +30,8 @@ public class ActivityMain  extends AppCompatActivity {
     private Button ultimo;
     private Button penultimo;
     private Button terzultimo;
+    private Button jolly;
+
     private Button giro;
     private TableLayout layoutTabellone;
     private LinearLayout layoutComandi;
@@ -38,6 +41,7 @@ public class ActivityMain  extends AppCompatActivity {
     private ManageButton manageButton;
     private TextView testo_tempo;
     private TextView numGiri;
+    private ArrayList<MediaPlayer> suoni;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -52,6 +56,7 @@ public class ActivityMain  extends AppCompatActivity {
         ultimo = (Button) findViewById(R.id.casella_ultimo_numero);
         penultimo = (Button) findViewById(R.id.casella_penultimo_numero);
         terzultimo = (Button) findViewById(R.id.casella_terzultimo_numero);
+        jolly=(Button) findViewById(R.id.casella_jolly_numero);
         giro = (Button) findViewById(R.id.casella_giro);
         ImageButton piu = (ImageButton) findViewById(R.id.piu);
         ImageButton meno = (ImageButton) findViewById(R.id.meno);
@@ -62,6 +67,99 @@ public class ActivityMain  extends AppCompatActivity {
         decima =(ImageButton)findViewById(R.id.decima);
         numGiri=(TextView) findViewById(R.id.numGiri);
         testo_tempo = (TextView) findViewById(R.id.testo_tempo);
+
+        suoni = new ArrayList<>(90);
+        suoni.add(MediaPlayer.create(this, R.raw._1));
+        suoni.add(MediaPlayer.create(this, R.raw._2));
+        suoni.add(MediaPlayer.create(this, R.raw._3));
+        suoni.add(MediaPlayer.create(this, R.raw._4));
+        suoni.add(MediaPlayer.create(this, R.raw._5));
+        suoni.add(MediaPlayer.create(this, R.raw._6));
+        suoni.add(MediaPlayer.create(this, R.raw._7));
+        suoni.add(MediaPlayer.create(this, R.raw._8));
+        suoni.add(MediaPlayer.create(this, R.raw._9));
+        suoni.add(MediaPlayer.create(this, R.raw._10));
+        suoni.add(MediaPlayer.create(this, R.raw._11));
+        suoni.add(MediaPlayer.create(this, R.raw._12));
+        suoni.add(MediaPlayer.create(this, R.raw._13));
+        suoni.add(MediaPlayer.create(this, R.raw._14));
+        suoni.add(MediaPlayer.create(this, R.raw._15));
+        suoni.add(MediaPlayer.create(this, R.raw._16));
+        suoni.add(MediaPlayer.create(this, R.raw._17));
+        suoni.add(MediaPlayer.create(this, R.raw._18));
+        suoni.add(MediaPlayer.create(this, R.raw._19));
+        suoni.add(MediaPlayer.create(this, R.raw._20));
+        suoni.add(MediaPlayer.create(this, R.raw._21));
+        suoni.add(MediaPlayer.create(this, R.raw._22));
+        suoni.add(MediaPlayer.create(this, R.raw._23));
+        suoni.add(MediaPlayer.create(this, R.raw._24));
+        suoni.add(MediaPlayer.create(this, R.raw._25));
+        suoni.add(MediaPlayer.create(this, R.raw._26));
+        suoni.add(MediaPlayer.create(this, R.raw._27));
+        suoni.add(MediaPlayer.create(this, R.raw._28));
+        suoni.add(MediaPlayer.create(this, R.raw._29));
+        suoni.add(MediaPlayer.create(this, R.raw._30));
+        suoni.add(MediaPlayer.create(this, R.raw._31));
+        suoni.add(MediaPlayer.create(this, R.raw._32));
+        suoni.add(MediaPlayer.create(this, R.raw._33));
+        suoni.add(MediaPlayer.create(this, R.raw._34));
+        suoni.add(MediaPlayer.create(this, R.raw._35));
+        suoni.add(MediaPlayer.create(this, R.raw._36));
+        suoni.add(MediaPlayer.create(this, R.raw._37));
+        suoni.add(MediaPlayer.create(this, R.raw._38));
+        suoni.add(MediaPlayer.create(this, R.raw._39));
+        suoni.add(MediaPlayer.create(this, R.raw._40));
+        suoni.add(MediaPlayer.create(this, R.raw._41));
+        suoni.add(MediaPlayer.create(this, R.raw._42));
+        suoni.add(MediaPlayer.create(this, R.raw._43));
+        suoni.add(MediaPlayer.create(this, R.raw._44));
+        suoni.add(MediaPlayer.create(this, R.raw._45));
+        suoni.add(MediaPlayer.create(this, R.raw._46));
+        suoni.add(MediaPlayer.create(this, R.raw._47));
+        suoni.add(MediaPlayer.create(this, R.raw._48));
+        suoni.add(MediaPlayer.create(this, R.raw._49));
+        suoni.add(MediaPlayer.create(this, R.raw._50));
+        suoni.add(MediaPlayer.create(this, R.raw._51));
+        suoni.add(MediaPlayer.create(this, R.raw._52));
+        suoni.add(MediaPlayer.create(this, R.raw._53));
+        suoni.add(MediaPlayer.create(this, R.raw._54));
+        suoni.add(MediaPlayer.create(this, R.raw._55));
+        suoni.add(MediaPlayer.create(this, R.raw._56));
+        suoni.add(MediaPlayer.create(this, R.raw._57));
+        suoni.add(MediaPlayer.create(this, R.raw._58));
+        suoni.add(MediaPlayer.create(this, R.raw._59));
+        suoni.add(MediaPlayer.create(this, R.raw._60));
+        suoni.add(MediaPlayer.create(this, R.raw._61));
+        suoni.add(MediaPlayer.create(this, R.raw._62));
+        suoni.add(MediaPlayer.create(this, R.raw._63));
+        suoni.add(MediaPlayer.create(this, R.raw._64));
+        suoni.add(MediaPlayer.create(this, R.raw._65));
+        suoni.add(MediaPlayer.create(this, R.raw._66));
+        suoni.add(MediaPlayer.create(this, R.raw._67));
+        suoni.add(MediaPlayer.create(this, R.raw._68));
+        suoni.add(MediaPlayer.create(this, R.raw._69));
+        suoni.add(MediaPlayer.create(this, R.raw._70));
+        suoni.add(MediaPlayer.create(this, R.raw._71));
+        suoni.add(MediaPlayer.create(this, R.raw._72));
+        suoni.add(MediaPlayer.create(this, R.raw._73));
+        suoni.add(MediaPlayer.create(this, R.raw._74));
+        suoni.add(MediaPlayer.create(this, R.raw._75));
+        suoni.add(MediaPlayer.create(this, R.raw._76));
+        suoni.add(MediaPlayer.create(this, R.raw._77));
+        suoni.add(MediaPlayer.create(this, R.raw._78));
+        suoni.add(MediaPlayer.create(this, R.raw._79));
+        suoni.add(MediaPlayer.create(this, R.raw._80));
+        suoni.add(MediaPlayer.create(this, R.raw._81));
+        suoni.add(MediaPlayer.create(this, R.raw._82));
+        suoni.add(MediaPlayer.create(this, R.raw._83));
+        suoni.add(MediaPlayer.create(this, R.raw._84));
+        suoni.add(MediaPlayer.create(this, R.raw._85));
+        suoni.add(MediaPlayer.create(this, R.raw._86));
+        suoni.add(MediaPlayer.create(this, R.raw._87));
+        suoni.add(MediaPlayer.create(this, R.raw._88));
+        suoni.add(MediaPlayer.create(this, R.raw._89));
+        suoni.add(MediaPlayer.create(this, R.raw._90));
+
         caselle = new ArrayList<>(90);
         AscoltatoreActivityMain ascoltatore = new AscoltatoreActivityMain(this);
         caselle.add((Button) findViewById(R.id.casella0));
@@ -192,6 +290,7 @@ public class ActivityMain  extends AppCompatActivity {
             manageXml.readXml(false);
         }
         updatetabellone();
+        jolly.setText(Integer.toString(getManageXml().getJolly()));
     }
 
     @Override
@@ -220,9 +319,12 @@ public class ActivityMain  extends AppCompatActivity {
         manageButton.setButton(ultimo, manageButton.preparaBordi(101), manageButton.preparaPadding(2),manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(),outValue.getFloat());
         manageButton.setButton(penultimo, manageButton.preparaBordi(102), manageButton.preparaPadding(2),manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(),outValue.getFloat());
         manageButton.setButton(terzultimo, manageButton.preparaBordi(103), manageButton.preparaPadding(2),manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(),outValue.getFloat());
+        manageButton.setButton(jolly, manageButton.preparaBordi(103), manageButton.preparaPadding(2),manageButton.getBlack(), manageButton.getWhite(), manageButton.getBlack(),outValue.getFloat());
         ultimo.setText("");
         penultimo.setText("");
         terzultimo.setText("");
+        jolly.setText(Integer.toString(getManageXml().getJolly()));
+
         Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.cinquina_verde);
         cinquina.setContentDescription("verde");
         cinquina.setImageBitmap(b);
@@ -272,6 +374,8 @@ public class ActivityMain  extends AppCompatActivity {
 
     public ArrayList<Button> getCaselle() { return caselle; }
 
+    public ArrayList<MediaPlayer> getSuoni() { return suoni; }
+
     public ImageButton getCinquina() {
         return cinquina;
     }
@@ -280,4 +384,99 @@ public class ActivityMain  extends AppCompatActivity {
         return decima;
     }
 
+    public void recreateSuoni()
+    {
+        suoni.clear();
+        suoni = new ArrayList<>(90);
+        suoni.add(MediaPlayer.create(this, R.raw._1));
+        suoni.add(MediaPlayer.create(this, R.raw._2));
+        suoni.add(MediaPlayer.create(this, R.raw._3));
+        suoni.add(MediaPlayer.create(this, R.raw._4));
+        suoni.add(MediaPlayer.create(this, R.raw._5));
+        suoni.add(MediaPlayer.create(this, R.raw._6));
+        suoni.add(MediaPlayer.create(this, R.raw._7));
+        suoni.add(MediaPlayer.create(this, R.raw._8));
+        suoni.add(MediaPlayer.create(this, R.raw._9));
+        suoni.add(MediaPlayer.create(this, R.raw._10));
+        suoni.add(MediaPlayer.create(this, R.raw._11));
+        suoni.add(MediaPlayer.create(this, R.raw._12));
+        suoni.add(MediaPlayer.create(this, R.raw._13));
+        suoni.add(MediaPlayer.create(this, R.raw._14));
+        suoni.add(MediaPlayer.create(this, R.raw._15));
+        suoni.add(MediaPlayer.create(this, R.raw._16));
+        suoni.add(MediaPlayer.create(this, R.raw._17));
+        suoni.add(MediaPlayer.create(this, R.raw._18));
+        suoni.add(MediaPlayer.create(this, R.raw._19));
+        suoni.add(MediaPlayer.create(this, R.raw._20));
+        suoni.add(MediaPlayer.create(this, R.raw._21));
+        suoni.add(MediaPlayer.create(this, R.raw._22));
+        suoni.add(MediaPlayer.create(this, R.raw._23));
+        suoni.add(MediaPlayer.create(this, R.raw._24));
+        suoni.add(MediaPlayer.create(this, R.raw._25));
+        suoni.add(MediaPlayer.create(this, R.raw._26));
+        suoni.add(MediaPlayer.create(this, R.raw._27));
+        suoni.add(MediaPlayer.create(this, R.raw._28));
+        suoni.add(MediaPlayer.create(this, R.raw._29));
+        suoni.add(MediaPlayer.create(this, R.raw._30));
+        suoni.add(MediaPlayer.create(this, R.raw._31));
+        suoni.add(MediaPlayer.create(this, R.raw._32));
+        suoni.add(MediaPlayer.create(this, R.raw._33));
+        suoni.add(MediaPlayer.create(this, R.raw._34));
+        suoni.add(MediaPlayer.create(this, R.raw._35));
+        suoni.add(MediaPlayer.create(this, R.raw._36));
+        suoni.add(MediaPlayer.create(this, R.raw._37));
+        suoni.add(MediaPlayer.create(this, R.raw._38));
+        suoni.add(MediaPlayer.create(this, R.raw._39));
+        suoni.add(MediaPlayer.create(this, R.raw._40));
+        suoni.add(MediaPlayer.create(this, R.raw._41));
+        suoni.add(MediaPlayer.create(this, R.raw._42));
+        suoni.add(MediaPlayer.create(this, R.raw._43));
+        suoni.add(MediaPlayer.create(this, R.raw._44));
+        suoni.add(MediaPlayer.create(this, R.raw._45));
+        suoni.add(MediaPlayer.create(this, R.raw._46));
+        suoni.add(MediaPlayer.create(this, R.raw._47));
+        suoni.add(MediaPlayer.create(this, R.raw._48));
+        suoni.add(MediaPlayer.create(this, R.raw._49));
+        suoni.add(MediaPlayer.create(this, R.raw._50));
+        suoni.add(MediaPlayer.create(this, R.raw._51));
+        suoni.add(MediaPlayer.create(this, R.raw._52));
+        suoni.add(MediaPlayer.create(this, R.raw._53));
+        suoni.add(MediaPlayer.create(this, R.raw._54));
+        suoni.add(MediaPlayer.create(this, R.raw._55));
+        suoni.add(MediaPlayer.create(this, R.raw._56));
+        suoni.add(MediaPlayer.create(this, R.raw._57));
+        suoni.add(MediaPlayer.create(this, R.raw._58));
+        suoni.add(MediaPlayer.create(this, R.raw._59));
+        suoni.add(MediaPlayer.create(this, R.raw._60));
+        suoni.add(MediaPlayer.create(this, R.raw._61));
+        suoni.add(MediaPlayer.create(this, R.raw._62));
+        suoni.add(MediaPlayer.create(this, R.raw._63));
+        suoni.add(MediaPlayer.create(this, R.raw._64));
+        suoni.add(MediaPlayer.create(this, R.raw._65));
+        suoni.add(MediaPlayer.create(this, R.raw._66));
+        suoni.add(MediaPlayer.create(this, R.raw._67));
+        suoni.add(MediaPlayer.create(this, R.raw._68));
+        suoni.add(MediaPlayer.create(this, R.raw._69));
+        suoni.add(MediaPlayer.create(this, R.raw._70));
+        suoni.add(MediaPlayer.create(this, R.raw._71));
+        suoni.add(MediaPlayer.create(this, R.raw._72));
+        suoni.add(MediaPlayer.create(this, R.raw._73));
+        suoni.add(MediaPlayer.create(this, R.raw._74));
+        suoni.add(MediaPlayer.create(this, R.raw._75));
+        suoni.add(MediaPlayer.create(this, R.raw._76));
+        suoni.add(MediaPlayer.create(this, R.raw._77));
+        suoni.add(MediaPlayer.create(this, R.raw._78));
+        suoni.add(MediaPlayer.create(this, R.raw._79));
+        suoni.add(MediaPlayer.create(this, R.raw._80));
+        suoni.add(MediaPlayer.create(this, R.raw._81));
+        suoni.add(MediaPlayer.create(this, R.raw._82));
+        suoni.add(MediaPlayer.create(this, R.raw._83));
+        suoni.add(MediaPlayer.create(this, R.raw._84));
+        suoni.add(MediaPlayer.create(this, R.raw._85));
+        suoni.add(MediaPlayer.create(this, R.raw._86));
+        suoni.add(MediaPlayer.create(this, R.raw._87));
+        suoni.add(MediaPlayer.create(this, R.raw._88));
+        suoni.add(MediaPlayer.create(this, R.raw._89));
+        suoni.add(MediaPlayer.create(this, R.raw._90));
+    }
 }

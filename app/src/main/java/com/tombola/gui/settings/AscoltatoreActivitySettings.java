@@ -143,6 +143,15 @@ public class AscoltatoreActivitySettings implements View.OnClickListener, SeekBa
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
+
+                String jolly = activity.getValore_jolly().getText().toString();
+                manageXml.setJolly(Integer.parseInt(jolly));
+                try {
+                    manageXml.setOst(activity.openFileOutput("config.xml", MODE_PRIVATE));
+                    manageXml.writeXml();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
                 break;
             case R.id.imposta:
                 int r = Integer.parseInt(activity.getValue_rosso().getText().toString());

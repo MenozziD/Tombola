@@ -17,9 +17,10 @@
     <string name="g">G</string>
     <string name="b">B</string>
     <string name="tempo">TEMPO IN SECONDI:</string>
+    <string name="jolly">NUMERO JOLLY:</string>
     <string name="imposta">IMPOSTA</string>
     <string name="salva">SALVA</string>
-    <string name="imposta_tempo">IMPOSTA TEMPO</string>
+    <string name="imposta_tempo">IMPOSTA</string>
     <!--<string name="messaggio_tempo">SI RIPRENDE TRA: %1$d SECONDI</string>-->
     <string name="messaggio_tempo">-%1$d</string>
     <!--<string name="messaggio_tempo">- %1$d sec</string>-->

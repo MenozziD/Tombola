@@ -342,7 +342,9 @@
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
                     android:layout_weight="0.3"
-                    tools:ignore="LabelFor,NestedWeights,TextFields" />
+                    tools:ignore="LabelFor,NestedWeights,TextFields"
+                    android:inputType="number"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -353,6 +355,19 @@
                 android:weightSum="1"
                 tools:ignore="NestedWeights">
 
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:text="@string/jolly" />
+
+                <EditText
+                    android:id="@+id/valore_jolly"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    tools:ignore="LabelFor,NestedWeights,TextFields"
+                    android:inputType="number"/>
             </LinearLayout>
 
             <LinearLayout

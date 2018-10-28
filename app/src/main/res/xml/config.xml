@@ -25,4 +25,5 @@
         <my_color r="255" g ="255" b="255"/>
     </bordo>
     <tempo t="10"/>
+    <jolly j="11"/>
 </settings>
